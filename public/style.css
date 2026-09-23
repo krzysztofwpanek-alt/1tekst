@@ -224,6 +224,49 @@ a { color: var(--accent); }
 .content-page h1 { font-size: 22px; margin: 0 0 1.25rem; }
 .content-page p { margin: 0 0 1rem; }
 
+.content-page figure { margin: 0 0 1.5rem; }
+.content-page figure img { width: 100%; border-radius: 12px; display: block; }
+.content-page figcaption { font-size: 12px; color: var(--text-secondary); margin-top: 6px; }
+
+.content-page .lead {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.pdf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--accent-dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 1rem 0 1.5rem;
+}
+.pdf-link:hover { background: var(--bg); }
+
+/* --- Strona „wkrótce” --- */
+.coming-soon {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.coming-soon .icon { font-size: 28px; margin-bottom: 10px; }
+.coming-soon .date-line {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin: 6px 0 0;
+}
+.coming-soon p { color: var(--text-secondary); margin: 0; }
+
 .placeholder-note {
   background: #fff7e6;
   border: 1px solid #f0d999;
