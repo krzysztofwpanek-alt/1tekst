@@ -57,6 +57,18 @@ function handleLogout(request) {
   return new Response(null, { status: 302, headers });
 }
 
+// Skoro html_handling jest ustawione na "none" (żeby uniknąć pętli
+// przekierowań opisanej wyżej), Cloudflare przestaje też automatycznie
+// serwować index.html pod samym "/" — musimy to zrobić sami.
+function resolveAssetRequest(request, pathname) {
+  if (pathname === "/") {
+    const url = new URL(request.url);
+    url.pathname = "/index.html";
+    return new Request(url.toString(), request);
+  }
+  return request;
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -73,7 +85,7 @@ export default {
       PUBLIC_EXTENSIONS.some((ext) => url.pathname.endsWith(ext));
 
     if (PUBLIC_PATHS.has(url.pathname) || isPublicAsset) {
-      return env.ASSETS.fetch(request);
+      return env.ASSETS.fetch(resolveAssetRequest(request, url.pathname));
     }
 
     const cookieHeader = request.headers.get("Cookie") || "";
@@ -82,7 +94,7 @@ export default {
     const expected = await hashPassword(SITE_PASSWORD);
 
     if (token === expected) {
-      return env.ASSETS.fetch(request);
+      return env.ASSETS.fetch(resolveAssetRequest(request, url.pathname));
     }
 
     const redirectUrl = new URL("/login.html", url.origin);
