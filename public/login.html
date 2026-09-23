@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logowanie — Walne Zgromadzenie GWŻ</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="login-card">
+      <img src="/assets/logogwz.jpg" alt="Logo Gminy Wyznaniowej Żydowskiej w Warszawie" />
+      <h1>Walne Zgromadzenie</h1>
+      <p class="subtitle">Gmina Wyznaniowa Żydowska w Warszawie</p>
+
+      <div id="error-box" class="login-error" style="display:none;">
+        Nieprawidłowe hasło. Spróbuj ponownie.
+      </div>
+
+      <form method="POST" action="/api/login" id="login-form">
+        <label for="password">Hasło dostępu</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required autofocus />
+        <input type="hidden" name="next" id="next-field" value="/" />
+        <button type="submit">Wejdź</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("error")) {
+      document.getElementById("error-box").style.display = "block";
+    }
+    const next = params.get("next");
+    if (next) {
+      document.getElementById("next-field").value = next;
+    }
+  </script>
+</body>
+</html>
