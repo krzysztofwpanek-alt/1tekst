@@ -267,6 +267,30 @@ a { color: var(--accent); }
 }
 .coming-soon p { color: var(--text-secondary); margin: 0; }
 
+/* --- Galeria ilustracji na końcu artykułu --- */
+.illustration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 2rem 0 1rem;
+}
+@media (max-width: 620px) {
+  .illustration-grid { grid-template-columns: 1fr; }
+}
+.illustration-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 14px 14px;
+  text-align: center;
+}
+.illustration-card svg { width: 100%; height: auto; max-width: 140px; }
+.illustration-card figcaption {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 10px;
+}
+
 .placeholder-note {
   background: #fff7e6;
   border: 1px solid #f0d999;
