@@ -5,6 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Budżet GWŻ – dlaczego za 3 lata zbankrutujemy — Walne Zgromadzenie GWŻ</title>
   <link rel="stylesheet" href="/style.css" />
+  <style>
+    .sim-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 4px 14px;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sim-row .sim-label { font-size: 14px; font-weight: 600; }
+    .sim-row .sim-value {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent-dark);
+      text-align: right;
+      white-space: nowrap;
+    }
+    .sim-row .sim-value small {
+      font-weight: 400;
+      color: var(--text-secondary);
+      margin-left: 6px;
+    }
+    .sim-row input[type="range"] {
+      grid-column: 1 / 3;
+      width: 100%;
+      accent-color: #185fa5;
+      height: 6px;
+    }
+    /* Pozycje zaznaczone na czerwono */
+    .sim-row.flag {
+      background: #fdf1f0;
+      border-left: 4px solid #c0392b;
+    }
+    .sim-row.flag .sim-label,
+    .sim-row.flag .sim-value { color: #a32d2d; }
+    .sim-row.flag input[type="range"] { accent-color: #c0392b; }
+
+    .sim-total {
+      position: sticky;
+      bottom: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-top: 18px;
+      box-shadow: 0 -6px 16px rgba(0,0,0,0.06);
+    }
+    .sim-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .sim-line.main { font-size: 16px; font-weight: 600; }
+    .sim-line.savings { font-size: 20px; font-weight: 800; margin-top: 4px; }
+    .sim-savings-value.bad { color: #a32d2d; }
+    .sim-savings-value.good { color: #1e7a2e; }
+
+    .sim-progress {
+      height: 8px;
+      background: #ece9e0;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    .sim-progress > div {
+      height: 100%;
+      width: 0%;
+      background: #c0392b;
+      transition: width 0.1s linear, background 0.15s;
+    }
+    .sim-progress > div.good { background: #1e7a2e; }
+    .sim-goal-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .sim-goal-text { font-size: 12px; color: var(--text-secondary); }
+    .sim-reset {
+      font-size: 12px;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 5px 10px;
+      cursor: pointer;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+    .sim-reset:hover { border-color: var(--accent); color: var(--accent-dark); }
+    .sim-unit-note { font-size: 12px; color: var(--text-secondary); margin: -8px 0 14px; }
+  </style>
 </head>
 <body>
   <nav class="site-nav">
@@ -23,6 +116,7 @@
             <a href="/gorace-tematy/laszon-hara.html">Laszon Hara</a>
             <a href="/gorace-tematy/ofiary-mobbingu.html">Ofiary mobbingu w Gminie</a>
             <a href="/gorace-tematy/budzet.html">Budżet GWŻ – dlaczego za 3 lata zbankrutujemy</a>
+            <a href="/gorace-tematy/symulator-budzetu.html">Symulator budżetu Gminy</a>
             <a href="/gorace-tematy/ulica-smetna.html">Coraz bardziej smętna historia ulicy Smętnej</a>
             <a href="/gorace-tematy/przeplaca.html">Dlaczego Gmina za wszystko przepłaca?</a>
             <a href="/gorace-tematy/misiewicze.html">„Misiewicze” w akcji</a>
@@ -36,7 +130,6 @@
             <a href="/uchwaly/zrownowazenie-budzetu.html">Uchwała w sprawie zrównoważenia budżetu</a>
             <a href="/uchwaly/regulamin-zarzadu.html">Uchwała w sprawie zmiany Regulaminu Prac Zarządu</a>
             <a href="/uchwaly/polityka-zakupow.html">Uchwała w sprawie zmiany Polityki Zakupów</a>
-            <a href="/uchwaly/ugoda-zgwz.html">Uchwała w sprawie ugody w sporze z ZGWŻ</a>
           </div>
         </li>
       </ul>
@@ -46,14 +139,254 @@
   <div class="page content-page">
     <p class="breadcrumb"><a href="/">Strona główna</a> / Gorące tematy</p>
     <h1>Budżet GWŻ – dlaczego za 3 lata zbankrutujemy</h1>
-    <div class="coming-soon">
-      <div class="icon">🗓️</div>
-      <p>Pełny tekst pojawi się w tym miejscu w zapowiedzianym terminie.</p>
-      <p class="date-line">Zapraszam 28 września</p>
+
+    <h2>Analiza sprawozdań finansowych z lat 2022–2025</h2>
+
+    <p>Na początek wyjaśnię znaczenie niektórych rubryk w tych sprawozdaniach, bo nigdzie nie jest tam zapisane „sprzedaż nieruchomości”, czy „odszkodowania”. Pierwsza z tych pozycji ukrywa się pod nazwą „Zysk z tytułu rozchodu niefinansowych środków trwałych” w dziale RACHUNEK ZYSKÓW I STRAT, a odszkodowania ukryte są pod nazwą „Inne przychody operacyjne”.</p>
+
+    <p>Po wyłączeniu zysku ze sprzedaży majątku i jednorazowego odszkodowania (6 070 086,36 zł w 2024 r.) nasze wydatki były średnio większe od dochodów o <strong>ok. 6,52 mln zł rocznie</strong>, czyli ok. 543 tys. zł miesięcznie. Kiedy z przychodów wyłączymy sprzedaż nieruchomości i odszkodowanie otrzymane w 2024 roku okazuje się, że mamy średnie koszty wyższe o ponad 5 mln od przychodów. Tu ważne zastrzeżenie – ponieważ amortyzacja nie jest wydatkiem gotówkowym, to realny deficyt jest niższy właśnie o taką sumę i wynosi średnio za te 4 lata nie 6,52 mln, a „jedynie” 5,3 mln zł.</p>
+
+    <div class="table-wrap">
+      <table class="rwd-table">
+        <caption>Koszty i przychody Gminy w latach 2022–2025 (kwoty w zł)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Rok</th>
+            <th scope="col">Koszty razem</th>
+            <th scope="col">Przychody razem</th>
+            <th scope="col">Wyłączone: sprzedaż majątku</th>
+            <th scope="col">Wyłączone: odszkodowanie</th>
+            <th scope="col">Przychody po wyłączeniach</th>
+            <th scope="col">Nadwyżka kosztów</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rwd-title">2022</td>
+            <td class="num" data-label="Koszty razem">14 200 946</td>
+            <td class="num" data-label="Przychody razem">9 618 514</td>
+            <td class="num" data-label="Wyłączone: sprzedaż majątku">1 048 780</td>
+            <td class="num" data-label="Wyłączone: odszkodowanie">–</td>
+            <td class="num" data-label="Przychody po wyłączeniach">8 569 734</td>
+            <td class="num key" data-label="Nadwyżka kosztów">5 631 212</td>
+          </tr>
+          <tr>
+            <td class="rwd-title">2023</td>
+            <td class="num" data-label="Koszty razem">17 249 792</td>
+            <td class="num" data-label="Przychody razem">10 640 524</td>
+            <td class="num" data-label="Wyłączone: sprzedaż majątku">305 081</td>
+            <td class="num" data-label="Wyłączone: odszkodowanie">–</td>
+            <td class="num" data-label="Przychody po wyłączeniach">10 335 443</td>
+            <td class="num key" data-label="Nadwyżka kosztów">6 914 349</td>
+          </tr>
+          <tr>
+            <td class="rwd-title">2024</td>
+            <td class="num" data-label="Koszty razem">19 419 288</td>
+            <td class="num" data-label="Przychody razem">22 854 528</td>
+            <td class="num" data-label="Wyłączone: sprzedaż majątku">4 920 000</td>
+            <td class="num" data-label="Wyłączone: odszkodowanie">6 070 086</td>
+            <td class="num" data-label="Przychody po wyłączeniach">11 864 441</td>
+            <td class="num key" data-label="Nadwyżka kosztów">7 554 847</td>
+          </tr>
+          <tr>
+            <td class="rwd-title">2025</td>
+            <td class="num" data-label="Koszty razem">19 343 775</td>
+            <td class="num" data-label="Przychody razem">25 391 198</td>
+            <td class="num" data-label="Wyłączone: sprzedaż majątku">12 030 000</td>
+            <td class="num" data-label="Wyłączone: odszkodowanie">–</td>
+            <td class="num" data-label="Przychody po wyłączeniach">13 361 198</td>
+            <td class="num key" data-label="Nadwyżka kosztów">5 982 577</td>
+          </tr>
+          <tr class="avg">
+            <td class="rwd-title">Średnia</td>
+            <td class="num" data-label="Koszty razem">17 553 450</td>
+            <td class="num" data-label="Przychody razem">17 101 191</td>
+            <td class="num" data-label="Wyłączone: sprzedaż majątku">4 575 965</td>
+            <td class="num" data-label="Wyłączone: odszkodowanie">1 517 522</td>
+            <td class="num" data-label="Przychody po wyłączeniach">11 032 704</td>
+            <td class="num" data-label="Nadwyżka kosztów">6 520 746</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <p><a href="/">&larr; Powrót na stronę główną</a></p>
+    <p>Nasze koszty były średnio o ok. 59% wyższe od przychodów (17,55 mln zł wobec 11,03 mln zł).</p>
+
+    <p>Jak to się przełoży na przyszłość? Poniżej kilka scenariuszy wyczerpania gotówki w zależności od tego, jak oszacujemy przyszłe koszty i przychody.</p>
+
+    <h3>Scenariusze wyczerpania gotówki</h3>
+
+    <div class="table-wrap">
+      <table class="rwd-table left">
+        <thead>
+          <tr>
+            <th scope="col">Scenariusz</th>
+            <th scope="col">Roczny ubytek</th>
+            <th scope="col">Gotówki starczy na</th>
+            <th scope="col">Wyczerpanie</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rwd-title">Powtórka 2025 r.</td>
+            <td data-label="Roczny ubytek">4,81 mln zł (ok. 0,40 mln/mies.)</td>
+            <td data-label="Gotówki starczy na">ok. 34 mies.</td>
+            <td class="key" data-label="Wyczerpanie">ok. październik 2028</td>
+          </tr>
+          <tr>
+            <td class="rwd-title">Średnia 2022–2025</td>
+            <td data-label="Roczny ubytek">5,33 mln zł</td>
+            <td data-label="Gotówki starczy na">ok. 30 mies.</td>
+            <td class="key" data-label="Wyczerpanie">ok. lipiec 2028</td>
+          </tr>
+          <tr>
+            <td class="rwd-title">Powtórka 2025 r., koszty rosną o 10% rocznie</td>
+            <td data-label="Roczny ubytek">4,81 mln w 2026 r., potem +10%</td>
+            <td data-label="Gotówki starczy na">ok. 31 mies.</td>
+            <td class="key" data-label="Wyczerpanie">ok. lipiec 2028</td>
+          </tr>
+          <tr>
+            <td class="rwd-title">Poziom 2024 r. (najgorszy)</td>
+            <td data-label="Roczny ubytek">6,30 mln zł</td>
+            <td data-label="Gotówki starczy na">ok. 26 mies.</td>
+            <td class="key" data-label="Wyczerpanie">ok. luty 2028</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>A kiedy już skończy się nam wolna gotówka będziemy musieli dokonać cięć nie skalpelem, a siekierą. Jak wielka będzie ich skala pokazuje poniższy symulator budżetu. Oczywistym jest wycięcie takich pozycji, jak niewystępujący w żadnej z innych gmin dyrektorzy cmentarzy, czy Biuro Komunikacji Społecznej, ale da to tylko 1,49 mln zł rocznie oszczędności. A my musimy dobić do 5,3 mln zł. Dlatego tak ważne jest jak najszybsze rozpoczęcie programu oszczędności, by przejadane dziś miliony można było zainwestować w coś przynoszącego zysk, bo za kilka lat będzie już na to za późno.</p>
+
+    <p>P.S. Powyższe obliczenia nie uwzględniają blisko 8 mln zł, które przyjdzie nam dodatkowo zapłacić ZGWŻ, jeśli już w 2029 roku przegramy sprawę o synagogę Nożyków i Biały Budynek. Przyznam, że nie mam żadnego pomysłu, co moglibyśmy zrobić w tej sytuacji…</p>
+
+    <section id="sim-section">
+    <h2>Symulator budżetu</h2>
+    <p class="lead">Przesuń suwaki, żeby zobaczyć, jak zmiana wydatków na poszczególne pozycje wpływa na łączny budżet. Wartości startowe to wykonanie budżetu za 2025 rok. Cel: obciąć wydatki o 5,3 mln zł.</p>
+    <p class="sim-unit-note">Kwoty w złotych. Każdy suwak: od 0% do 150% wartości z 2025 roku.</p>
+
+    <div id="sim-rows"></div>
+
+    <div class="sim-total">
+      <div class="sim-line main">
+        <span>Razem wydatki</span>
+        <span id="sim-total-value">18 496 271 zł</span>
+      </div>
+      <div class="sim-line savings">
+        <span>Oszczędności</span>
+        <span id="sim-savings-value" class="sim-savings-value bad">0 zł</span>
+      </div>
+      <div class="sim-progress"><div id="sim-bar"></div></div>
+      <div class="sim-goal-row">
+        <span id="sim-goal-text" class="sim-goal-text">Cel: 5 300 000 zł</span>
+        <button class="sim-reset" id="sim-reset">Przywróć wartości z 2025</button>
+      </div>
+    </div>
+    </section>
+
+    <h2>Załączniki</h2>
+    <p>Sprawozdania finansowe Gminy za lata 2022–2025 (formularz SF-JIN), na których opiera się powyższa analiza.</p>
+    <div class="doc-list">
+      <a class="doc-item" href="/materialy/sprawozdanie-finansowe-2022.pdf">
+        <span>Sprawozdanie finansowe za 2022 rok</span>
+        <span class="doc-status">PDF · 5,5 MB</span>
+      </a>
+      <a class="doc-item" href="/materialy/sprawozdanie-finansowe-2023.pdf">
+        <span>Sprawozdanie finansowe za 2023 rok</span>
+        <span class="doc-status">PDF · 5,5 MB</span>
+      </a>
+      <a class="doc-item" href="/materialy/sprawozdanie-finansowe-2024.pdf">
+        <span>Sprawozdanie finansowe za 2024 rok</span>
+        <span class="doc-status">PDF · 5,5 MB</span>
+      </a>
+      <a class="doc-item" href="/materialy/sprawozdanie-finansowe-2025.pdf">
+        <span>Sprawozdanie finansowe za 2025 rok</span>
+        <span class="doc-status">PDF · 5,6 MB</span>
+      </a>
+    </div>
+
+    <p style="margin-top:1.5rem;"><a href="/">&larr; Powrót na stronę główną</a></p>
   </div>
   <script src="/nav.js"></script>
+  <script>
+    // [numer, nazwa, wykonanie 2025 w zł, zaznaczona na czerwono?]
+    const items = [
+      [1,  "Zarząd", 798449, false],
+      [2,  "Administracja (Biuro Zarządu)", 1059672, false],
+      [3,  "IT", 263662, false],
+      [4,  "Synagoga - Rabin Michael Schudrich", 985745, false],
+      [5,  "Synagoga - Ec Chaim - Synagoga", 819052, false],
+      [6,  "Komisja Pomocy Społecznej", 1778155, false],
+      [7,  "Klub Seniora", 226181, false],
+      [8,  "Pomoc finansowa / dotacje i składki", 816442, false],
+      [9,  "Biuro Komunikacji Społecznej", 206161, true],
+      [10, "Cmentarz na Bródnie", 134653, true],
+      [11, "Cmentarz Okopowa", 844260, true],
+      [12, "Restytucja", 5120, false],
+      [13, "Zarządzanie nieruchomościami", 6320521, false],
+      [14, "Filia w Lublinie", 276676, false],
+      [15, "Cmentarze poza Warszawą", 303795, true],
+      [16, "Ochrona", 1099815, false],
+      [17, "Inne koszty i daniny (dotacje, koszty zarządu, podatek VAT)", 2557912, false],
+    ];
+    const ORIGINAL_TOTAL = items.reduce((s, it) => s + it[2], 0); // 18 496 271
+    const GOAL = 5300000;
+    const nf = new Intl.NumberFormat("pl-PL");
+    const zl = (n) => nf.format(n) + " zł";
+
+    const rowsEl = document.getElementById("sim-rows");
+    const totalEl = document.getElementById("sim-total-value");
+    const savingsEl = document.getElementById("sim-savings-value");
+    const barEl = document.getElementById("sim-bar");
+    const goalTextEl = document.getElementById("sim-goal-text");
+
+    // Suwak działa w procentach wartości z 2025 (0–150%), więc 100% to dokładnie
+    // kwota z tabeli — bez błędów zaokrągleń przy wartościach startowych.
+    items.forEach(([nr, name, val, flag], idx) => {
+      const row = document.createElement("div");
+      row.className = "sim-row" + (flag ? " flag" : "");
+      row.innerHTML =
+        '<span class="sim-label">' + nr + '. ' + name + '</span>' +
+        '<span class="sim-value" id="sim-value-' + idx + '"></span>' +
+        '<input type="range" id="sim-slider-' + idx + '" min="0" max="150" step="0.5" value="100" />';
+      rowsEl.appendChild(row);
+    });
+
+    function currentValue(idx) {
+      const pct = parseFloat(document.getElementById("sim-slider-" + idx).value);
+      return Math.round(items[idx][2] * pct / 100);
+    }
+
+    function recalc() {
+      let total = 0;
+      items.forEach((it, idx) => {
+        const pct = parseFloat(document.getElementById("sim-slider-" + idx).value);
+        const v = Math.round(it[2] * pct / 100);
+        total += v;
+        const pctText = String(pct).replace(".", ",") + "%";
+        document.getElementById("sim-value-" + idx).innerHTML =
+          zl(v) + "<small>" + pctText + "</small>";
+      });
+      const savings = ORIGINAL_TOTAL - total;
+      totalEl.textContent = zl(total);
+      savingsEl.textContent = (savings < 0 ? "−" : "") + zl(Math.abs(savings));
+
+      const reached = savings >= GOAL;
+      savingsEl.className = "sim-savings-value " + (reached ? "good" : "bad");
+      barEl.className = reached ? "good" : "";
+      barEl.style.width = Math.max(0, Math.min(100, savings / GOAL * 100)) + "%";
+      goalTextEl.textContent = reached
+        ? "Cel osiągnięty: obcięto co najmniej 5 300 000 zł"
+        : "Cel: 5 300 000 zł — brakuje jeszcze " + zl(GOAL - savings);
+    }
+
+    items.forEach((_, idx) => {
+      document.getElementById("sim-slider-" + idx).addEventListener("input", recalc);
+    });
+    document.getElementById("sim-reset").addEventListener("click", () => {
+      items.forEach((_, idx) => { document.getElementById("sim-slider-" + idx).value = 100; });
+      recalc();
+    });
+    recalc();
+  </script>
 </body>
 </html>

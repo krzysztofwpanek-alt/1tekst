@@ -18,19 +18,25 @@ public/
   assets/logogwz.jpg              logo gminy
   assets/uchwala-2003-adnotacje.jpeg   zdjęcie w artykule o procesie
   materialy/proces-zgwz-dokumenty.pdf   pełne dokumenty źródłowe sprawy (16 stron)
+  materialy/polityka-antymobbingowa-wzor.pdf   załącznik do tekstu „Laszon Hara”
+  materialy/sprawozdanie-finansowe-2022.pdf … 2025.pdf   załączniki w zakładce Budżet GWŻ (po ok. 5,5 MB)
   gorace-tematy/
-    proces-synagoga.html          PEŁNY ARTYKUŁ (gotowa treść)
-    budzet.html                    „wkrótce” — 28 września
-    ulica-smetna.html               „wkrótce” — 1 października
-    przeplaca.html                   „wkrótce” — 5 października
-    misiewicze.html                   „wkrótce” — 8 października
-    misiewicze-reaktywacja.html        „wkrótce” — 9 października
-    zarzad-fatalnie.html                „wkrótce” — 13 października
+    proces-synagoga.html            PEŁNY ARTYKUŁ o procesie (+ PDF z dokumentami sprawy)
+    laszon-hara.html                 PEŁNY TEKST o mobbingu (+ załącznik PDF: polityka antymobbingowa)
+    ofiary-mobbingu.html              „wkrótce” — 15 października
+    budzet.html                        analiza sprawozdań finansowych 2022–2025 (tabele responsywne)
+                                        + symulator budżetu z suwakami (cel: oszczędności 5,3 mln zł)
+                                        + załączniki: sprawozdania finansowe 2022–2025
+    symulator-budzetu.html              „wkrótce” — wieczorem 17 października (miejsce na aplikację do głosowania)
+    ulica-smetna.html                    „wkrótce” — 1 października
+    przeplaca.html                        „wkrótce” — 5 października
+    misiewicze.html                        „wkrótce” — 8 października
+    misiewicze-reaktywacja.html             „wkrótce” — 9 października
+    zarzad-fatalnie.html                     „wkrótce” — 13 października
   uchwaly/
-    zrownowazenie-budzetu.html      „wkrótce” — 28 września
+    zrownowazenie-budzetu.html      „wkrótce” — 16 października
     regulamin-zarzadu.html           „wkrótce” — 13 października
     polityka-zakupow.html             „wkrótce” — 5 października
-    ugoda-zgwz.html                    tekst zastępczy (lorem ipsum), bez daty
 ```
 
 ## Wdrożenie na Cloudflare (Workers + Git)
