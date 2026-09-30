@@ -33,6 +33,7 @@ public/
     misiewicze.html                        „wkrótce” — 8 października
     misiewicze-reaktywacja.html             „wkrótce” — 9 października
     zarzad-fatalnie.html                     „wkrótce” — 13 października
+    wynagrodzenia-w-gminie-i.html               PEŁNY TEKST — etat dyrektora cmentarza na Bródnie
   uchwaly/
     zrownowazenie-budzetu.html      „wkrótce” — 16 października
     regulamin-zarzadu.html           „wkrótce” — 13 października
