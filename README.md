@@ -23,17 +23,17 @@ public/
   gorace-tematy/
     proces-synagoga.html            PEŁNY ARTYKUŁ o procesie (+ PDF z dokumentami sprawy)
     laszon-hara.html                 PEŁNY TEKST o mobbingu (+ załącznik PDF: polityka antymobbingowa)
+    wynagrodzenia-w-gminie-i.html     PEŁNY TEKST — etat dyrektora cmentarza na Bródnie (6 zdjęć)
     ofiary-mobbingu.html              „wkrótce” — 15 października
     budzet.html                        analiza sprawozdań finansowych 2022–2025 (tabele responsywne)
                                         + symulator budżetu z suwakami (cel: oszczędności 5,3 mln zł)
                                         + załączniki: sprawozdania finansowe 2022–2025
     symulator-budzetu.html              „wkrótce” — wieczorem 17 października (miejsce na aplikację do głosowania)
-    ulica-smetna.html                    „wkrótce” — 1 października
+    ulica-smetna.html                    PEŁNY ARTYKUŁ — plany drogi przez cmentarz Okopowa / mur getta (11 zdjęć)
     przeplaca.html                        „wkrótce” — 5 października
     misiewicze.html                        „wkrótce” — 8 października
     misiewicze-reaktywacja.html             „wkrótce” — 9 października
     zarzad-fatalnie.html                     „wkrótce” — 13 października
-    wynagrodzenia-w-gminie-i.html               PEŁNY TEKST — etat dyrektora cmentarza na Bródnie
   uchwaly/
     zrownowazenie-budzetu.html      „wkrótce” — 16 października
     regulamin-zarzadu.html           „wkrótce” — 13 października
