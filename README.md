@@ -19,11 +19,13 @@ public/
   assets/uchwala-2003-adnotacje.jpeg   zdjęcie w artykule o procesie
   materialy/proces-zgwz-dokumenty.pdf   pełne dokumenty źródłowe sprawy (16 stron)
   materialy/polityka-antymobbingowa-wzor.pdf   załącznik do tekstu „Laszon Hara”
+  materialy/rozporzadzenie-wynagradzanie-pracownikow-samorzadowych-2026.pdf   załącznik do „Wynagrodzenia Zarządu GWŻ”
   materialy/sprawozdanie-finansowe-2022.pdf … 2025.pdf   załączniki w zakładce Budżet GWŻ (po ok. 5,5 MB)
   gorace-tematy/
     proces-synagoga.html            PEŁNY ARTYKUŁ o procesie (+ PDF z dokumentami sprawy)
     laszon-hara.html                 PEŁNY TEKST o mobbingu (+ załącznik PDF: polityka antymobbingowa)
     wynagrodzenia-w-gminie-i.html     PEŁNY TEKST — etat dyrektora cmentarza na Bródnie (6 zdjęć)
+    wynagrodzenia-zarzadu.html        tabela + tekst o wynagrodzeniach Zarządu (załącznik: rozporządzenie RM)
     ofiary-mobbingu.html              „wkrótce” — 15 października
     budzet.html                        analiza sprawozdań finansowych 2022–2025 (tabele responsywne)
                                         + symulator budżetu z suwakami (cel: oszczędności 5,3 mln zł)
