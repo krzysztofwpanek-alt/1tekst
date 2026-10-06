@@ -514,3 +514,115 @@ img { max-width: 100%; height: auto; }
   .rwd-table td.rwd-title::before { display: none; }
   .rwd-table tr.avg td.rwd-title { background: #dbe9f5; }
 }
+
+/* --- Tabela „pro”: raportowy wygląd (używana m.in. w „Wynagrodzenia Zarządu GWŻ”) --- */
+.pro-wrap {
+  background: #fff;
+  border: 1px solid #d9e1ea;
+  border-radius: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-shadow: 0 2px 10px rgba(12, 68, 124, 0.08);
+  margin: 0.5rem 0 0.5rem;
+}
+
+.rwd-table.pro { border: none; background: none; font-size: 15px; }
+
+.rwd-table.pro caption {
+  caption-side: top;
+  text-align: left;
+  padding: 18px 20px 14px;
+  background: #fff;
+}
+.rwd-table.pro caption .t { display: block; font-size: 16px; font-weight: 700; color: var(--accent-dark); }
+.rwd-table.pro caption .s { display: block; font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+
+.rwd-table.pro thead th {
+  background: var(--accent-dark);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  padding: 12px 16px;
+  border-bottom: none;
+  vertical-align: bottom;
+}
+.rwd-table.pro thead th.total { background: var(--accent); }
+
+.rwd-table.pro tbody td { padding: 15px 16px; border-bottom: 1px solid #e8edf3; vertical-align: middle; }
+.rwd-table.pro tbody tr:last-child td { border-bottom: none; }
+.rwd-table.pro tbody tr:nth-child(even) td { background: #f7f9fc; }
+.rwd-table.pro tbody tr:hover td { background: #eef4fa; }
+
+.rwd-table.pro td.rwd-title strong { display: block; font-size: 15px; color: var(--text); }
+.rwd-table.pro td.rwd-title .sub { display: block; font-size: 12.5px; font-weight: 400; color: var(--text-secondary); margin-top: 2px; }
+
+.rwd-table.pro td.num { font-variant-numeric: tabular-nums; }
+.rwd-table.pro thead th:first-child, .rwd-table.pro td.rwd-title { width: 38%; min-width: 230px; }
+.rwd-table.pro td .cur { color: var(--text-secondary); font-size: 0.85em; margin-left: 4px; font-weight: 400; }
+
+.rwd-table.pro tbody tr td.total {
+  background: #eaf1f8;
+  border-left: 3px solid var(--accent);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+.rwd-table.pro tbody tr td.total .cur { color: var(--accent); }
+
+.pro-source { font-size: 12px; color: var(--text-secondary); margin: 8px 2px 1.5rem; }
+
+@media (max-width: 640px) {
+  .pro-wrap { background: none; border: none; box-shadow: none; border-radius: 0; overflow: visible; }
+  .rwd-table.pro caption { padding: 0 2px 12px; background: none; }
+
+  .rwd-table.pro tr {
+    border: 1px solid #d9e1ea;
+    border-radius: 14px;
+    box-shadow: 0 1px 6px rgba(12, 68, 124, 0.08);
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .rwd-table.pro tbody tr:nth-child(even) td { background: #fff; }
+  .rwd-table.pro tbody tr:hover td { background: #fff; }
+  .rwd-table.pro tbody td { padding: 11px 16px; border-bottom: 1px solid #e8edf3; }
+
+  .rwd-table.pro td.rwd-title,
+  .rwd-table.pro tbody tr:nth-child(even) td.rwd-title {
+    background: var(--accent-dark);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 14px 16px;
+  }
+  .rwd-table.pro td.rwd-title { width: 100%; min-width: 0; }
+  .rwd-table.pro td.rwd-title strong { color: #fff; font-size: 16px; }
+  .rwd-table.pro td.rwd-title .sub { color: #cfe0f0; }
+
+  .rwd-table.pro tbody tr td.total { border-left: none; border-bottom: none; font-size: 18px; }
+  .rwd-table.pro td.total::before { color: var(--accent-dark); }
+}
+
+/* --- Procedura / polityka: numeracja wielopoziomowa (1. / 1.1. / 1.1.1.) --- */
+.proc-title { text-align: center; margin: 1.75rem 0 1.25rem; }
+.proc-title p { margin: 0 0 6px; font-weight: 700; }
+.proc-title p:first-child { font-size: 17px; }
+
+.proc-h0, .proc-h1, .proc-item { display: flex; gap: 10px; }
+.proc-h0 .n, .proc-h1 .n, .proc-item .n { flex: 0 0 4rem; }
+.proc-h0 { font-size: 16px; font-weight: 700; margin: 1.9rem 0 0.5rem; }
+.proc-h1 { font-size: 14px; font-weight: 700; margin: 1.3rem 0 0.5rem; }
+.proc-item { margin: 0 0 0.8rem; }
+.proc-item .n { color: var(--text-secondary); }
+.proc-cont { margin: 0 0 0.8rem; padding-left: calc(4rem + 10px); }
+.proc-cont.flush { padding-left: 0; }
+
+.proc-sign { display: flex; justify-content: space-around; gap: 20px; margin: 2.25rem 0 1rem; text-align: center; font-size: 13px; }
+.proc-sign .role { font-weight: 700; font-size: 12px; line-height: 1.5; }
+.proc-sign .name { margin-top: 2.2rem; font-style: italic; font-size: 14px; }
+
+@media (max-width: 640px) {
+  .proc-h0 .n, .proc-h1 .n, .proc-item .n { flex-basis: 3.5rem; }
+  .proc-cont { padding-left: calc(3.5rem + 10px); }
+  .proc-sign { flex-direction: column; align-items: center; }
+}

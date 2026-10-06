@@ -19,6 +19,7 @@ public/
   assets/uchwala-2003-adnotacje.jpeg   zdjęcie w artykule o procesie
   materialy/proces-zgwz-dokumenty.pdf   pełne dokumenty źródłowe sprawy (16 stron)
   materialy/polityka-antymobbingowa-wzor.pdf   załącznik do tekstu „Laszon Hara”
+  materialy/polityka-zakupow-projekt.pdf   załącznik do „Dlaczego Gmina za wszystko przepłaca?”
   materialy/rozporzadzenie-wynagradzanie-pracownikow-samorzadowych-2026.pdf   załącznik do „Wynagrodzenia Zarządu GWŻ”
   materialy/sprawozdanie-finansowe-2022.pdf … 2025.pdf   załączniki w zakładce Budżet GWŻ (po ok. 5,5 MB)
   gorace-tematy/
@@ -32,14 +33,14 @@ public/
                                         + załączniki: sprawozdania finansowe 2022–2025
     symulator-budzetu.html              „wkrótce” — wieczorem 17 października (miejsce na aplikację do głosowania)
     ulica-smetna.html                    PEŁNY ARTYKUŁ — plany drogi przez cmentarz Okopowa / mur getta (11 zdjęć)
-    przeplaca.html                        „wkrótce” — 5 października
+    przeplaca.html                    PEŁNY TEKST o konkursach ofert + pełny tekst Procedury zakupowej (czerwone zmiany, 2 zdjęcia, PDF)
     misiewicze.html                        „wkrótce” — 8 października
     misiewicze-reaktywacja.html             „wkrótce” — 9 października
     zarzad-fatalnie.html                     „wkrótce” — 13 października
   uchwaly/
     zrownowazenie-budzetu.html      „wkrótce” — 16 października
     regulamin-zarzadu.html           „wkrótce” — 13 października
-    polityka-zakupow.html             „wkrótce” — 5 października
+    polityka-zakupow.html              pełny tekst Procedury zakupowej z czerwonymi zmianami
 ```
 
 ## Wdrożenie na Cloudflare (Workers + Git)
