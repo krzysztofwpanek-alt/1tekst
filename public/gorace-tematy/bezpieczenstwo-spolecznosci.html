@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bezpieczeństwo społeczności żydowskich — Walne Zgromadzenie GWŻ w Warszawie</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+  .bz{
+    --bz-bg:#faf8f4; --bz-surface:#ffffff; --bz-ink:#1d1f24; --bz-muted:#5d6370;
+    --bz-line:#e3dfd6; --bz-accent:#1f4e8c; --bz-accent-soft:#e8eef7; --bz-warn:#8a3b12; --bz-warn-soft:#fbefe7;
+  }
+  .bz{max-width:760px;margin:0 auto;padding:8px 16px 40px}
+  .bz h1,.bz h2,.bz h3,.bz .kicker,.bz .stat b,.bz table,.bz figcaption,.bz .toc,.bz .note{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .bz .kicker{color:var(--bz-accent);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+  .bz h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:.3em 0 .4em}
+  .bz h2{font-size:26px;line-height:1.25;margin:2.4em 0 .5em;padding-top:.6em;border-top:1px solid var(--bz-line)}
+  .bz h3{font-size:19px;margin:1.6em 0 .3em}
+  .bz .lead{font-size:20px;color:var(--bz-muted)}
+  .bz a{color:var(--bz-accent)}
+  .bz .toc{background:var(--bz-surface);border:1px solid var(--bz-line);border-radius:10px;padding:14px 20px;font-size:15px;margin:28px 0}
+  .bz .toc ol{margin:6px 0 0;padding-left:20px}
+  .bz .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:20px 0}
+  .bz .stat{background:var(--bz-surface);border:1px solid var(--bz-line);border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.4;color:var(--bz-muted)}
+  .bz .stat b{display:block;font-size:30px;color:var(--bz-ink);margin-bottom:4px;font-variant-numeric:tabular-nums}
+  .bz blockquote{margin:1.4em 0;padding:4px 0 4px 18px;border-left:3px solid var(--bz-accent);font-style:italic}
+  .bz blockquote cite{display:block;font-style:normal;font-size:14px;color:var(--bz-muted);margin-top:6px}
+  .bz figure{margin:24px 0}
+  .bz .video{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden}
+  .bz .video.vertical{aspect-ratio:9/16;max-width:340px;margin:0 auto}
+  .bz .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .bz figcaption{font-size:14px;color:var(--bz-muted);margin-top:8px;text-align:center}
+  .bz .note{background:var(--bz-warn-soft);border-left:3px solid var(--bz-warn);padding:12px 16px;border-radius:6px;font-size:15px;margin:20px 0}
+  .bz .tablewrap{overflow-x:auto;margin:20px 0;border:1px solid var(--bz-line);border-radius:10px}
+  .bz table{border-collapse:collapse;width:100%;font-size:14px;background:var(--bz-surface);min-width:560px}
+  .bz th,.bz td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--bz-line)}
+  .bz thead th{background:var(--bz-accent-soft)}
+  .bz tbody th{font-weight:600;white-space:nowrap}
+  .bz td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .bz tr.total td{font-weight:700}
+  .bz .sources{font-size:14px;color:var(--bz-muted)}
+  .bz .sources li{margin-bottom:4px}
+
+  .bz{color:var(--bz-ink);font:17px/1.65 Georgia,"Times New Roman",serif;box-sizing:border-box}
+  .bz *{box-sizing:border-box}
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="brand" href="/">
+        <img src="/assets/logogwz.jpg" alt="Logo Gminy Wyznaniowej Żydowskiej w Warszawie" />
+        <span>Gmina Wyznaniowa Żydowska<br/>w Warszawie<br/><em style="font-weight:400; font-size:11px; color:var(--text-secondary);">(moja prywatna inicjatywa)</em></span>
+      </a>
+      <button class="nav-toggle" aria-label="Otwórz menu">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="/">Strona główna</a></li>
+        <li>
+          <button type="button">Gorące tematy</button>
+          <div class="dropdown">
+            <a href="/gorace-tematy/proces-synagoga.html">Proces o synagogę i Biały Budynek – dlaczego przegramy</a>
+            <a href="/gorace-tematy/laszon-hara.html">Laszon Hara</a>
+            <a href="/gorace-tematy/wynagrodzenia-w-gminie-i.html">Wynagrodzenia w Gminie I</a>
+            <a href="/gorace-tematy/wynagrodzenia-zarzadu.html">Wynagrodzenia Zarządu GWŻ</a>
+            <a href="/gorace-tematy/ofiary-mobbingu.html">Ofiary mobbingu w Gminie</a>
+            <a href="/gorace-tematy/budzet.html">Budżet GWŻ – dlaczego za 3 lata zbankrutujemy</a>
+            <a href="/gorace-tematy/symulator-budzetu.html">Symulator budżetu Gminy</a>
+            <a href="/gorace-tematy/ulica-smetna.html">Coraz bardziej smętna historia ulicy Smętnej</a>
+            <a href="/gorace-tematy/przeplaca.html">Dlaczego Gmina za wszystko przepłaca?</a>
+            <a href="/gorace-tematy/misiewicze.html">„Misiewicze” w akcji</a>
+            <a href="/gorace-tematy/zarzad-fatalnie.html">Dlaczego Zarząd tak fatalnie pracuje?</a>
+            <a href="/gorace-tematy/konflikt-interesow.html">O konflikcie interesów</a>
+            <a href="/gorace-tematy/sprawozdanie-nasza-gmina.html">Sprawozdanie – Nasza Gmina, nasza społeczność</a>
+            <a href="/gorace-tematy/bezpieczenstwo-spolecznosci.html">Bezpieczeństwo społeczności żydowskich – USA, W. Brytania, Francja</a>
+          </div>
+        </li>
+        <li>
+          <button type="button">Projekty uchwał</button>
+          <div class="dropdown">
+            <a href="/uchwaly/zrownowazenie-budzetu.html">Uchwała w sprawie zrównoważenia budżetu</a>
+            <a href="/uchwaly/regulamin-zarzadu.html">Uchwała w sprawie zmiany Regulaminu Prac Zarządu</a>
+            <a href="/uchwaly/polityka-zakupow.html">Uchwała w sprawie zmiany Polityki Zakupów</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page">
+  <article class="bz">
+
+<p class="kicker">Materiały na walne zgromadzenie</p>
+<h1>Ochrona i samoobrona społeczności żydowskich: USA, Wielka Brytania, Francja</h1>
+<p class="lead">Jak społeczności żydowskie w trzech krajach organizują swoje bezpieczeństwo po 7 października 2023 r. Omawiamy cztery organizacje, które reprezentują bardzo różne podejścia.</p>
+
+<nav class="toc" aria-label="Spis treści">
+  <strong>W tym tekście</strong>
+  <ol>
+    <li><a href="#kontekst">Kontekst: eskalacja zagrożeń</a></li>
+    <li><a href="#magen-am">Magen Am (USA)</a></li>
+    <li><a href="#lox">Lox and Loaded (USA)</a></li>
+    <li><a href="#ldj">Ligue de Défense Juive (Francja)</a></li>
+    <li><a href="#cst">Community Security Trust (Wielka Brytania)</a></li>
+    <li><a href="#porownanie">Porównanie czterech modeli</a></li>
+    <li><a href="#polska">A w Polsce? Koszt pozwolenia na broń</a></li>
+  </ol>
+</nav>
+
+<!-- ============ KONTEKST ============ -->
+<h2 id="kontekst">Kontekst: eskalacja zagrożeń po 7 października 2023</h2>
+<p>Atak Hamasu na Izrael z 7 października 2023 r. spowodował gwałtowny wzrost liczby incydentów antysemickich w Stanach Zjednoczonych, Wielkiej Brytanii i Francji. Społeczności żydowskie odpowiedziały rozbudową istniejących organizacji ochronnych i tworzeniem nowych, oddolnych inicjatyw samoobrony.</p>
+
+<div class="stats">
+  <div class="stat"><b>9 354</b>incydentów antysemickich w USA w 2024 r. To rekord w historii pomiarów ADL.</div>
+  <div class="stat"><b>5 583</b>incydenty antysemickie w Wielkiej Brytanii w okresie X 2023 – IX 2024 (dane CST)</div>
+  <div class="stat"><b>1 570</b>aktów antysemickich we Francji w 2024 r. (SPCJ / MSW)</div>
+</div>
+
+<p>Rośnie też poczucie zagrożenia wśród samych Żydów. Badania w każdym z trzech krajów stosowały inną metodologię, ale wszystkie pokazują ten sam trwały kierunek:</p>
+
+<div class="stats">
+  <div class="stat"><b>78%</b>Żydów w USA czuje się mniej bezpiecznie z powodu ataku z 7 października (AJC, 2025)</div>
+  <div class="stat"><b>35%</b>Żydów w Wielkiej Brytanii ocenia swoje bezpieczeństwo nisko (0–4 na 10). W 2023 r. było to 9% (JPR, 2025)</div>
+  <div class="stat"><b>86%</b>Żydów we Francji bardziej obawia się, że padnie ofiarą aktu antysemickiego (AJC / Fondapol, 2024)</div>
+</div>
+
+<!-- ============ MAGEN AM ============ -->
+<h2 id="magen-am">Magen Am (Stany Zjednoczone)</h2>
+<p>Magen Am to organizacja non-profit z siedzibą w Los Angeles. Zajmuje się kompleksowym bezpieczeństwem społeczności żydowskiej w Kalifornii, od szkoleń po fizyczną ochronę obiektów.</p>
+
+<figure>
+  <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/GZ6LEOu-mf4" title="What is Magen Am?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+  <figcaption>„What is Magen Am?” – film organizacji (j. angielski)</figcaption>
+</figure>
+
+<h3>Geneza</h3>
+<p>Organizację założył w 2016 r. 24-letni wówczas rabin Yossi Eilfort. Była to lokalna odpowiedź na potrzeby bezpieczeństwa społeczności żydowskiej w Los Angeles. Z czasem nieformalne szkolenia przekształciły się w pełnoprawny program, który obejmuje również ochronę prawną i legalne ramy działania.</p>
+<blockquote>„Wiedza teoretyczna to jedno, a legalna możliwość działania i ochrona prawna to drugie.”<cite>Rabin Yossi Eilfort, założyciel Magen Am</cite></blockquote>
+<p>Po 7 października do organizacji zaczęło zgłaszać się wiele osób, które wcześniej były sceptyczne wobec broni. Znacznie przyspieszyło to rozwój Magen Am.</p>
+
+<h3>Zakres działań i skala</h3>
+<ul>
+  <li><strong>Ochrona obiektów:</strong> usługi ochroniarskie dla 42 szkół i synagog w rejonie Los Angeles.</li>
+  <li><strong>Szkolenia strzeleckie:</strong> prywatne sesje treningowe z bronią palną oraz kursy CCW (ukrytego noszenia broni).</li>
+  <li><strong>Samoobrona:</strong> zajęcia z samoobrony i świadomości sytuacyjnej.</li>
+  <li><strong>Edukacja społeczności:</strong> programy dla rabinów, wolontariuszy i rodzin, w tym osób wcześniej niechętnych broni.</li>
+</ul>
+<p>W 2024 r. organizacja miała ok. 50 przeszkolonych wolontariuszy i zapowiadała zwiększenie tej liczby do 300 w ciągu dwóch lat. Oddziały działają w Los Angeles, w Orange County oraz w Phoenix w Arizonie.</p>
+
+<figure>
+  <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/x7sf56G5das" title="SecYOUR Community – Magen Am" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+  <figcaption>Kampania „SecYOUR Community” (j. angielski)</figcaption>
+</figure>
+
+<!-- ============ LOX AND LOADED ============ -->
+<h2 id="lox">Lox and Loaded (Stany Zjednoczone)</h2>
+<p>Lox and Loaded to ogólnokrajowy, apolityczny klub strzelecki dla amerykańskich Żydów i ich sojuszników. Uczy bezpiecznego posługiwania się bronią palną i świadomości sytuacyjnej.</p>
+
+<h3>Geneza</h3>
+<p>Klub założyła w marcu 2025 r. Gayle Pearlstein, która działa w rejonie Chicago i Cleveland. Zamiast przekazywać darowizny do Izraela, postanowiła prowadzić bezpłatne lekcje strzeleckie we własnej społeczności.</p>
+<blockquote>„Uczę was, byście sami byli swoimi pierwszymi ratownikami. Broń to tylko narzędzie i jak każdego narzędzia trzeba się nauczyć go używać.”<cite>Gayle Pearlstein, współzałożycielka Lox and Loaded</cite></blockquote>
+<p>Większość członków to osoby, które po raz pierwszy w życiu sięgają po broń. Wśród nich jest wielu seniorów, stąd hasło klubu: „Bubbe też teraz nosi broń”. W kwietniu 2026 r. amerykańskie Narodowe Stowarzyszenie Strzeleckie (NRA) ogłosiło pierwsze w swojej historii partnerstwo z żydowską organizacją strzelecką.</p>
+
+<figure>
+  <div class="video vertical"><iframe src="https://www.youtube-nocookie.com/embed/Uzs273ADZKw" title="Orthodox Jewish Woman teaches gun safety" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+  <figcaption>Ortodoksyjna Żydówka uczy bezpiecznego obchodzenia się z bronią (YouTube Shorts, j. angielski)</figcaption>
+</figure>
+
+<h3>Skala</h3>
+<div class="stats">
+  <div class="stat"><b>1 800+</b>członków (lipiec 2026)</div>
+  <div class="stat"><b>59</b>oddziałów w całym kraju</div>
+  <div class="stat"><b>24</b>stany USA z aktywnym oddziałem</div>
+</div>
+<p>Klub rozwinął się od pojedynczej lekcji strzeleckiej w 2025 r. do ponad 50 oddziałów i blisko dwóch tysięcy członków w niespełna półtora roku. Dołączają rodziny, seniorzy i osoby wcześniej niezwiązane z bronią, które obawiają się narastającej wrogości i braku systemowych rozwiązań. Zajęcia odbywają się w formule „Shoot and Schmooze”. To bezpłatny trening strzelecki połączony ze spotkaniem przy bajglach z łososiem (stąd nazwa: <em>lox</em> to wędzony łosoś). Celem organizacji jest oddział w każdym stanie USA, a w dalszej kolejności rozszerzenie działalności poza granice kraju.</p>
+
+<!-- ============ LDJ ============ -->
+<h2 id="ldj">Ligue de Défense Juive, LDJ (Francja)</h2>
+<p>LDJ powstała w 2000 r. jako francuska gałąź amerykańskiej Jewish Defense League (JDL). Był to skrajnie prawicowy ruch, założony w Nowym Jorku przez Meira Kahane. Organizacja przedstawia się jako obrońca francuskiej społeczności żydowskiej przed przejawami judeofobii i pełni funkcję nieformalnej ochrony oraz „służby porządkowej”.</p>
+
+<div class="note"><strong>Status prawny.</strong> Organizacja macierzysta JDL figuruje na amerykańskiej liście organizacji terrorystycznych od 2001 r. W 2014 r. francuskie Ministerstwo Spraw Wewnętrznych analizowało możliwość delegalizacji LDJ.</div>
+
+<p>LDJ liczy szacunkowo 100–300 członków. Jej twardy rdzeń to 30–40 osób, które potrafią zmobilizować do 200 uczestników.</p>
+
+<h3>Działania i kontrowersje po 7 października</h3>
+<ul>
+  <li><strong>Incydent z 12 listopada 2023 r.</strong> Podczas marszu przeciwko antysemityzmowi członkowie LDJ, pełniący nieformalną „służbę porządkową” przy kolumnie Zjednoczenia Narodowego (Rassemblement National), zaatakowali rowerzystę skandującego hasła przeciwko liderce RN.</li>
+  <li><strong>Metody działania.</strong> Organizacja jest krytykowana za brutalne metody: cyberprzemoc, groźby śmierci i fizyczne ataki na przeciwników.</li>
+  <li><strong>Rosnące poparcie.</strong> Mimo kontrowersyjnej reputacji po 7 października LDJ zyskała większe poparcie jako aktywny uczestnik działań przeciwko antysemityzmowi.</li>
+  <li><strong>Powiązania polityczne.</strong> Organizację łączy się ze środowiskami skrajnej prawicy, co budzi sprzeciw części francuskich instytucji żydowskich.</li>
+</ul>
+
+<figure>
+  <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/t35rxInKLEw" title="Szkolenie z miejskiej samoobrony dla ochrony społeczności żydowskiej w Paryżu" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+  <figcaption>Szkolenie z miejskiej samoobrony dla grupy chroniącej społeczność żydowską w Paryżu</figcaption>
+</figure>
+
+<!-- ============ CST ============ -->
+<h2 id="cst">Community Security Trust, CST (Wielka Brytania)</h2>
+<p>CST to organizacja charytatywna założona w 1994 r. Jest najbardziej zinstytucjonalizowanym z omawianych modeli. CST jest oficjalnym zarządcą rządowego programu <em>Jewish Community Protective Security Grant</em>, który finansuje ochronę synagog, szkół żydowskich i innych placówek społecznych.</p>
+
+<div class="stats">
+  <div class="stat"><b>2 000+</b>przeszkolonych wolontariuszy</div>
+  <div class="stat"><b>100+</b>etatowych pracowników</div>
+  <div class="stat"><b>250 mln £</b>finansowania na 2026 r.</div>
+</div>
+
+<p>Zakres działań CST:</p>
+<ul>
+  <li>fizyczna ochrona synagog, szkół i ośrodków społecznościowych,</li>
+  <li>doradztwo w zakresie zabezpieczeń,</li>
+  <li>współpraca z policją w zwalczaniu przestępstw z nienawiści.</li>
+</ul>
+<p>Liczba incydentów antysemickich w Wielkiej Brytanii podwoiła się w porównaniu z okresem sprzed 7 października 2023 r.</p>
+
+<figure>
+  <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/koM8Auo5zik" title="CST – Together We Protect 2024" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+  <figcaption>CST: „Together We Protect” (2024, j. angielski)</figcaption>
+</figure>
+
+<h3>Reakcja na eskalację zagrożeń</h3>
+<p><strong>Atak w Manchesterze, październik 2025.</strong> Urodzony w Syrii sprawca wjechał samochodem w uczestników nabożeństwa w Jom Kipur, a następnie zaatakował ich nożem. Zginęły dwie osoby. Był to najtragiczniejszy w skutkach atak antysemicki w Wielkiej Brytanii od dziesięcioleci. Po zamachu podniesiono krajowy poziom zagrożenia terrorystycznego.</p>
+<ul>
+  <li><strong>Weterani jednostek specjalnych:</strong> CST zaczęła zatrudniać byłych żołnierzy elitarnych brytyjskich jednostek do patrolowania żydowskich dzielnic Londynu i Manchesteru.</li>
+  <li><strong>Ataki podpaleniowe:</strong> podpalono cztery karetki żydowskiej organizacji charytatywnej Hatzola zaparkowane przy synagodze.</li>
+  <li><strong>Wsparcie rządu:</strong> rząd ogłosił rekordowy plan obejmujący 500 dodatkowych policjantów i setki milionów funtów na ochronę społeczności żydowskiej.</li>
+</ul>
+
+<!-- ============ PORÓWNANIE ============ -->
+<h2 id="porownanie">Porównanie czterech modeli</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th></th><th>Magen Am</th><th>Lox and Loaded</th><th>LDJ</th><th>CST</th></tr></thead>
+  <tbody>
+    <tr><th>Kraj</th><td>USA (Kalifornia, Arizona)</td><td>USA (ogólnokrajowa)</td><td>Francja</td><td>Wielka Brytania</td></tr>
+    <tr><th>Rok założenia</th><td>2016</td><td>2025</td><td>2000</td><td>1994</td></tr>
+    <tr><th>Charakter</th><td>Ochrona i szkolenia: broń, samoobrona</td><td>Klub strzelecki, szkolenia z broni palnej</td><td>Aktywistyczna, kontrowersyjna</td><td>Instytucjonalna fundacja charytatywna</td></tr>
+    <tr><th>Liczebność</th><td>ok. 50 wolontariuszy (cel: 300)</td><td>1 800+ członków, 59 oddziałów w 24 stanach</td><td>ok. 100–300 członków (rdzeń: 30–40)</td><td>2 000+ wolontariuszy, 100+ pracowników</td></tr>
+    <tr><th>Status</th><td>Legalna organizacja non-profit</td><td>Legalny klub strzelecki, partner NRA</td><td>Rozważana delegalizacja (2014); JDL uznana w USA za organizację terrorystyczną</td><td>Oficjalny partner rządu brytyjskiego</td></tr>
+  </tbody>
+</table>
+</div>
+<p>To cztery odmienne odpowiedzi społeczności żydowskich na wzrost zagrożeń: od instytucjonalnej współpracy z państwem (CST), przez oddolne szkolenia bezpieczeństwa i samoobrony (Magen Am, Lox and Loaded), po kontrowersyjny aktywizm (LDJ).</p>
+
+<!-- ============ POLSKA ============ -->
+<h2 id="polska">A w Polsce? Ile kosztuje pozwolenie na broń</h2>
+<p>W Polsce najczęściej wybieraną drogą do legalnego posiadania broni jest pozwolenie w celu kolekcjonerskim lub sportowym. Do kosztów uzyskania pozwolenia trzeba doliczyć zakup samej broni, atestowany sejf (wymagany do jej przechowywania) oraz wyrobienie legitymacji posiadacza broni.</p>
+
+<h3>Pozwolenie w celu kolekcjonerskim</h3>
+<div class="tablewrap">
+<table style="min-width:0">
+  <tbody>
+    <tr><td>Składka kolekcjonerska</td><td class="num">10 zł</td></tr>
+    <tr><td>Składka sportowa</td><td class="num">50 zł</td></tr>
+    <tr><td>Kurs przygotowujący do egzaminu</td><td class="num">240 zł</td></tr>
+    <tr><td>Badania lekarskie i psychiatryczne</td><td class="num">450 zł</td></tr>
+    <tr><td>Egzamin policyjny</td><td class="num">648 zł</td></tr>
+    <tr><td>Wniosek o pozwolenie na broń w celu kolekcjonerskim (tzw. pełne)</td><td class="num">242 zł</td></tr>
+    <tr><td>Wniosek o dopuszczenie do posiadania broni</td><td class="num">10 zł</td></tr>
+    <tr class="total"><td>Razem</td><td class="num">1 650 zł</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Pozwolenie w celu sportowym i kolekcjonerskim</h3>
+<div class="tablewrap">
+<table style="min-width:0">
+  <tbody>
+    <tr><td>Składka kolekcjonerska</td><td class="num">10 zł</td></tr>
+    <tr><td>Składka sportowa</td><td class="num">50 zł</td></tr>
+    <tr><td>Kurs przygotowujący do egzaminu</td><td class="num">240 zł</td></tr>
+    <tr><td>Lekarz do egzaminu na patent</td><td class="num">50 zł</td></tr>
+    <tr><td>Egzamin PZSS</td><td class="num">400 zł</td></tr>
+    <tr><td>Badania lekarskie i psychiatryczne</td><td class="num">450 zł</td></tr>
+    <tr><td>Wniosek o pozwolenie sportowe</td><td class="num">242 zł</td></tr>
+    <tr><td>Wniosek o pozwolenie na broń sportową w celu kolekcjonerskim</td><td class="num">242 zł</td></tr>
+    <tr><td>Wniosek o dopuszczenie</td><td class="num">10 zł</td></tr>
+    <tr class="total"><td>Razem</td><td class="num">1 800 zł</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="sources">Kwoty są orientacyjne i mogą się różnić w zależności od klubu, ośrodka szkoleniowego i lekarza.</p>
+
+<h2>Źródła danych</h2>
+<ul class="sources">
+  <li>ADL (Anti-Defamation League): Audit of Antisemitic Incidents 2024</li>
+  <li>CST (Community Security Trust): raporty o incydentach antysemickich</li>
+  <li>SPCJ (Service de Protection de la Communauté Juive) / francuskie MSW: bilans aktów antysemickich 2024</li>
+  <li>AJC (American Jewish Committee): State of Antisemitism in America 2025</li>
+  <li>JPR (Institute for Jewish Policy Research): badanie Żydów brytyjskich 2025</li>
+  <li>AJC / Fondapol: badanie Żydów we Francji 2024</li>
+  <li>Materiały organizacji Magen Am, Lox and Loaded, LDJ i CST</li>
+</ul>
+
+  </article>
+
+    <footer class="site-footer">Gmina Wyznaniowa Żydowska w Warszawie · <a href="/api/logout">Wyloguj się</a></footer>
+  </div>
+  <script src="/nav.js"></script>
+</body>
+</html>
