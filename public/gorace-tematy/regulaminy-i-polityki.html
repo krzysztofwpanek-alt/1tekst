@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aktualne regulaminy i polityki GWŻ — Walne Zgromadzenie GWŻ</title>
+  <link rel="stylesheet" href="/style.css" />
+<style>
+.reg{--rbg:#faf9f5;--card:#fff;--ink:#1f1f1d;--rmuted:#5b5b57;--line:#dcdad2;--racc:#185fa5;--accent-soft:#e8eef6;--mark:#fff3b0;color:var(--ink)}
+.reg .r-wrap{display:grid;grid-template-columns:250px minmax(0,1fr);gap:32px;align-items:start}
+.reg .r-aside{position:sticky;top:76px;max-height:calc(100vh - 92px);overflow:auto;font:14px/1.4 system-ui,sans-serif}
+.reg .r-label{font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--rmuted);margin:0 0 10px}
+.reg .r-aside input{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit;margin-bottom:14px}
+.reg .r-aside ol{list-style:none;margin:0;padding:0;counter-reset:d}
+.reg .r-aside li{counter-increment:d;margin:0}
+.reg .r-aside li a{display:flex;gap:10px;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--ink)}
+.reg .r-aside li a::before{content:counter(d);color:var(--rmuted);min-width:1.2em;font-variant-numeric:tabular-nums}
+.reg .r-aside li a:hover,.reg .r-aside li a.on{background:var(--accent-soft);color:var(--racc)}
+.reg .r-hits{color:var(--rmuted);font-size:13px;margin:-6px 0 12px;min-height:1em}
+.reg .r-main{min-width:0}
+.reg section.r-doc,.reg section.r-doc *:not(table):not(th):not(td):not(tr){overflow-wrap:anywhere}
+.reg .r-main > p:first-child{font:14px/1.6 system-ui,sans-serif;color:var(--rmuted);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:0}
+.reg section.r-doc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px clamp(16px,4vw,36px);margin:24px 0;scroll-margin-top:76px}
+.reg section.r-doc h2{font-size:clamp(20px,2.6vw,25px);line-height:1.3;margin:0 0 12px;color:var(--racc)}
+.reg section.r-doc h3{font-size:18px;margin:26px 0 8px}
+.reg .r-main table{border-collapse:collapse;width:100%;font:14px/1.5 system-ui,sans-serif;margin:12px 0}
+.reg .r-main th,.reg .r-main td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.reg .r-main th{color:var(--rmuted);font-weight:600}
+.reg .r-tablewrap{overflow-x:auto}
+.reg .r-main ol,.reg .r-main ul{padding-left:1.4em}
+.reg .r-main li{margin:4px 0}
+.reg li.r-chk{list-style:none;margin-left:-1.2em}
+.reg .r-main em{color:var(--rmuted)}
+.reg .r-main blockquote{margin:12px 0;padding:10px 16px;border-left:3px solid var(--line);font-family:ui-monospace,monospace;font-size:14px}
+.reg mark{background:var(--mark);color:inherit;border-radius:2px}
+@media (max-width:860px){
+  .reg .r-wrap{grid-template-columns:1fr;gap:12px}
+  .reg .r-aside{position:static;max-height:none;border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px}
+  .reg section.r-doc{scroll-margin-top:70px}
+}
+.page.reg-page{max-width:1180px}
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="brand" href="/">
+        <img src="/assets/logogwz.jpg" alt="Logo Gminy Wyznaniowej Żydowskiej w Warszawie" />
+        <span>Gmina Wyznaniowa Żydowska<br/>w Warszawie<br/><em style="font-weight:400; font-size:11px; color:var(--text-secondary);">(moja prywatna inicjatywa)</em></span>
+      </a>
+      <button class="nav-toggle" aria-label="Otwórz menu">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="/">Strona główna</a></li>
+        <li>
+          <button type="button">Gorące tematy</button>
+          <div class="dropdown">
+            <a href="/gorace-tematy/proces-synagoga.html">Proces o synagogę i Biały Budynek – dlaczego przegramy</a>
+            <a href="/gorace-tematy/laszon-hara.html">Laszon Hara</a>
+            <a href="/gorace-tematy/wynagrodzenia-w-gminie-i.html">Wynagrodzenia w Gminie I</a>
+            <a href="/gorace-tematy/wynagrodzenia-zarzadu.html">Wynagrodzenia Zarządu GWŻ</a>
+            <a href="/gorace-tematy/ofiary-mobbingu.html">Ofiary mobbingu w Gminie</a>
+            <a href="/gorace-tematy/budzet.html">Budżet GWŻ – dlaczego za 3 lata zbankrutujemy</a>
+            <a href="/gorace-tematy/symulator-budzetu.html">Symulator budżetu Gminy</a>
+            <a href="/gorace-tematy/ulica-smetna.html">Coraz bardziej smętna historia ulicy Smętnej</a>
+            <a href="/gorace-tematy/przeplaca.html">Dlaczego Gmina za wszystko przepłaca?</a>
+            <a href="/gorace-tematy/misiewicze.html">„Misiewicze” w akcji</a>
+            <a href="/gorace-tematy/zarzad-fatalnie.html">Dlaczego Zarząd tak fatalnie pracuje?</a>
+            <a href="/gorace-tematy/konflikt-interesow.html">O konflikcie interesów</a>
+            <a href="/gorace-tematy/nieruchomosci-gminne.html">Nieruchomości gminne</a>
+            <a href="/gorace-tematy/sprawozdanie-nasza-gmina.html">Sprawozdanie – Nasza Gmina, nasza społeczność</a>
+          </div>
+        </li>
+        <li>
+          <button type="button">Projekty uchwał</button>
+          <div class="dropdown">
+            <a href="/uchwaly/zrownowazenie-budzetu.html">Uchwała w sprawie zrównoważenia budżetu</a>
+            <a href="/uchwaly/regulamin-zarzadu.html">Uchwała w sprawie zmiany Regulaminu Prac Zarządu</a>
+            <a href="/uchwaly/polityka-zakupow.html">Uchwała w sprawie zmiany Polityki Zakupów</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page content-page reg-page">
+    <p class="breadcrumb"><a href="/">Strona główna</a> / Gorące tematy</p>
+    <h1>Aktualne regulaminy i polityki GWŻ</h1>
+    <p style="color:var(--text-secondary)">Obowiązujące regulaminy, polityki i procedury Gminy Wyznaniowej Żydowskiej w Warszawie, przepisane ze skanów oryginałów.</p>
+    <div class="reg"><div class="r-wrap">
+<aside class="r-aside">
+    <p class="r-label">Dokumenty</p>
+    <input id="q" type="search" placeholder="Szukaj w dokumentach…" aria-label="Szukaj w dokumentach">
+    <div class="r-hits" id="hits"></div>
+    <ol id="nav">
+<li><a href="#regulamin-pracy-zarzadu-gminy-wyznaniowej-zydowskiej-w-warsz">Regulamin pracy Zarządu</a></li>
+<li><a href="#proces-rekrutacji-na-znaczace-stanowiska-w-gminie-lub-w-zwia">Proces rekrutacji</a></li>
+<li><a href="#zasady-etycznego-postepowania-wytyczne-oraz-polityka-przeciw">Zasady etyczne i konflikt interesów</a></li>
+<li><a href="#polityka-zapobiegania-oszustwom">Polityka zapobiegania oszustwom</a></li>
+<li><a href="#polityka-zglaszania-nieprawidlowosci">Polityka zgłaszania nieprawidłowości</a></li>
+<li><a href="#polityka-poufnosci">Polityka poufności</a></li>
+<li><a href="#polityka-rachunkowosci">Polityka rachunkowości</a></li>
+<li><a href="#instrukcja-obiegu-i-kontroli-dowodow-ksiegowych-w-gminie-wyz">Instrukcja obiegu dowodów księgowych</a></li>
+<li><a href="#procedura-zakupowa-w-gminie-wyznaniowej-zydowskiej-w-warszaw">Procedura zakupowa</a></li>
+    </ol>
+  </aside>
+<div class="r-main" id="content">
+<p>Zbiór przepisany ze skanów dziewięciu dokumentów wewnętrznych Gminy Wyznaniowej Żydowskiej w Warszawie, w kolejności z § 2 Regulaminu pracy Zarządu. Fragmenty ucięte na krawędziach skanów uzupełniono z kontekstu i oznaczono [w nawiasach kwadratowych]; podpisy zastąpiono opisem.</p>
+<table>
+<thead>
+<tr>
+<th>Dokument</th>
+<th>Zatwierdzony</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regulamin pracy Zarządu</td>
+<td>uchwała Zarządu z 10 kwietnia 2018 r.</td>
+</tr>
+<tr>
+<td>Proces rekrutacji na znaczące stanowiska</td>
+<td>bez daty</td>
+</tr>
+<tr>
+<td>Zasady etycznego postępowania. Wytyczne oraz polityka przeciwdziałania konfliktom</td>
+<td>uchwała Zarządu z 25 października 2017 r.</td>
+</tr>
+<tr>
+<td>Polityka zapobiegania oszustwom</td>
+<td>uchwała Zarządu z 25 października 2017 r.</td>
+</tr>
+<tr>
+<td>Polityka zgłaszania nieprawidłowości</td>
+<td>uchwała Zarządu z 25 października 2017 r.</td>
+</tr>
+<tr>
+<td>Polityka poufności</td>
+<td>uchwała Zarządu z 25 października 2017 r.</td>
+</tr>
+<tr>
+<td>Polityka rachunkowości</td>
+<td>uchwała Zarządu z 25 października 2017 r.</td>
+</tr>
+<tr>
+<td>Instrukcja obiegu i kontroli dowodów księgowych</td>
+<td>bez daty</td>
+</tr>
+<tr>
+<td>Procedura zakupowa</td>
+<td>uchwała Zarządu z 10 kwietnia 2018 r.</td>
+</tr>
+</tbody>
+</table>
+<section class="r-doc"><h2 id="regulamin-pracy-zarzadu-gminy-wyznaniowej-zydowskiej-w-warsz">Regulamin pracy Zarządu Gminy Wyznaniowej Żydowskiej w Warszawie</h2>
+<p><em>(zatwierdzony uchwałą Zarządu GWŻ w Warszawie z dn. 10 kwietnia 2018 r.)</em></p>
+<p>Zarząd Gminy Wyznaniowej Żydowskiej w Warszawie jest ustawowym organem Gminy i działa na podstawie Ustawy o stosunku państwa do gmin wyznaniowych żydowskich w RP z dnia 20 lutego 1997 r., Prawa Wewnętrznego Wyznaniowej Wspólnoty Żydowskiej z dnia 15 Tewet 5766/stycznia 2006 r. (z późniejszymi zmianami) oraz niniejszego Regulaminu.</p>
+<p>Niniejszy Regulamin określa zakres i zasady działania Zarządu Gminy.</p>
+<h3 id="sklad-zarzadu-1">Skład Zarządu — § 1</h3>
+<ol>
+<li>Zarząd Gminy składa się z pięciu do siedmiu członków.</li>
+<li>Zarząd, na pierwszym swym posiedzeniu, któremu przewodniczy najstarszy wiekiem członek Zarządu Gminy, wybiera Prezydium Zarządu: Przewodniczącego, jednego lub dwóch Wiceprzewodniczących, Skarbnika, a w razie konieczności Sekretarza Zarządu Gminy. W miarę konieczności uzupełnienia jego składu dokonuje się w pierwszym możliwym terminie z zachowaniem trybu głosowania.</li>
+<li>Powołanie członka Zarządu nie oznacza konieczności nawiązania z nim stosunku pracy tylko powierzenie funkcji organu Gminy.</li>
+<li>Funkcji Przewodniczącego Zarządu nie można pełnić dłużej niż przez dwie następujące po sobie kadencje, o ile Walne Zebranie członków Gminy nie uchwali odstąpienia od tego zakazu.</li>
+<li>Członkowie Zarządu mogą sprawować swoje obowiązki tylko osobiście.</li>
+</ol>
+<h3 id="prowadzenie-spraw-gminy-2">Prowadzenie spraw Gminy — § 2</h3>
+<ol>
+<li>Członkowie Zarządu sprawują swoje funkcje kierując się standardami uczciwości i etycznego postępowania oraz mając na uwadze przede wszystkim interes Gminy.</li>
+<li>
+<p>Podejmowane przez Zarząd czynności opierają się na zasadach określonych w Uchwałach Walnego Zebrania oraz zasadach, politykach i procedurach Gminy Wyznaniowej Żydowskiej w Warszawie, w tym:</p>
+<ul>
+<li><em>Zasadach dotyczących procesu rekrutacji na znaczące stanowiska;</em></li>
+<li><em>Regulacjach dot. Przeciwdziałania mobbingowi;</em></li>
+<li><em>Regulacjach dot. Równego traktowania w zatrudnieniu;</em></li>
+<li><em>Zasadach etycznego postępowania. Wytycznych i polityce przeciwdziałania konfliktom;</em></li>
+<li><em>Polityce zapobiegania oszustwom;</em></li>
+<li><em>Polityce zgłaszania nieprawidłowości;</em></li>
+<li><em>Polityce poufności;</em></li>
+<li><em>Polityce rachunkowości;</em></li>
+<li><em>Instrukcji obiegu i kontroli dowodów księgowych;</em></li>
+<li><em>Procedurze zakupowej.</em></li>
+</ul>
+<p>Zmiana powyższych polityk, regulacji i zasad wymaga uchwały Zarządu lub Walnego Zebrania Członków Gminy.
+3. Podejmowanie przez Zarząd czynności dotyczących gospodarowania majątkiem Gminy określa Uchwała nr 3 Nadzwyczajnego Walnego Zebrania Członków Gminy z dn. 7 września 2014 r. w sprawie zasad gospodarowania majątkiem Gminy.
+4. Postanowienia § 2 nie uchybiają uchwalonym przez Radę Związku zasadom i wytycznym dotyczącym gospodarowania majątkiem gminy oraz uchwałom Walnego Zebrania Członków Gminy.
+5. Postanowienia § 2 nie mają wpływu na zasady reprezentacji Gminy w stosunkach zewnętrznych wynikające z postanowień art. 25 ust. 3 Ustawy z dnia 20 lutego 1997 r. o stosunku Państwa do gmin wyznaniowych żydowskich w Rzeczypospolitej Polskiej (tj. Dz. U. z 2014 r. poz. 1798).</p>
+</li>
+</ol>
+<h3 id="kompetencje-zarzadu-3">Kompetencje Zarządu — § 3</h3>
+<ol>
+<li>Zarząd reprezentuje Gminę na zewnątrz w stosunku do władz, urzędów i osób trzecich, w postępowaniu przed sądem oraz organami i urzędami państwowymi.</li>
+<li>Do reprezentacji i składania oświadczeń woli w imieniu Gminy uprawnieni są łącznie działający dwaj członkowie Zarządu Gminy, w tym Przewodniczący Zarządu.</li>
+<li>Do zakresu działania Zarządu Gminy należy:<ul>
+<li>a) prowadzenie spraw bieżących Gminy zgodnie z Prawem i uchwałami władz Wspólnoty żydowskiej na terenie RP;</li>
+<li>b) zwoływanie Walnych Zebrań oraz przygotowywanie projektów uchwał Walnego Zebrania, a także wykonywanie uchwał podjętych przez Walne Zebranie;</li>
+<li>c) sporządzanie sprawozdań z działalności i przedstawianie ich do uchwalenia Walnemu Zebraniu;</li>
+<li>d) podejmowanie uchwał w sprawach przyjmowania nowych członków, zawieszania w prawach członkowskich i wykluczania członków;</li>
+<li>e) organizowanie dla potrzebujących członków Gminy pomocy w zakresie spraw bytowych;</li>
+<li>f) prowadzenie spraw z zakresu ochrony materialnego dziedzictwa przodków i przywracania żydowskiej własności gmin wyznaniowych i innych wyznaniowych żydowskich osób prawnych;</li>
+<li>g) gospodarowanie majątkiem nieruchomym i ruchomym w granicach określonych Prawem i uchwałami władz Wspólnoty, tradycją rabiniczną i zasadami judaizmu;</li>
+<li>h) powoływanie i odwoływanie głównego księgowego Gminy, kierownika lub dyrektora biura Gminy oraz wykonywanie funkcji pracodawcy w stosunkach pracy;</li>
+<li>i) prowadzenie rekrutacji w oparciu o przyjęte przez Zarząd zasady opisane w dokumencie: <em>„Proces rekrutacji na znaczące stanowiska w Gminie lub zw. z nią miejscach (np. spółka AVIR)”</em> oraz przydzielanie stanowisk pracowniczych w Gminie i ustalanie wysokości wynagrodzenia w oparciu o obowiązujący w Gminie Regulamin wynagradzania oraz Regulamin pracy;</li>
+<li>j) przyznawanie premii, nagród oraz nakładanie kar na pracowników Gminy;</li>
+<li>k) współpraca z Zarządem Związku Gmin Wyznaniowych Żydowskich w RP;</li>
+<li>l) zatrudnianie rabinów, podrabinów i innych duchownych.</li>
+</ul>
+</li>
+<li>Ponadto, w ramach prowadzenia spraw bieżących, do obowiązków Zarządu należy:<ul>
+<li>a) Wykonywanie i prowadzenie dokumentacji czynności organizacyjnych dokonywanych przez Gminę.</li>
+<li>b) Prowadzenie pełnej dokumentacji działalności Gminy w sposób wynikający z obowiązujących przepisów z uwzględnieniem wszelkich zdarzeń finansowych, prawnych oraz innych faktów mających znaczenie dla sytuacji Gminy.</li>
+<li>c) Udzielanie organom kontrolującym oraz Walnemu Zebraniu członków Gminy wyczerpujących wyjaśnień wraz z przedstawieniem żądanych dokumentów i materiałów dotyczących działalności Gminy.</li>
+<li>d) Rozpatrywanie ocen i zaleceń kontrolnych i pokontrolnych, jak również ich realizacja.</li>
+<li>e) Zawieranie umów i zaciąganie zobowiązań.</li>
+<li>f) Sporządzanie projektów i uchwalanie budżetów Gminy.</li>
+<li>g) Prowadzenie dokumentacji związanej ze zwołaniem i przebiegiem Walnych Zebrań członków Gminy.</li>
+<li>h) Przechowywanie uchwał i protokołów z posiedzeń Zarządu Gminy.</li>
+</ul>
+</li>
+<li>Członkowie Zarządu, w związku ze sprawowaniem swojej funkcji w Zarządzie, mogą zostać zatrudnieni na podstawie stosunku pracy lub umowy cywilnoprawnej. Wysokość ich wynagrodzenia określa uchwała Zarządu.</li>
+</ol>
+<h3 id="posiedzenia-zarzadu-4">Posiedzenia Zarządu — § 4</h3>
+<ol>
+<li>Posiedzenia Zarządu Gminy odbywają się w miarę potrzeb, jednak nie rzadziej, niż raz na kwartał.</li>
+<li>Posiedzenia Zarządu w terminach innych niż wynikające z postanowień ust. 1 zwołuje Przewodniczący z własnej inicjatywy lub na wniosek Komisji Rewizyjnej. O terminie i przewidywanym przedmiocie obrad Zarządu Przewodniczący informuje członków Zarządu za pośrednictwem poczty elektronicznej.</li>
+<li>W przypadku nie zwołania przez Przewodniczącego zebrania w terminie przewidzianym w ust. 1, uprawnienie jego zwołania przysługuje Wiceprzewodniczącemu lub Sekretarzowi Zarządu Gminy, a także grupie członków Zarządu nie mniejszej jednak niż 40% jego składu.</li>
+<li>Zebrania Zarządu odbywają się w siedzibie Gminy, chyba, że wszyscy członkowie Zarządu wyrażą zgodę na odbycie posiedzenia w innym miejscu.</li>
+<li>Zarządu jest ważne i zdolne do podejmowania uchwał, jeżeli wszyscy członkowie Zarządu zostali o nim powiadomieni, a obecnych jest co najmniej 50% członków Zarządu.</li>
+<li>Każdy z członków Zarządu powinien zostać zawiadomiony o terminie posiedzenia i porządku obrad co najmniej na 2 dni przed planowanym zebraniem, a porządek posiedzenia wyłożony w Biurze Zarządu Gminy.</li>
+<li>Ogłoszenia o zwołaniu posiedzenia Zarządu wysyłane są do członków Gminy drogą mailową oraz wywieszane w gablotach na terenie Gminy z minimum dwudniowym wyprzedzeniem.</li>
+<li>W sprawach nagłych, wymagających natychmiastowego rozstrzygnięcia, posiedzenie Zarządu może odbyć się pomimo braku jego formalnego zwołania. Posiedzenie takie jest ważne i zdolne do podejmowania uchwał, jeżeli uczestniczy w nim co najmniej 50% członków Zarządu.</li>
+<li>Posiedzeniom Zarządu przewodniczy Przewodniczący Zarządu, a w przypadku jego nieobecności Wiceprzewodniczący Zarządu lub członek Zarządu wskazany przez Przewodniczącego.</li>
+<li>Przewodniczący Zarządu lub inny członek Zarządu otwiera posiedzenie Zarządu i stwierdza jego prawomocność. Nowe punkty porządku obrad mogą być wprowadzone, jeżeli członkowie Zarządu, w drodze głosowania, wyrażają zgodę na umieszczenie ich w porządku posiedzenia.</li>
+<li>Prowadzący posiedzenie Zarządu udziela głosu w kolejności zgłaszania się.</li>
+<li>W posiedzeniach Zarządu mogą brać udział członkowie Komisji Rewizyjnej, Sądu Polubownego, członkowie Gminy oraz osoby trzecie. Udział osób trzecich wymaga uprzedniej decyzji Zarządu.</li>
+<li>W posiedzeniach Zarządu Gminy mogą uczestniczyć członkowie Gminy, jednak prawo do zabrania głosu w dyskusji mają wyłącznie pod warunkiem udzieleniu im go przez osobę prowadzącą zebranie.</li>
+<li>Decyzją Przewodniczącego Zarządu posiedzenie Zarządu może być ograniczone do ścisłego grona członków Zarządu i Komisji Rewizyjnej w szczególności, gdy omawiane kwestie dotyczą spraw personalnych, kadrowych, z zakresu pomocy społecznej, negocjacji handlowych lub takich, w których Zarząd zobligowany został, na mocy zawartych zobowiązań, np. do nieujawniania tajemnicy handlowej lub zachowania poufności.</li>
+<li>Po wyczerpaniu porządku obrad prowadzący zamyka zebranie.</li>
+</ol>
+<p><em>(Dalsze ustępy § 4 mają w oryginale numerację od początku.)</em></p>
+<ol>
+<li>Z posiedzenia Zarządu sporządza się protokół. Protokół powinien zawierać:<ul>
+<li>datę i miejsce posiedzenia;</li>
+<li>nazwiska i imiona członków Zarządu uczestniczących w posiedzeniu;</li>
+<li>stwierdzenie, że wszyscy członkowie Zarządu zostali prawidłowo zawiadomieni oraz że w posiedzeniu uczestniczy wymagana Prawem Wewnętrznym liczba członków Zarządu, w związku z czym jest ono prawomocne i zdolne do podejmowania uchwał;</li>
+<li>porządek obrad zgodny jest z zawiadomieniem o zwołaniu posiedzenia;</li>
+<li>przebieg dyskusji w poszczególnych punktach obrad;</li>
+<li>decyzje Zarządu przyjęte w formie uchwały;</li>
+<li>stwierdzenie o wyczerpaniu porządku obrad;</li>
+<li>podpisy protokolanta i osoby przewodniczącej posiedzeniu.</li>
+</ul>
+</li>
+<li>Do protokołu należy dołączyć materiały merytoryczne stanowiące podstawę rozstrzygnięć zapadłych na posiedzeniu.</li>
+<li>Protokoły są przechowywane w Biurze Zarządu Gminy.</li>
+</ol>
+<h3 id="uchwaly-zarzadu-5">Uchwały Zarządu — § 5</h3>
+<ol>
+<li>Wykonując swoje zadania Zarząd podejmuje uchwały, decyzje i dokonuje innych stosownych czynności.</li>
+<li>Uchwały Zarządu zapadają na posiedzeniach.</li>
+<li>W przypadkach niecierpiących zwłoki czynność może być podjęta na podstawie uchwały przyjętej w trybie obiegowym, tj. drogą elektroniczną lub w formie indywidualnego zbierania głosów przez Zarząd.</li>
+<li>Uchwały podjęte na posiedzeniach Zarządu zapadają w obecności co najmniej 50% członków Zarządu.</li>
+<li>Uchwały zapadają zwykłą większością głosów, w przypadku równej ilości głosów decyduje głos Przewodniczącego.</li>
+<li>Uchwały w przedmiocie wykluczenia członka Gminy zapadają w obecności co najmniej 60% członków Zarządu Gminy.</li>
+<li>Biuro Zarządu Gminy prowadzi rejestr podjętych uchwał i decyzji.</li>
+<li>Uchwała powinna zawierać:<ul>
+<li>dokładną datę i tryb podjęcia uchwały;</li>
+<li>określenie, w jakiej sprawie została podjęta;</li>
+<li>w razie konieczności podstawę prawną;</li>
+<li>głosy oddane za uchwałą, wstrzymujące się oraz przeciwne uchwale;</li>
+<li>podpisy co najmniej dwóch członków Zarządu, w tym Przewodniczącego.</li>
+</ul>
+</li>
+</ol>
+<h3 id="dostep-do-informacji-dotyczacej-dzialalnosci-gminy-6">Dostęp do informacji dotyczącej działalności Gminy — § 6</h3>
+<ol>
+<li>Dostęp do danych ujawnionych w dokumentach dotyczących działalności Gminy przysługuje:<ul>
+<li>a) Członkom Zarządu Gminy.</li>
+<li>b) Członkom Komisji Rewizyjnej Gminy na wniosek złożony przez Komisję do Zarządu Gminy, określający przedmiot i zakres kontroli oraz żądane do wglądu dokumenty.</li>
+</ul>
+</li>
+<li>Przewodniczący Zarządu działający wspólnie wraz z drugim członkiem Zarządu, ma prawo do klasyfikacji i oznaczenia klauzulą poufności tych dokumentów dotyczących działalności Gminy, których ujawnienie mogłoby narazić Gminę na znaczne straty finansowe lub wizerunkowe.</li>
+<li>Informacje niejawne stanowiące tajemnicę służbową oznaczone klauzulą POUFNE podlegają ewidencji w Biurze Zarządu Gminy i muszą być przechowywane w oddzielnych szafach metalowych bądź ich częściach, jeżeli pozwalają one na ich zamknięcie.</li>
+<li>Członek Gminy, w zakresie dostępu do dokumentów, ma prawo otrzymania Prawa Wewnętrznego Wyznaniowej Wspólnoty Żydowskiej w RP oraz uzyskać wgląd do polityk, regulaminów, procedur, uchwał i decyzji Zarządu Gminy, protokołów z posiedzeń Zarządu Gminy, protokołów kontrolnych Komisji Rewizyjnej Gminy, a także zapoznać się z budżetem Gminy oraz audytami i sprawozdaniami finansowymi Zarządu.</li>
+<li>
+<p>Członek Gminy musi się liczyć z ograniczeniami w zakresie dostępu do dokumentów Gminy.</p>
+<p>Zarząd Gminy może odmówić członkowi wglądu do umów zawieranych z osobami trzecimi i innych dokumentów, jeżeli naruszałoby to prawa osób trzecich lub jeżeli istnieje uzasadniona obawa, że członek wykorzysta pozyskane informacje w celach sprzecznych z interesem Gminy i przez to wyrządzi Gminie szkodę.</p>
+<p>Członek, któremu odmówiono wglądu do dokumentów Gminy może złożyć wniosek do Komisji Rewizyjnej Gminy o zobowiązanie Zarządu do udostępnienia tych umów i/lub innych dokumentów Komisji Rewizyjnej i o zapoznanie go z wnioskami z jej kontroli.</p>
+</li>
+</ol>
+<h3 id="postanowienia-koncowe-7">Postanowienia końcowe — § 7</h3>
+<ol>
+<li>Regulamin Pracy Zarządu uchwala Zarząd Gminy.</li>
+<li>Zmiany niniejszego Regulaminu wymagają uchwały Zarządu.</li>
+<li>Niniejszy Regulamin wchodzi w życie w dniu jego przyjęcia w drodze uchwały Zarządu Gmin.</li>
+</ol>
+<p><em>Podpisy: Anna Chipczyńska — Przewodnicząca Zarządu; Anna Bakuła — Skarbnik.</em></p>
+</section><section class="r-doc"><h2 id="proces-rekrutacji-na-znaczace-stanowiska-w-gminie-lub-w-zwia">Proces rekrutacji na znaczące stanowiska w Gminie lub w związanych z nią miejscach (np. spółka AVIR)</h2>
+<ol>
+<li>Ustalenie przez Zarząd kryteriów, jakie powinna spełniać osoba ubiegająca się o dane stanowisko wraz z zakresem obowiązków.</li>
+<li>Ustalenie przez Zarząd grona osób dokonującego wyboru kandydata, tzw. Komisji Rekrutacyjnej. W skład Komisji Rekrutacyjnej wchodzi 2-3 członków Zarządu (w tym członek/członkini Zarządu odpowiedzialny/a za dany dział), Kierownik Biura Zarządu, kierownik lub oddelegowany pracownik działu, w ramach którego prowadzona jest rekrutacja.</li>
+<li>Po zapoznaniu się z aplikacjami kandydatów Komisja Rekrutacyjna przedstawi Zarządowi:<ul>
+<li>a. podsumowanie nadesłanych propozycji w formie zestawienia zawierającego przede wszystkim liczbę nadesłanych aplikacji oraz liczbę kandydatów spełniających kryteria określone w ogłoszeniu o pracę;</li>
+<li>b. uzupełniony formularz oceny spełniania przez kandydatów ustalonych kryteriów (ocena w skali od 1 do 5 z możliwością zamieszczenia komentarza);</li>
+<li>c. rekomendację dalszych rozmów z wybranymi kandydatami wraz z ich aplikacjami.</li>
+</ul>
+</li>
+<li>Kandydaci, którzy uzyskali najwyższą punktację, zapraszani są na rozmowę kwalifikacyjną. Liczba i lista zaproszonych na rozmowę kwalifikacyjną osób zostanie ustalona przez Komisję Rekrutacyjną, z podaniem informacji Zarządowi, do ewentualnej weryfikacji. Wstępna rozmowa kwalifikacyjna z wybranymi kandydatami będzie przeprowadzona przez Komisję Rekrutacyjną, której skład może być poszerzony o dodatkowych członków Zarządu lub eksperta w danej dziedzinie.</li>
+<li>Wyniki rozmowy kwalifikacyjnej przedstawiane są Zarządowi w formie rekomendacji, a ten podejmuje decyzję o odbyciu ew. drugiej rozmowy kwalifikacyjnej lub decyzję, w formie uchwały, o zatrudnieniu kandydata na dane stanowisko. Zarząd może podjąć decyzję o wstrzymaniu procesu rekrutacji lub jego przedłużeniu.</li>
+<li>Na każdym etapie rekrutacji Zarząd może podjąć decyzję o wprowadzeniu dodatkowego zadania do wykonania weryfikującego umiejętności kandydatów.</li>
+</ol>
+<p><em>Podpisy: Anna Bakuła — Skarbnik; Anna Chipczyńska — Przewodnicząca Zarządu.</em></p>
+</section><section class="r-doc"><h2 id="zasady-etycznego-postepowania-wytyczne-oraz-polityka-przeciw">Zasady etycznego postępowania. Wytyczne oraz polityka przeciwdziałania konfliktom („Zasady”)</h2>
+<p><em>(zatwierdzone uchwałą Zarządu GWŻ w Warszawie dn. 25 października 2017 r.)</em></p>
+<h3 id="1-wprowadzenie">1. Wprowadzenie</h3>
+<p>Gmina Wyznaniowa Żydowska w Warszawie (zwana dalej „GWŻ w Warszawie” lub „Gminą”) została powołana na mocy Ustawy o stosunku Państwa do gmin wyznaniowych żydowskich w RP z dn. 20 lutego 1997 r. (Dz. U. nr 41, poz. 251) (zwana dalej „Ustawą”) w celu „swobodnego wykonywania zasad prawa mojżeszowego oraz zarządzania swoimi sprawami”. Zgodnie z art. 7 ust. 1 Ustawy, gminy wyznaniowe żydowskie, w tym GWŻ w Warszawie, rządzą się własnym prawem wewnętrznym, tj. Prawem wewnętrznym wyznaniowej wspólnoty żydowskiej w RP uchwalonej przez Związek Gmin Wyznaniowych Żydowskich w Polsce dn. 15 stycznia 2006 r. Zarząd Gminy Wyznaniowej Żydowskiej w Warszawie jest przekonany, że zaufanie, którym cieszy się GWŻ w Warszawie, opiera się na utrzymywaniu najwyższych standardów działania, zgodnych z zasadami etycznymi i prawnymi. GWŻ w Warszawie stoi także na stanowisku, że wszystkie „Osoby Zaangażowane” muszą zachowywać się w taki sposób, by nie zaistniało nawet podejrzenie wystąpienia konfliktu pomiędzy interesami osobistymi jednostki i organizacyjnymi GWŻ w Warszawie. Termin „Osoby Zaangażowane” obejmuje członków Zarządu, Komisji Rewizyjnej, Sądu Polubownego, kierownictwo i innych kluczowych pracowników i współpracowników Gminy Wyznaniowej Żydowskiej w Warszawie. Właściwym jest posiadanie polityki rozwiązywania potencjalnych konfliktów interesu. Polityka ta ma na celu wzbudzenie zaufania publicznego do GWŻ w Warszawie, zapewnienia, że wszystkie decyzje podejmowane są wyłącznie w celu wspierania działalności GWŻ w Warszawie, bez faworyzowania lub wyróżniania w oparciu o względy osobiste i zapewnienia postępowania według najwyższych standardów etycznych.</p>
+<p>W celu zapewnienia dalszego stosowania najwyższych standardów, GWŻ w Warszawie zawrze opis niniejszych standardów w Zasadach, aby stworzyć ramy informacyjne dla Osób Zaangażowanych.</p>
+<h3 id="2-ogolne-zasady-etycznego-postepowania-i-konflikt-interesow">2. Ogólne zasady etycznego postępowania i konflikt interesów</h3>
+<p>Osoby Zaangażowane muszą być świadome, że służą interesom publicznym oraz dobru społeczności żydowskiej. W związku z tym, mają obowiązek prowadzenia wszelkich spraw GWŻ w Warszawie na najwyższym poziomie etycznym i według najwyższych standardów fiskalnych.</p>
+<p>Wszystkie Osoby Zaangażowane mają obowiązek być lojalne wobec GWŻ w Warszawie. Obowiązek ten wymaga od Osoby Zaangażowanej działania w dobrej wierze i w najlepszym interesie Gminy Wyznaniowej Żydowskiej w Warszawie, a nie w swoim interesie lub w interesie innych osób lub organizacji, których cel działalności lub interes sprzeczny jest z interesem GWŻ w Warszawie.</p>
+<p>Konflikt interesów powstaje zawsze w przypadku transakcji, inwestycji, umów, grantów, programów lub innych zdarzeń, w których (1) uczestnikiem będzie GWŻ w Warszawie, a jedna lub więcej Osób Zaangażowanych lub Powiązanych Stron, zgodnie z poniższą definicją, miałyby odnosić korzyść finansową lub (2) z innego powodu mógłby wystąpić faktyczny lub potencjalny konflikt interesów, włączając w to wszelkie transakcje, inwestycje, umowy, granty, programy lub inne zdarzenia, w których interesy Osób Zaangażowanych lub Osób Powiązanych mogłyby być postrzegane jako konkurujące z interesem GWŻ w Warszawie.</p>
+<p>Niemożliwym jest zidentyfikowanie wszystkich sytuacji. Konflikt interesów wynika bowiem zwykle z okoliczności, w których Osoba Zaangażowana (lub Osoba Powiązana z taką osobą), na podstawie zawartej umowy, uzyska wynagrodzenie lub odniesie inną korzyść z transakcji z GWŻ w Warszawie. Konflikt interesów może także powstać, gdy Osoba Zaangażowana lub Osoba Powiązana otrzymały lub przyjęły prezent lub inną korzyść od trzeciej strony, gdzie taki prezent może stworzyć pozory możliwości wywarcia wpływu na taką osobę (inne niż prezenty o nominalnej wartości nie przekraczającej 100 zł, jeżeli są wyrazem szacunku i przyjaźni, niezwiązane z żadną konkretną transakcją).</p>
+<p>Termin „Osoby Zaangażowane” obejmuje członków Zarządu, Komisji Rewizyjnej, Sądu Polubownego, kierownictwo oraz innych kluczowych pracowników i współpracowników.</p>
+<p>Termin „Osoby Powiązane” obejmuje:</p>
+<ul>
+<li>a. krewnych Osoby Zaangażowanej: wstępnych; rodzeństwo i rodzeństwo przyrodnie; współmałżonków rodzeństwa i rodzeństwa przyrodniego; współmałżonków lub konkubentów; dzieci, wnuki; i prawnuki, włączając w to adopcję; współmałżonków dzieci, wnuków i prawnuków;</li>
+<li>b. wszelkie osoby prawne, w tym fundusze, spółki, fundacje, stowarzyszenia, gdzie Osoba Zaangażowana lub Osoba Powiązana posiada udziały ekonomiczne lub właścicielskie przekraczające 10% ich wartości, bądź czerpie z nich zyski finansowe.</li>
+</ul>
+<p>Każda Osoba Zaangażowana ma obowiązek ujawnić wszelkiego rodzaju osobist[e lub] organizacyjne powiązania jego/jej lub jego/jej rodziny (włącznie z akcjami, pożycz[kami,] pensjami, nagrodą dla pośrednika lub konsultanta itd.) z trzecią stroną, któr[a jest] zaangażowana w transakcję lub proponowaną transakcję pomiędzy GWŻ w Warsz[awie] zgodnie z procedurami zawartymi w tym dokumencie.</p>
+<h3 id="3-procedury-na-wypadek-konfliktu-interesow">3. Procedury na wypadek konfliktu interesów</h3>
+<p>Osoba Zaangażowana ma obowiązek, w dobrej wierze, ujawnić przewodniczącemu Ko[misji] Rewizyjnej istotne fakty dotyczące każdej proponowanej GWŻ w Warszawie transakc[ji, w] której przypadku zajdzie faktyczny lub potencjalny konflikt interesów takiej O[soby] Zaangażowanej lub Osoby Powiązanej. Ujawnienie musi nastąpić w formie pisemnej i p[rzed] decyzją GWŻ w Warszawie dotyczącą akceptacji proponowanej transakcji lub niezwło[cznie] po uzyskaniu przez taką osobę wiedzy na temat istotnych faktów, jeżeli on lub ona [nie] mieli faktycznej wiedzy przed danym działaniem Zarządu.</p>
+<p>Wszelkie proponowane transakcje lub umowy, które wywołują konflikt interesów O[soby] Zaangażowanej lub Osoby Powiązanej (co określa przewodniczący Komisji Rewizyjn[ej]) muszą zostać zaakceptowane przez większość członków Komisji Rewizyjnej, z wyłączen[iem] osoby zainteresowanej. Wyrażając zgodę na dokonanie takiej transakcji, Komisja Rewiz[yjna] musi ustalić, czy transakcja jest uczciwa i uzasadniona oraz w najlepszym interesie GW[Ż w] Warszawie. W przypadku, gdy Osoba Zaangażowana lub Osoba Powiązana odniesie znacz[ną] korzyść finansową z takiej transakcji, Komisja Rewizyjna musi rozważyć alternatyw[ne] transakcje w dostępnym zakresie oraz zgłosić je Zarządowi GWŻ w Warszawie. Os[oby] Zaangażowane wyłączają się z obrad i podejmowania decyzji dotyczących spraw, g[dzie] występuje dla nich lub Osób Powiązanych, konflikt interesów. Podczas posiedzenia Kom[isji] Rewizyjnej i na jej żądanie, osoba zainteresowana może dokonać prezentacji [i] odpowiedzieć na pytania dotyczące transakcji lub umowy, z której wynika konf[likt] interesów, jednakże ma on/ona obowiązek opuścić obrady w trakcie dyskusji i głosowa[nia] nad transakcją lub umową, z której wynika konflikt interesów. Protokół Komisji Rewizyj[nej] powinien zawierać:</p>
+<ul>
+<li>a. nazwiska i imiona osób zainteresowanych; charakter interesu; informacje, że os[oba] zainteresowana nie głosowała i nie była obecna podczas obrad i głosowania, [a także] podczas jakichkolwiek działań mających na celu ustalenie, czy zaistniał konfl[ikt] interesów; oraz decyzję Komisji Rewizyjnej na temat tego, czy konflikt interes[ów] w rzeczywistości istniał</li>
+</ul>
+<p>oraz
+- b. nazwiska i imiona osób obecnych podczas obrad i głosowania odnoszących się [do] transakcji lub umowy; treść obrad, włącznie z rozważanymi alternatywam[i dla] proponowanej transakcji lub umowy w związku z zaistnieniem znacznego zysk[u] finansowego; oraz zapis każdego głosowania związanego z postępowaniem.</p>
+<h3 id="4-ujawnienie-faktycznego-potencjalnego-lub-oczywistego-konfl">4. Ujawnienie faktycznego, potencjalnego lub oczywistego konfliktu interesów</h3>
+<p>W dążeniu do realizacji niniejszych Zasad:</p>
+<ul>
+<li>a. Każda Osoba Zaangażowana jest zobowiązana do wypełnienia kwestionariusza konfliktu interesów (załączonego do niniejszego dokumentu) przed wyborem lub zatrudnieniem. Osoby Zaangażowane raz w roku winne ujawniać potencjalny lub oczywisty konflikt interesów oraz potwierdzać, że zapoznały się, zrozumiały i będą obecnie oraz w przyszłości stosować się do Zasad. Wypełniony kwestionariusz konfliktu interesów, odnoszący się do Osób Zaangażowanych, powinien zostać przedłożony przewodniczącemu Komisji Rewizyjnej.</li>
+<li>b. W przypadku, gdy Osoba Zaangażowana ustali, że jej lub jego sytuacja uległa zmianie po złożeniu wypełnionego kwestionariusza rocznego, musi wypełnić nowy kwestionariusz.</li>
+<li>c. Żadna Osoba Zaangażowana lub Osoba Powiązana z członkiem personelu nie może przyjmować prezentów niepieniężnych o wartości nominalnej większej niż 100 zł od osób lub organizacji mających związki z GWŻ w Warszawie. Przyjmowanie prezentów w postaci gotówki jest zakazane. W przypadku wejścia w posiadanie takich prezentów należy ujawnić sposób ich zwrotu.</li>
+</ul>
+<h3 id="5-nadzor-i-wytyczne">5. Nadzór i Wytyczne</h3>
+<p>Przewodniczący Komisji Rewizyjnej nadzoruje, przedstawia wytyczne i doradza w zakresie interpretacji i stosowania Zasad. Będzie on wydawał wytyczne i doradzał w zaufaniu, nie będzie jednak posiadał możliwości egzekwowania, poza możliwością raportowania domniemanych naruszeń przewodniczącemu Zarządu.</p>
+<p>Postępowanie dyscyplinarne, zgodne z przepisami Prawa wewnętrznego wyznaniowej wspólnoty żydowskiej w RP i z obowiązującymi przepisami prawa, prowadzi Zarząd Gminy. Jeżeli Zarząd GWŻ w Warszawie ma uzasadnione powody by sądzić, że Osoba Zaangażowana nie ujawniła faktycznego, potencjalnego lub oczywistego konfliktu interesów, poinformuje taką osobę o swoich wątpliwościach, a osobie tej zapewniona będzie możliwość złożenia wyjaśnień w kwestii domniemanego zatajenia.</p>
+<p>W przypadku, gdy Zarząd Gminy stwierdzi, po przeprowadzeniu dochodzenia i rozważeniu faktów i okoliczności, że nastąpiło naruszenie Zasad, w zależności od sprawy, będzie miał prawo do usunięcia Osoby Zaangażowanej z zajmowanego stanowiska lub podjęcia innych kroków prawnych, zgodnie z Prawem wewnętrznym wyznaniowej wspólnoty żydowskiej w RP z dn. 15 stycznia 2006 r. oraz przepisami obowiązującego prawa.</p>
+<p>Naruszenie Zasad przez pracownika Gminy może skutkować postępowaniem dyscyplinarnym, zakończonym nawet rozwiązaniem stosunku pracy.</p>
+<h3 id="6-okresowa-weryfikacja-zasad">6. Okresowa Weryfikacja Zasad</h3>
+<p>Aby upewnić się, że GWŻ w Warszawie działa w sposób zgodny ze swoją misją i [nie] angażuje się w działania, które mogłyby zagrozić jej reputacji, przeprowadzane będ[ą] okresowe weryfikacje Zasad, kwestionariusza konfliktu interesów i oświadczeni[a] dotyczącego prezentów. Zasady mogą być zmieniane tylko przez Zarząd Gminy lub Waln[e] Zgromadzenie członków GWŻ w Warszawie, jednak celem Gminy jest weryfikacj[a] kwestionariusza konfliktu interesów i oświadczenia dotyczącego prezentów okresowo, [w] razie potrzeby, aby zapewnić wykrywanie sytuacji potencjalnych lub faktycznych opisan[ych] i zdefiniowanych w Zasadach.</p>
+<p><em>Podpisy: Anna Chipczyńska — Przewodnicząca Zarządu; Lesław Piszewski — Wiceprzewodniczący Zarządu; Anna Bakuła — Członkini Zarządu, Skarbniczka; Anna Dodziuk — Członkini Zarządu; Paweł Lewandowski — Członek Zarządu; Grażyna Majer — Członkini Zarządu.</em></p>
+<p>Załączniki:</p>
+<ol>
+<li>Doroczny kwestionariusz konfliktu interesów Osób Zaangażowanych.</li>
+<li>Oświadczenie dotyczące prezentów.</li>
+</ol>
+<h3 id="zalacznik-oswiadczenie-dotyczace-prezentow">Załącznik: Oświadczenie dotyczące prezentów</h3>
+<p><em>(Formularz ten ma zostać złożony w przypadku, gdy Osoba Zaangażowana¹ otrzymała prezent od osoby lub organizacji zewnętrznej mającej związki z GWŻ w Warszawie)</em></p>
+<p>Zapoznałem/-am się z treścią Zasad Etycznego Postępowania i Wytycznymi oraz Polityką przeciwdziałania konfliktom i oświadczam, co następuje:</p>
+<ul>
+<li class="r-chk">☐ Rozumiem, że pod żadnym pozorem, ani ja, ani Osoba Powiązana² ze mną, nie możemy przyjmować gotówki lub innych prezentów pieniężnych od osób lub organizacji mających związki z GWŻ w Warszawie, ale możemy – po uzyskaniu zgody – przyjąć prezenty niepieniężne, o wartości nominalnej nieprzekraczającej 100 zł.</li>
+</ul>
+<p>Imię i nazwisko (wypełnić drukowanymi literami): ______________________</p>
+<p>Podpis: ______________________</p>
+<p>Zatwierdzone przez kierownika/zwierzchnika: Podpis ______________________ Data ______________</p>
+<p>¹ Terminy pisane wielką literą i niezdefiniowane w oświadczeniu mają znaczenie przypisane im w Zasadach Postępowania i Wytycznych. Pojęcie „Osoba Zaangażowana” obejmuje członków Zarządu, Komisji Rewizyjnej, Sądu Polubownego, kierownictwo, innych kluczowych pracowników i współpracowników.</p>
+<p>² Termin „Osoba Powiązana” obejmuje: a. krewnych Osoby Zaangażowanej: wstępnych; rodzeństwo i rodzeństwo przyrodnie; współmałżonków rodzeństwa i rodzeństwa przyrodniego; współmałżonków lub konkubentów; dzieci, wnuki; i prawnuki, włączając w to adopcję; współmałżonków dzieci, wnuków i prawnuków; b. wszelkie osoby prawne, w tym fundusze, spółki, fundacje, stowarzyszenia; gdzie Osoba Zaangażowana lub Osoba Powiązana posiada udziały ekonomiczne lub właścicielskie przekraczające 10% ich wartości, bądź czerpie z nich zyski finansowe.</p>
+<h3 id="zalacznik-doroczny-kwestionariusz-konfliktu-interesow-osob-z">Załącznik: Doroczny kwestionariusz konfliktu interesów Osób Zaangażowanych</h3>
+<p><em>(Formularz ten powinien być złożony raz w roku przez Osobę Zaangażowaną¹)</em></p>
+<p>Zapoznałem/-am się z treścią Zasad Etycznego Postępowania i Wytycznymi oraz Polityką przeciwdziałania konfliktom, wyraziłem/-am zgodę na stosowanie się do określonych w nich warunków oraz oświadczam, że zgodnie z posiadanymi przeze mnie informacjami, poniżej wymieniam konflikty interesów w odniesieniu do GWŻ w Warszawie:</p>
+<ol>
+<li>
+<p>Poniżej wymieniłem/-am jednostkę – w której ja (lub Osoba Powiązana²) sprawuję funkcję, jestem dyrektorem, powiernikiem, członkiem, właścicielem (samodzielnym lub wspólnikiem) lub pracownikiem – która ma relacje z GWŻ w Warszawie (lub wiadomym jest, że prowadzone są rozmowy w celu nawiązania takich relacji):</p>
+<hr />
+<hr />
+<hr />
+<p><em>(W razie potrzeby należy dołączyć kolejny arkusz.)</em>
+2. Poniżej wymieniłem/-am każdą transakcję, umowę czy inne porozumienie, w których GWŻ w Warszawie jest uczestnikiem (lub wiadomym jest, że prowadzone są rozmowy, aby uczestnikiem został) i, w których dla mnie (lub Osoby Powiązanej ze mną) zachodzi lub może zajść konflikt interesów:</p>
+<hr />
+<hr />
+<hr />
+<p><em>(W razie potrzeby należy dołączyć kolejny arkusz.)</em>
+3. Poniżej wymieniłem/-am i opisałem/-am inne moje lub Osób Powiązanych ze mną interesy, które mogłyby wywołać konflikt interesów w rozumieniu Etycznych Zasad Postępowania i Wytycznych.</p>
+<hr />
+<hr />
+<p><em>(W razie potrzeby należy dołączyć kolejny arkusz.)</em></p>
+</li>
+</ol>
+<p>W przypadku zmiany okoliczności, wyrażam zgodę na ponowne, niezwłoczne złożenie przeze mnie niniejszego kwestionariusza.</p>
+<p>Imię i nazwisko (wypełnić drukowanymi literami): ______________________</p>
+<p>Podpis: ______________________ Data: ______________</p>
+<p>¹ ² Przypisy jak w Oświadczeniu dotyczącym prezentów (definicje „Osoby Zaangażowanej” i „Osoby Powiązanej”).</p>
+</section><section class="r-doc"><h2 id="polityka-zapobiegania-oszustwom">Polityka zapobiegania oszustwom</h2>
+<p><em>(zatwierdzona uchwałą Zarządu GWŻ w Warszawie dn. 25 października 2017 r.)</em></p>
+<p>Mając na uwadze fakt, iż stosowanie wysokich standardów uczciwości i etyczne[go] postępowania jest jednym z kluczowych elementów tworzenia wiarygodności, zaufania [oraz] dbałości o dobry wizerunek, Gmina Wyznaniowa Żydowska w Warszawie (zwana dalej „GWŻ w Warszawie” i „Gminą”) nie będzie tolerować żadnych oszustw związanych z interesami i innymi działaniami prowadzonymi z Gminą, w jej imieniu i wobec niej oraz może wnie[ść] oskarżenie lub podjąć inne działania prawne, jeśli zajdzie podejrzenie dokonania oszustwa. Polityka ta dotyczy każdej zaistniałej lub podejrzanej nieprawidłowości związanej z Osobami Zaangażowanymi.¹ Wszystkie wymagane działania dochodzeniowe będą podejmowane niezależnie od stażu pracy podejrzanego, jego lub jej pozycji, czy tytułu oraz związku z Gminą.</p>
+<p><strong>OSZUSTWO</strong> definiuje się jako celową nieuczciwość, zaplanowaną, by uzyskać korzyść, w tym majątkową, lub przewagę, albo też by otrzymać korzyść, której by w innym przypadku odmówiono. Termin „Oszustwo” odnosi się, ale nie ogranicza się, do:</p>
+<ul>
+<li>jakiegokolwiek nieuczciwego lub oszukańczego działania;</li>
+<li>sprzeniewierzenia funduszy, zabezpieczeń, zasobów lub innych aktywów;</li>
+<li>defraudacji i wszelkich nieprawidłowości w obracaniu pieniędzmi lub zdawaniu ich oraz w przeprowadzaniu transakcji finansowych;</li>
+<li>spekulacji wynikających z wewnętrznej wiedzy o działalności Gminy;</li>
+<li>bezprawnego ujawniania tajnych lub zastrzeżonych informacji osobom lub instytucjom zewnętrznym;</li>
+<li>bezprawnego ujawniania innym osobom transakcji, w jakie zaangażowana jest lub jakie rozważa Gmina;</li>
+<li>przyjmowania lub oczekiwania jakichkolwiek dóbr, posiadających wartość materialną, od kontrahentów, sprzedawców czy też osób oferujących GWŻ w Warszawie usługi bądź materiały, z wyjątkiem podarunków, których wartość nie przekracza 100 zł;</li>
+<li>bezprawnego dostępu do oraz wykorzystywania tajnych informacji otrzymanych od Gminy;</li>
+<li>sfałszowania czeku, przekazu bankowego lub innego dokumentu finansowego, tudzież wprowadzenie do niego zmian;</li>
+<li>zniszczenia lub usunięcia akt, mebli, elementów stałych i wyposażenia, tudzież korzystania z nich powodującego uszkodzenie;</li>
+<li>wszelkich podobnych lub powiązanych nieprawidłowości.</li>
+</ul>
+<p>GWŻ w Warszawie wymaga, aby każda Osoba Zaangażowana zgłosiła do Komisji Rewizyjnej w trybie natychmiastowym jakiekolwiek zaistniałe lub podejrzewane oszustwo, zgodnie z zasadami zgłaszania nieprawidłowości.</p>
+<p>Wszystkie informacje pozostaną tajne i żadna Osoba Zaangażowana, podejrzewająca nieuczciwe lub oszukańcze działania, nie powinna osobiście prowadzić dochodzenia lub przesłuchiwać w związku z tymi działaniami. Wyniki dochodzenia nie będą przekazywane ani dyskutowane z nikim, kto nie ma ku temu uzasadnionych powodów. Jest to ważne, aby uniknąć nadwyrężenia reputacji osób podejrzanych, lecz następnie uznanych za niewinne zarzucanych im czynów, i aby chronić GWŻ w Warszawie przed potencjalnym pozwem cywilnym. Decyzja o oskarżeniu lub przekazaniu wyników dochodzenia odpowiednim organom ścigania i/lub instytucjom nadzorującym w celu przeprowadzenia niezależnego śledztwa zostanie podjęta we współpracy ze świeckim kierownictwem GWŻ w Warszawie – Zarządem i/lub Komisją Rewizyjną, podobnie jak ostateczna decyzja o rozporządzeniu daną sprawą.</p>
+<p>Na życzenie osoby zgłaszającej sprawę, GWŻ w Warszawie będzie chronić jej t[ożsamość] w ramach dozwolonych przez prawo i nie zastosuje sankcji przeciwko osobie, któr[a złożyła] doniesienie w dobrej wierze.</p>
+<p>W przypadku, gdy Osoba Zaangażowana nie zastosuje się do tych postanowień, [może to] skutkować rozwiązaniem stosunku pracy, anulowaniem działalności bizneso[wej lub] zakończeniem relacji pomiędzy daną osobą a GWŻ w Warszawie.</p>
+<p><em>Podpisy: Anna Chipczyńska — Przewodnicząca Zarządu; Lesław Piszewski — Wiceprzewodniczący Zarządu; Anna Bakuła — Członkini Zarządu, Skarbniczka; Anna Dodziuk — Członkini Zarządu; Paweł Lewandowski — Członek Zarządu; Grażyna Majer — Członkini Zarządu.</em></p>
+<p>¹ Termin „Osoba Zaangażowana” obejmuje członków Zarządu, Komisji Rewizyjnej, Sądu Polubownego, kierownictwo oraz innych kluczowych pracowników i współpracowników Gminy Wyznaniowej Żydowskiej w Warszawie.</p>
+</section><section class="r-doc"><h2 id="polityka-zglaszania-nieprawidlowosci">Polityka zgłaszania nieprawidłowości</h2>
+<p><em>(zatwierdzona uchwałą Zarządu GWŻ w Warszawie dn. 25 października 2017 r.)</em></p>
+<p>Gmina Wyznaniowa Żydowska w Warszawie (zwana dalej „GWŻ w Warszawie” lub „Gminą”) wymaga, aby Osoby Zaangażowane przestrzegały wysokich standardów pracy i zasad etycznych w wypełnianiu swoich zadań i obowiązków wobec Gminy, a także aby kierowały się uczciwością w wypełnianiu swoich obowiązków oraz by stosowały się do obowiązujących praw i regulacji. „Osobami Zaangażowanymi” są członkowie Zarządu, Komisji Rewizyjnej, Sądu Polubownego, kierownictwo, kluczowi pracownicy oraz współpracownicy GWŻ w Warszawie.</p>
+<p>Przewodniczący Komisji Rewizyjnej Gminy zostaje wyznaczony do zarządzania tą Polityką we współpracy z przewodniczącym Zarządu. Każda z Osób Zaangażowanych musi otrzymać kopię tej Polityki.</p>
+<h3 id="i-raportowanie">I. Raportowanie</h3>
+<p>Każda Osoba Zaangażowana ma obowiązek zgłosić, zgodnie z zasadami niniejszej Polityki, podejrzenie o zaistnieniu nielegalnych działań związanych z finansowymi lub operacyjnymi sprawami GWŻ w Warszawie, oszustw lub łamania Polityki Gminy dotyczącej zapobiegania oszustwom lub łamiących przyjętą przez GWŻ w Warszawie Politykę zawierającą, lecz nie ograniczającą się do Zasad etycznego postępowania, Wytycznych oraz Polityki przeciwdziałania konfliktom, Polityki poufności, Zasad gospodarowania majątkiem GWŻ w Warszawie, Polityki rachunkowości oraz innych przyjętych i obowiązujących Polityk. Pracownicy także mają obowiązek zgłoszenia podejrzeń dotyczących łamania zasad Przeciwdziałania mobbingowi oraz zasad Równego traktowania w zatrudnieniu.</p>
+<p>Osobę posiadającą wiedzę lub podejrzewającą, że doszło do nielegalnego lub nieuczciwego nadużycia finansowego lub naruszenia którejkolwiek z Polityk Gminy zachęca się do zgłoszenia swych podejrzeń przewodniczącemu Komisji Rewizyjnej. Osoba ta może zgłosić je także przewodniczącemu Zarządu GWŻ w Warszawie.</p>
+<p>Zgłoszenia można składać ustnie lub pisemnie, osobiście lub anonimowo. Zach[ęca się do] przedstawienia tak dużej ilości informacji, jak to tylko możliwe, aby umożliwi[ć szybkie] i całościowe rozpatrzenie zgłoszonych zastrzeżeń.</p>
+<p>Każdy, kto otrzyma ustną lub pisemną informację dotyczącą nielegalnych lub ni[euczciwych] działań, ma obowiązek niezwłocznie poinformować o tym przewodnicząceg[o Komisji] Rewizyjnej lub przewodniczącego Zarządu Gminy, chyba że wyżej wymienione os[oby już je] otrzymały.</p>
+<p>W przypadku, gdy przewodniczący Komisji Rewizyjnej otrzyma ustne lub [pisemne] zawiadomienie, zgłosi je przewodniczącemu Zarządu Gminy. W przypadku [pisemnego] zgłoszenia, jego kopia ma być przedstawiona przewodniczącemu Komisji Rewi[zyjnej oraz] przewodniczącemu Zarządu.</p>
+<h3 id="ii-zakaz-stosowania-sankcji">II. Zakaz stosowania sankcji</h3>
+<p>Polityka ta ma na celu zachęcenie i umożliwienie Osobom Zaangażowanym oraz [członkom] i członkiniom GWŻ w Warszawie wyrażania zaniepokojenia wewnątrz Gminy[, w celu] przeprowadzenia dochodzenia i podjęcia stosownych działań. Pamiętając o ty[m, żadna] osoba, która w dobrej wierze zawiadomiła o zaistnieniu lub podejrzeniu z[aistnienia] nielegalnych działań, oszustw lub łamania jakiejkolwiek Polityki GWŻ w Warsz[awie, nie] będzie zastraszana, napastowana, dyskryminowana lub nie będą podjęte wobec [niej] sankcje lub niekorzystne dla zatrudnienia konsekwencje.</p>
+<h3 id="iii-dochodzenie-i-raport">III. Dochodzenie i raport</h3>
+<p>Wszystkie zgłoszenia będą niezwłocznie rozpatrywane przez lub pod kierunkiem [przewodniczącego Komisji] Rewizyjnej, chyba że przewodniczący Komisji Rewizyjnej i przewodniczący Zarzą[du] uznają, że zawiadomienie nie zostało złożone w dobrej wierze, lub jeżeli rap[ort został] złożony anonimowo i nie zawiera informacji wystarczających do przeprow[adzenia] dochodzenia.</p>
+<p>Zawiadomienia o podejrzeniach i dochodzenie z nimi związane są traktowane jak[o poufne] w takim zakresie, w jakim to tylko możliwe i praktyczne do przeprowadzenia szczeg[ółowego] dochodzenia. We wszystkich sprawach przewodniczący dołożą wszelkich starań by[ działać] rozważnie i dyskretnie.</p>
+<p>Ujawnienie zawiadomień o podejrzeniach osobom niezaangażowanym w dochodzeni[e może zostać] uznane za wykroczenie dyscyplinarne i, w przypadku pracownika Gminy, może sk[utkować] sankcjami dyscyplinarnymi, włączając w to rozwiązanie umowy o pracę.</p>
+<p>Po zakończeniu dochodzenia, przewodniczący przekażą raport z dochodzenia, ustaleń i podjętych lub proponowanych działań. Komisja Rewizyjna dopilnuje, aby podjęte zostały odpowiednie uchwały odnoszące się do skarg. Zarząd GWŻ w Warszawie, jeżeli będzie to uzasadnione dochodzeniem, będzie rekomendował odpowiednie działania naprawcze.</p>
+<h3 id="vi-informacje-kontaktowe">VI. Informacje kontaktowe</h3>
+<p>Osoby Zaangażowane oraz członkowie i członkinie Gminy mogą złożyć anonimowe zawiadomienie odnoszące się do działań opisanych w niniejszej Polityce, kontaktując się z przewodniczącym Komisji Rewizyjnej lub z przewodniczącym Zarządu Gminy.</p>
+<p><em>Podpisy: Anna Chipczyńska — Przewodnicząca Zarządu; Lesław Piszewski — Wiceprzewodniczący Zarządu; Anna Bakuła — Członkini Zarządu, Skarbniczka; Anna Dodziuk — Członkini Zarządu; Paweł Lewandowski — Członek Zarządu; Grażyna Majer — Członkini Zarządu.</em></p>
+</section><section class="r-doc"><h2 id="polityka-poufnosci">Polityka poufności</h2>
+<p><em>(zatwierdzona uchwałą Zarządu GWŻ w Warszawie dn. 25 października 20[17 r.])</em></p>
+<p>Przez cały okres zatrudnienia w GWŻ w Warszawie, członkostwa w jej [organach,] tj. Zarządzie, Komisji Rewizyjnej i Sądzie Polubownym, a także po ich zakończen[iu,] Osoba Zaangażowana zobowiązuje się zachować w tajemnicy i nie ujawniać [osobom] trzecim, ani też nie pozwalać na ujawnianie wszelkich informacji i danych, [które nie] znajdują się w domenie publicznej, a które zostały jemu/jej ujawnione pr[zez GWŻ] w Warszawie zgodnie z wymogami zatrudnienia przez lub przynależności do orga[nów GWŻ] w Warszawie, lub w których posiadanie Osoba Zaangażowana wejdzie w inn[y sposób] („Informacje Poufne”).</p>
+<p>Termin „Osoby Zaangażowane” obejmuje członków Zarządu, Komisji Rewizyjn[ej, Sądu] Polubownego, kierownictwo oraz innych kluczowych pracowników i współpra[cowników] GWŻ w Warszawie.</p>
+<p>Informacje Poufne obejmują wszelkie informacje finansowe, ekonomiczne, h[andlowe,] organizacyjne, techniczne, technologiczne, artystyczne, posiadające wartość gos[podarczą] lub inne uzasadnione względami bezpieczeństwa, a które dotyczą bezpośre[dnio lub] pośrednio GWŻ w Warszawie. Informacje Poufne odnoszą się w szczególności[, lecz nie] ograniczają się, do poufnych informacji związanych ze sprzedażą nieruc[homości,] informacji na temat trwających działań prawnych oraz danych dotycząc[ych osób] zatrudnionych, stowarzyszonych, korzystających z pomocy społecznej lub prow[adzących] interesy z GWŻ w Warszawie.</p>
+<p>Osoba Zaangażowana nie będzie wykorzystywać Informacji Poufnych w żadnym in[nym celu] niż wykonywanie obowiązków związanych z zatrudnieniem w lub przynależnością [do organów GWŻ] w Warszawie. Po zakończeniu z jakiegokolwiek powodu zatrudnienia lub przyna[leżności] Osoba Zaangażowana niezwłocznie dostarczy swojemu przełożonem[u lub] przewodniczącemu Zarządu wszystkie dokumenty, dane i inne materiały zaw[ierające] Informacje Poufne, które znajdują się w jej posiadaniu lub w posiadaniu kogoś in[nego, kto] zdobył je w związku z pracą danej Osoby Zaangażowanej dla GWŻ w Warszawie.</p>
+<p>Zobowiązanie Osoby Zaangażowanej do zachowania w tajemnicy Informacji Pou[fnych nie] ma zastosowania do:</p>
+<ul>
+<li>(a) Informacji Poufnych, które są publicznie dostępne, chyba że stał[y się] publicznie dostępne w wyniku naruszenia zobowiązań ok[reślonych] w niniejszym dokumencie;</li>
+<li>(b) Informacji Poufnych, które Osoba Zaangażowana ma obowiązek uj[awnić na] podstawie bezwzględnie obowiązujących przepisów prawa, [orzeczeń] sądowych lub decyzji administracyjnych;</li>
+<li>(c) ujawnienia Informacji Poufnych za uprzednią zgodą GWŻ w Wa[rszawie] wyrażoną na piśmie.</li>
+</ul>
+<p>Wszystkie Osoby Zaangażowane muszą stosować się do Polityki Poufności. Osoby Zaangażowane, które udostępnią osobom trzecim Informacje Poufne na temat GWŻ w Warszawie naruszając tę Politykę, będą podlegać sankcjom dyscyplinarnym przewidzianym w Prawie wewnętrznym wyznaniowej wspólnoty żydowskiej w RP, włączając w to wypowiedzenie umowy o pracę lub rozwiązanie umowy o pracę bez wypowiedzenia. Naruszenie niniejszego zobowiązania przez Osobę Zaangażowaną będzie uprawniało GWŻ w Warszawie do dochodzenia odszkodowania na zasadach ogólnych lub określonych w odrębnej umowie.</p>
+<p><em>Podpisy: Anna Chipczyńska — Przewodnicząca Zarządu; Lesław Piszewski — Wiceprzewodniczący Zarządu; Anna Bakuła — Członkini Zarządu, Skarbniczka; Anna Dodziuk — Członkini Zarządu; Paweł Lewandowski — Członek Zarządu; Grażyna Majer — Członkini Zarządu.</em></p>
+</section><section class="r-doc"><h2 id="polityka-rachunkowosci">Polityka rachunkowości</h2>
+<p><em>(zatwierdzona uchwałą Zarządu GWŻ w Warszawie dn. 25 października 201[7 r.])</em></p>
+<h3 id="rozdzial-pierwszy-okreslenie-roku-obrotowego-i-wchodzacych-w">Rozdział pierwszy. Określenie roku obrotowego i wchodzących w jego skład okresów sprawozdawczych</h3>
+<p>Rokiem obrotowym jednostki jest rok kalendarzowy zaczynający się dnia 1 [stycznia] a kończący 31 grudnia. Podzielony jest on na 12 miesięcznych okresów sprawozdaw[czych].</p>
+<h3 id="rozdzial-drugi-zasady-i-sposob-prowadzenia-ksiag-rachunkowyc">Rozdział drugi. Zasady i sposób prowadzenia ksiąg rachunkowych</h3>
+<p><strong>2.1. Wykaz kont księgi głównej i ksiąg pomocniczych.</strong></p>
+<p>Wykaz kont księgi głównej, z prowadzonymi do niej analitykami (Plan kont[) wraz z] opisem zdarzeń ujmowanych na poszczególnych kontach syntetycznych i analit[ycznych] stanowi Załącznik nr 1 do Polityki rachunkowości.</p>
+<p><strong>2.2. Opis zasad klasyfikacji i ujmowania w księgach rachunkowych o[peracji] gospodarczych.</strong></p>
+<p><strong>2.2.1. Wycena i sposoby dokonywania odpisów amortyzacyjnych dla środków trwałych, wartości niematerialnych i prawnych oraz inwestycji.</strong></p>
+<p>Wartość początkową środka trwałego stanowi cena nabycia lub kosz[t] wytworzenia powiększony o koszty jego ulepszenia, polegającego na przebu[dowie,] rozbudowie, modernizacji lub rekonstrukcji, powodującego, iż wartość uż[ytkowa] tego środka po zakończeniu ulepszenia przewyższa posiadaną przy przyję[ciu do] używania wartość użytkową, mierzoną okresem używania, zdolnością wytw[órczą,] jakością produktów uzyskiwanych przy pomocy ulepszonego środka trw[ałego,] kosztami eksploatacji lub innymi miarami.</p>
+<p>Wartość początkową środków trwałych (z wyjątkiem gruntów niesłużących wydobyciu kopalin metodą odkrywkową) zmniejszają odpisy amortyzacyjne lub umorzeniowe dokonywane w celu uwzględnienia utraty ich wartości, na skutek używania lub upływu czasu.</p>
+<p>Wartość początkowa i dotychczas dokonane od środków trwałych odpisy amortyzacyjne lub umorzeniowe mogą, na podstawie odrębnych przepisów, ulegać aktualizacji wyceny. Ustalona w wyniku aktualizacji wyceny wartość księgowa netto środka trwałego nie powinna być wyższa od jego wartości godziwej, której odpisanie w przewidywanym okresie jego dalszego używania jest ekonomicznie uzasadnione.</p>
+<p>Powstałą na skutek aktualizacji wyceny różnicę wartości netto środków trwałych, odnosi się na kapitał (fundusz) z aktualizacji wyceny i nie może ona być przeznaczona do podziału. Kapitał (fundusz) z aktualizacji wyceny podlega, z zastrzeżeniem art. 32 ust. 5 Ustawy, zmniejszeniu o różnicę z aktualizacji wyceny uprzednio zaktualizowanych zbywanych lub zlikwidowanych środków trwałych. Różnica ta wpływa na kapitał (fundusz) zapasowy lub inny o podobnym charakterze, o ile odrębne przepisy nie stanowią inaczej.</p>
+<p>Odpisów amortyzacyjnych lub umorzeniowych od środka trwałego dokonuje się drogą systematycznego, planowego rozłożenia jego wartości początkowej na ustalony okres amortyzacji. Rozpoczęcie amortyzacji następuje w miesiącu następującym po miesiącu przyjęcia środka trwałego do używania, a jej zakończenie z chwilą zrównania wartości odpisów amortyzacyjnych lub umorzeniowych z wartością początkową środka trwałego lub z końcem miesiąca, w którym jednostka przeznacza go do likwidacji, sprzedaży lub stwierdzenia jego niedoboru, z ewentualnym uwzględnieniem przewidywanej przy likwidacji ceny sprzedaży netto pozostałości środka trwałego.</p>
+<p>Na dzień przyjęcia środka trwałego do używania kierownik jednostki ustala stawkę i metodę jego amortyzacji. Poprawność stosowanych okresów i stawek amortyzacji środków trwałych będzie przez jednostkę okresowo weryfikowana, powodując odpowiednią korektę dokonywanych w następnych latach obrotowych odpisów amortyzacyjnych.</p>
+<p>W przypadku zmiany technologii produkcji, przeznaczenia do likwidacji, wycofania z używania lub innych przyczyn powodujących trwałą utratę wartości środka trwałego, dokonuje się – w ciężar pozostałych kosztów operacyjnych – odpowiedniego odpisu aktualizującego jego wartość.</p>
+<p>Dla każdego środka trwałego o wartości początkowej przekraczającej 3.500 zł. tworzy się kartę środka trwałego i wprowadza się go na listę środków trwałych, dla których dokonuje się odpisów amortyzacyjnych.</p>
+<p>Każdy środek trwały o wartości początkowej nie przekraczającej 3.500 zł., ale wyższej niż 1.500 zł., wpisuję się na listę „Wyposażenia”. Listę wyposażenie sporządzają działy, które dysponują sprzętem.</p>
+<p>Odpisów amortyzacyjnych sprzętu komputerowego i innego w[yposażenia] o wartości od 1.500 do 3.500 zł. dokonuje się jednorazowo, w miesiącu [zakupu].</p>
+<p>Dla pozostałego wyposażenia o wartości początkowej nie przekraczając[ej 1.500 zł] nie prowadzi się odrębnej ewidencji, a ich wartość odnosi się be[zpośrednio] w koszty, w miesiącu zakupu.</p>
+<p>Przykładowe stawki amortyzacyjne są następujące:</p>
+<table>
+<thead>
+<tr>
+<th>Grupa środków trwałych</th>
+<th>Stawka</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Budynki</td>
+<td>od 4 do 10%</td>
+</tr>
+<tr>
+<td>Urządzenia techniczne i maszyny</td>
+<td>od 10 do 30%</td>
+</tr>
+<tr>
+<td>Środki transportu</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>Inne środki trwałe</td>
+<td>od 10 do 30%</td>
+</tr>
+</tbody>
+</table>
+<p>Nieruchomości uzyskane przez Jednostkę w ramach restytucji ujmuje [się jedynie] w ewidencji pozabilansowej prowadzonej przez Dział Nieruchomości [Jednostki]. W nocie nr 2 w sprawozdaniu finansowym, opisującej środki trwałe zn[ajduje się] krótki opis tych nieruchomości z podaną szacunkową ich wyceną.</p>
+<p>Nakłady ponoszone przez Gminę na renowację, remonty lub napraw[y budynków] służących jej celom statutowym, ujmuje się na bieżąco w koszta[ch okresu,] w którym zostały poniesione.</p>
+<p>Do wyceny wartości niematerialnych i prawnych oraz sposobów dokon[ywania od] nich odpisów amortyzacyjnych lub umorzeniowych stosuje się od[powiednio] przepisy dotyczące środków trwałych.</p>
+<p>Wartości niematerialne i prawne umarza się metodą liniową przy zas[tosowaniu] następujących stawek amortyzacyjnych:</p>
+<table>
+<thead>
+<tr>
+<th>Rodzaj</th>
+<th>Stawka</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oprogramowanie</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Inne wartości niematerialne i prawne</td>
+<td>50%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Inwestycje</strong> obejmują aktywa posiadane w celu osiągnięcia [korzyści] ekonomicznych wynikających z przyrostu wartości tych aktywów, uzyska[nia z nich] przychodów w formie odsetek, dywidend (udziałów w zyskach) l[ub innych] pożytków, w tym również z transakcji handlowej, a w szczególnoś[ci aktywa] finansowe oraz te nieruchomości i wartości niematerialne i prawne, kt[óre nie są] użytkowane przez jednostkę, lecz są posiadane w celu osiągnięcia tych k[orzyści].</p>
+<p><strong>Inwestycje w nieruchomości</strong> ujmuje się w księgach według ceny na[bycia lub] kosztu wytworzenia (wartość początkowa) z uwzględnieniem [skutków] przeszacowania (aktualizacji), pomniejszonych o odpisy amortyzacyjne [oraz] o odpisy z tytułu trwałej utraty ich wartości.</p>
+<p>Wartość początkową inwestycji w nieruchomości powiększają k[oszty ich] ulepszenia, polegającego na przebudowie, rozbudowie, modern[izacji,] rekonstrukcji i powodującego, że wartość użytkowa inwestycji w nieruch[omości po] zakończeniu ulepszenia przewyższa posiadaną przy przyjęciu do używan[ia wartość] użytkową.</p>
+<p>Inwestycje w nieruchomości amortyzowane są metodą liniową. Rozpoczęcie amortyzacji następuje w następnym miesiącu po przyjęciu inwestycji w nieruchomości do używania.</p>
+<p>Nieruchomości uzyskane przez Jednostkę w ramach restytucji ujmuje się jedynie w ewidencji pozabilansowej prowadzonej przez Dział Nieruchomości Jednostki. W nocie nr 3 opisującej nakłady na nieruchomości znajduje się krótki opis tych nieruchomości z podaną szacunkową ich wyceną.</p>
+<p>Jednostka stosuje następujące stawki amortyzacyjne: Budynki — od 4 do 10%.</p>
+<p>Poprawność stosowanych okresów i stawek amortyzacji środków trwałych jest przez jednostkę okresowo weryfikowana, powodując odpowiednią korektę dokonywanych w następnych latach odpisów amortyzacyjnych.</p>
+<p><strong>2.2.2. Zasady ujmowania w księgach rachunkowych operacji gospodarczych wyrażonych w walutach obcych.</strong></p>
+<p>Operacje gospodarcze wyrażone w walutach obcych ujmuje się w księgach rachunkowych na dzień ich przeprowadzenia odpowiednio po kursie:</p>
+<ul>
+<li>średnim ustalonym dla danej waluty przez Narodowy Bank Polski na ten dzień, chyba że w zgłoszeniu celnym lub innym wiążącym jednostkę dokumencie ustalony został inny kurs – w przypadku operacji sprzedaży lub kupna walut oraz operacji zapłaty należności lub zobowiązań,</li>
+<li>średnim ustalonym dla danej waluty przez Narodowy Bank Polski na ten dzień, chyba, że w zgłoszeniu celnym lub innym wiążącym jednostkę dokumencie ustalony został inny kurs w przypadku pozostałych operacji.</li>
+</ul>
+<p>Jeżeli aktywa i pasywa są wyrażone w walutach, dla których bank, z którego usług korzysta jednostka, lub Narodowy Bank Polski nie ustalają kursu, to kurs tych walut określa się w relacji do wskazanej przez jednostkę waluty odniesienia, której kurs jest ustalany przez Narodowy Bank Polski.</p>
+<p><strong>2.2.3. Zasady tworzenia rezerw.</strong></p>
+<p>Rezerwy tworzy się na:</p>
+<ul>
+<li>pewne lub o dużym stopniu prawdopodobieństwa przyszłe zobowiązania, których kwotę można w sposób wiarygodny oszacować, a w szczególności na straty z transakcji gospodarczych w toku, w tym z tytułu udzielonych gwarancji, poręczeń, operacji kredytowych, skutków toczącego się postępowania sądowego,</li>
+<li>przyszłe zobowiązania spowodowane restrukturyzacją, jeżeli na podstawie odrębnych przepisów jednostka jest zobowiązana do jej przeprowadzenia lub zawarto w tej sprawie wiążące umowy, a plany restrukturyzacji pozwalają w sposób wiarygodny oszacować wartość tych przyszłych zobowiązań.</li>
+</ul>
+<p>Rezerwy te zalicza się odpowiednio do pozostałych kosztów operacyjn[ych, kosztów] finansowych lub strat nadzwyczajnych, zależnie od okoliczności, z któr[ymi przyszłe] zobowiązania się wiążą. Powstanie zobowiązania, na które uprzednio u[tworzono] rezerwę, zmniejsza rezerwę. Niewykorzystane rezerwy, wobec zmniej[szenia lub] ustania ryzyka uzasadniającego ich utworzenie, zwiększają na dzień, [na który] okazały się zbędne, odpowiednio pozostałe przychody operacyjne, [przychody] finansowe lub zyski nadzwyczajne.</p>
+<p><strong>2.2.4. Sposób prezentacji kapitałów.</strong></p>
+<p>Kapitały (fundusze) własne ujmuje się w księgach rachunkowych z pod[ziałem na] ich rodzaje i według zasad określonych przepisami prawa oraz postano[wieniami] uchwał Zarządu o podziale zysku.</p>
+<p><strong>2.2.5. Rozliczenia międzyokresowe kosztów i przychodów.</strong></p>
+<p>Jednostka dokonuje czynnych rozliczeń międzyokresowych kosztów, jeżel[i dotyczą] one przyszłych okresów sprawozdawczych. W przypadku, gdy kwota [kosztów] dotycząca przyszłych okresów nie wpływa znacząco na obraz finansow[y jednostki,] jednostka zalicza te wydatki do wydatków bieżącego okresu.</p>
+<p>Jednostka dokonuje biernych rozliczeń międzyokresowych kosztów w w[ysokości] prawdopodobnych zobowiązań przypadających na bieżący okres spraw[ozdawczy,] wynikających w szczególności:</p>
+<ul>
+<li>ze świadczeń wykonanych na rzecz jednostki przez kontrahentów j[ednostki,] a kwotę zobowiązania można oszacować w sposób wiarygodny,</li>
+<li>z obowiązku wykonania, związanych z bieżącą działalnością, p[rzyszłych] świadczeń wobec nieznanych osób, których kwotę można oszacować, [choć] data powstania zobowiązania nie jest jeszcze znana, w tym z tytułu [napraw] gwarancyjnych i rękojmi za sprzedane produkty długotrwałego użytku.</li>
+</ul>
+<p>Odpisy czynnych i biernych rozliczeń międzyokresowych kosztów n[astępują] stosownie do upływu czasu lub wielkości świadczeń. Czas i sposób rozlicze[nia jest] uzasadniony charakterem rozliczanych kosztów, z zachowaniem zasady ostr[ożności].</p>
+<p>Rozliczenia międzyokresowe przychodów, dokonywane z zachowaniem [zasady] ostrożności, obejmują w szczególności:</p>
+<ul>
+<li>równowartość otrzymanych lub należnych od kontrahentów środków [z tytułu] świadczeń, których wykonanie nastąpi w następnych o[kresach] sprawozdawczych,</li>
+<li>środki pieniężne otrzymane na sfinansowanie nabycia lub wytw[orzenia] środków trwałych, w tym także środków trwałych w budowie o[raz prac] rozwojowych, jeżeli stosownie do innych Ustaw nie zwiększają one ka[pitałów] (funduszy) własnych. Zaliczone do rozliczeń międzyokresowych przych[odów] kwoty zwiększają stopniowo pozostałe przychody operacyjne, równol[egle do] odpisów amortyzacyjnych lub umorzeniowych od środków trwały[ch lub] kosztów prac rozwojowych sfinansowanych z tych źródeł.</li>
+</ul>
+<h3 id="rozdzial-trzeci-metody-wyceny-aktywow-i-pasywow-oraz-ustalen">Rozdział trzeci. Metody wyceny aktywów i pasywów oraz ustalenie wyniku finansowego</h3>
+<p><strong>3.1. Wycena aktywów i pasywów.</strong></p>
+<p>Aktywa i pasywa wycenia się na dzień bilansowy w sposób następujący:</p>
+<ul>
+<li>środki trwałe oraz wartości niematerialne i prawne – według cen nabycia lub kosztów wytworzenia, pomniejszonych o odpisy amortyzacyjne lub umorzeniowe, a także o odpisy z tytułu trwałej utraty wartości;</li>
+<li>środki trwałe w budowie – w wysokości ogółu kosztów pozostających w bezpośrednim związku z ich nabyciem lub wytworzeniem, pomniejszonych o odpisy z tytułu trwałej utraty wartości;</li>
+<li>udziały w innych jednostkach oraz inne inwestycje zaliczone do aktywów trwałych – według ceny nabycia pomniejszonej o odpisy z tytułu trwałej utraty wartości; wartość w cenie nabycia można przeszacować do wartości w cenie rynkowej, a różnicę z przeszacowania rozliczyć zgodnie z art. 35 ust. 4 Ustawy;</li>
+<li>inwestycje krótkoterminowe – według ceny nabycia lub ceny (wartości) rynkowej, zależnie od tego, która z nich jest niższa, a krótkoterminowe inwestycje, dla których nie istnieje aktywny rynek w inny sposób określonej wartości godziwej;</li>
+<li>należności i udzielone pożyczki – w kwocie wymaganej zapłaty, z zachowaniem ostrożności,</li>
+<li>zobowiązania – w kwocie wymagającej zapłaty;</li>
+<li>rezerwy – w uzasadnionej, wiarygodnie oszacowanej wartości;</li>
+<li>kapitały (fundusze) własne oraz pozostałe aktywa i pasywa – w wartości nominalnej.</li>
+</ul>
+<p>Na dzień bilansowy wycenia się wyrażone w walutach obcych:</p>
+<ul>
+<li>składniki aktywów (z wyłączeniem udziałów w jednostkach podporządkowanych wycenionych metodą praw własności) – po kursie średnim ustalonym dla danej waluty przez Narodowy Bank Polski,</li>
+<li>składniki pasywów – po kursie średnim ustalonym dla danej waluty przez Narodowy Bank Polski.</li>
+</ul>
+<p><strong>3.2. Inwentaryzacja.</strong></p>
+<p>Jednostka przeprowadza na ostatni dzień każdego roku obrotowego inwentaryzację:</p>
+<ul>
+<li>aktywów pieniężnych (z wyjątkiem zgromadzonych na rachunkach bankowych), papierów wartościowych, rzeczowych składników aktywów obrotowych – <strong>drogą spisu ich ilości z natury</strong>, wyceny tych ilości, porównania wartości z danymi z ksiąg rachunkowych oraz wyjaśnienia i rozliczenia ewentualnych różnic,</li>
+<li>aktywów finansowych zgromadzonych na rachunkach banko[wych lub] przechowywanych przez inne jednostki, oraz należności, w tym u[dzielonych] pożyczek oraz powierzonych kontrahentom własnych składników [aktywów –] drogą otrzymania od banków i uzyskania od kontrahentów <strong>po[twierdzeń]</strong> prawidłowości wykazanego w księgach rachunkowych jednostki s[tanu tych] aktywów oraz wyjaśnienia i rozliczenia ewentualnych różnic,</li>
+<li>należności spornych i wątpliwych oraz należności i zobowiązań wobe[c osób nie] prowadzących ksiąg rachunkowych, a także z tytułu rozr[achunków] publicznoprawnych (US, ZUS – jeżeli przeprowadzenie ich spisu z [natury lub] uzgodnienie z przyczyn uzasadnionych nie było możliwe) – <strong>drogą po[równania] danych</strong> ksiąg rachunkowych z odpowiednimi dokumentami i w[eryfikacji] realnej wartości tych składników.</li>
+</ul>
+<p>Jednostka przeprowadza raz na cztery lata, na ostatni dzień roku ob[rotowego,] w którym upływa ten okres, inwentaryzację środków trwałych oraz maszyn i [urządzeń] wchodzących w skład środków trwałych w budowie, znajdujących się n[a terenie] strzeżonym – <strong>drogą spisu ich ilości z natury</strong> i porównania wartości z danym[i ksiąg] rachunkowych oraz wyjaśnienia i rozliczenia ewentualnych różnic.</p>
+<p>Inwentaryzacją drogą spisu z natury obejmuje się również znajdujące się w [jednostce] składniki aktywów, będące własnością innych jednostek, powierzone jej do s[przedaży,] przechowania, przetwarzania lub używania, powiadamiając te jednostki o [wynikach] spisu.</p>
+<p>Inwentaryzację, przeprowadza się również na dzień zakończenia działalno[ści przez] jednostkę oraz na dzień poprzedzający postawienie jej w stan likwidacji lub u[padłości]. W przypadku połączenia lub podziału jednostek, z wyjątkiem spółek kapi[tałowych,] strony mogą w drodze umowy pisemnej odstąpić od inwentaryzacji.</p>
+<p>Przeprowadzenie i wyniki inwentaryzacji należy odpowiednio udokum[entować] i powiązać z zapisami ksiąg rachunkowych.</p>
+<p>Ujawnione w toku inwentaryzacji różnice między stanem rzeczywistym a [stanem] wykazanym w księgach rachunkowych należy wyjaśnić i rozliczyć w [księgach] rachunkowych tego roku obrotowego, na który przypadał termin inwentaryz[acji, przy] czym niedobory niezawinione, których wartość nie przekracza 3500 zł. będzie [odnoszona] w koszty bieżącego okresu.</p>
+<p><strong>3.3. Koszty.</strong></p>
+<p>Ewidencję kosztów jednostka prowadzi w układzie rodzajowym na kontac[h zespołu] „4” oraz zespołu „5”. Ewidencja kosztów w zespole „4” umożliwia r[odzajowy] podział kosztów zgodnie z Ustawą o rachunkowości na:</p>
+<ul>
+<li>amortyzację</li>
+<li>zużycie materiałów i energii</li>
+<li>usługi obce</li>
+<li>podatki i opłaty</li>
+<li>wynagrodzenia</li>
+<li>świadczenia pracownicze</li>
+<li>pozostałe koszty</li>
+</ul>
+<p>Ewidencja na kotach zespołu „5” umożliwia podział kosztów na:</p>
+<ul>
+<li>koszty związane z działalnością statutową Gminy (konto 501)</li>
+<li>koszty związane z działalnością opodatkowaną VAT prowadzoną przez Gminę (konto 502)</li>
+<li>koszty związane z projektami celowymi (konto 530)</li>
+<li>koszty związane z funkcjonowaniem Zarządu i innych organów nadzorczych (konto 550)</li>
+</ul>
+<p>Analityka prowadzona do kont 501 i 502 pozwala na ustalenie stopnia realizacji budżetu uchwalanego przez Gminę na dany rok obrachunkowy w podziale na poszczególne działy.</p>
+<p><strong>3.3.1. Ustalenie wyniku finansowego.</strong></p>
+<p>Na wynik finansowy netto składają się:</p>
+<ul>
+<li>a) wynik działalności operacyjnej, w tym z tytułu pozostałych przychodów i kosztów operacyjnych,</li>
+<li>b) wynik operacji finansowych,</li>
+<li>c) wynik operacji nadzwyczajnych,</li>
+<li>d) obowiązkowe obciążenia wyniku finansowego z tytułu podatku dochodowego, którego podatnikiem jest jednostka, i płatności z nim zrównanych, na podstawie odrębnych przepisów.</li>
+</ul>
+<p><strong>Wynik działalności operacyjnej</strong> stanowi różnicę między przychodami netto ze sprzedaży usług z uwzględnieniem dotacji, upustów, rabatów i innych zwiększeń lub zmniejszeń, bez podatku od towarów i usług, oraz pozostałymi przychodami operacyjnymi, a ogółem kosztów poniesionych w celu ich realizacji oraz pozostałych kosztów operacyjnych.</p>
+<p><strong>Wynik operacji finansowych</strong> stanowi różnicę między przychodami finansowymi, w szczególności z tytułu dywidend (udziałów w zyskach), odsetek, zysków ze zbycia inwestycji, aktualizacji wartości inwestycji, nadwyżki dodatnich różnic kursowych nad ujemnymi, a kosztami finansowymi, w szczególności z tytułu odsetek, strat ze zbycia inwestycji, aktualizacji wartości inwestycji, nadwyżki ujemnych różnic kursowych nad dodatnimi, z wyjątkiem odsetek, prowizji, dodatnich i ujemnych różnic kursowych, o których mowa w art. 28 ust. 4 i ust. 8 pkt 2 Ustawy.</p>
+<p><strong>Wynik zdarzeń nadzwyczajnych</strong> stanowi różnicę między zyskami nadzwyczajnymi a stratami nadzwyczajnymi.</p>
+<h3 id="rozdzial-czwarty-wycena-aktywow-i-pasywow-w-przypadku-gdy-za">Rozdział czwarty. Wycena aktywów i pasywów w przypadku, gdy zagrożona jest zas[ada] kontynuacji działania Gminy</h3>
+<p>Jeżeli założenie kontynuacji działalności, o którym mowa w art. 5 ust. 2 Ustawy, [nie jest] zasadne, to wycena aktywów jednostki następuje po cenach sprzedaży netto moż[liwych do] uzyskania, nie wyższych od cen ich nabycia albo kosztów wytworzenia, pomniejs[zonych o] dotychczasowe odpisy amortyzacyjne lub umorzeniowe, a także odpisy z tytu[łu trwałej] utraty wartości. W takim przypadku jednostka jest również obowiązana utworzyć [rezerwę] na przewidywane dodatkowe koszty i straty spowodowane zaniechaniem [lub utratą] zdolności do kontynuowania działalności.</p>
+<p>Wycena po cenach sprzedaży netto i utworzenie rezerwy następują w szcze[gólności] w przeddzień postawienia jednostki w stan likwidacji (jeżeli nie jest ona spow[odowana] prywatyzacją przedsiębiorstwa państwowego) lub w stan upadłości, na ko[niec roku] obrotowego, jeżeli na dzień zatwierdzenia sprawozdania finansowego za [ten rok] obrotowy jednostka nie będzie kontynuowała działalności, na koniec roku ob[rotowego] przypadającego w czasie trwania postępowania likwidacyjnego lub upadłoś[ciowego,] a także w przeddzień przekazania, podziału lub sprzedaży jednostki, jeżeli odp[owiednia] umowa nie przewiduje przyjęcia za podstawę rozliczeń wartości majątku ustalo[nej przy] założeniu, że działalność gospodarcza będzie przez jednostkę kontynuowana.</p>
+<p>Różnica powstała w wyniku wyceny oraz utworzenia rezerwy, wpływa na kapitał ([fundusz]) z aktualizacji wyceny.</p>
+<p>Wszczęcie postępowania naprawczego lub zmiana formy prawnej jednostki nie [stanowi] przeszkody do uznania, że działalność będzie kontynuowana, jeżeli odpowiedni[a umowa] nie przewiduje obniżenia wartości wykazanych w bilansie aktywów i pasywów.</p>
+<h3 id="rozdzial-piaty-dowody-ksiegowe-oraz-oprogramowanie">Rozdział piąty. Dowody księgowe oraz oprogramowanie</h3>
+<p>Ustala się, że dowodami źródłowymi stanowiącymi podstawę zapisów w [księgach] rachunkowych są dowody księgowe:</p>
+<ul>
+<li>dowody zewnętrzne obce, otrzymane od kontrahentów,</li>
+<li>dowody zewnętrzne własne, przekazywane w oryginale kontrahentom,</li>
+<li>dowody wewnętrzne dotyczące operacji wewnątrz jednostki,</li>
+<li>dowody zbiorcze,</li>
+<li>dowody korygujące poprzedni zapis,</li>
+<li>dowody zastępcze – wystawione gdy otrzymanie zewnętrznego obcego, dowodu źródłowego (z wyjątkiem zakupów opodatkowanych podatkiem VAT) było niemożliwe, bądź trudne do realizacji,</li>
+<li>dowody rozliczeniowe – ujmujące już dokonane zapisy w/g nowych kryteriów klasyfikacji.</li>
+</ul>
+<p><strong>Dowodem zastępczym</strong> dokumentującym operację gospodarczą, w przypadku braku możliwości uzyskania zewnętrznych dowodów źródłowych, jest <strong>dowód wewnętrzny</strong> własny, posiadający następujące cechy:</p>
+<ul>
+<li>określenie stron dokonujących operacji gospodarczej,</li>
+<li>datę dokonania operacji gospodarczej,</li>
+<li>miejsce i datę wystawienia dowodu,</li>
+<li>opis operacji oraz jej wartość</li>
+<li>stwierdzenie sprawdzenia i zakwalifikowania dowodu do ujęcia w księgach rachunkowych.</li>
+</ul>
+<p>Dopuszcza się dokumentowanie kosztów dowodami wewnętrznymi do kwoty 500 zł. jednorazowo, pod warunkiem uzyskania akceptu danego wydatku przez Zarządu Jednostki.</p>
+<p>Zapis księgowy powinien zawierać co najmniej:</p>
+<ul>
+<li>datę dokonania operacji gospodarczej,</li>
+<li>określenie rodzaju i numer identyfikacyjny dowodu księgowego stanowiącego podstawę zapisu oraz jego datę, jeżeli różni się ona od daty dokonania operacji,</li>
+<li>zrozumiały tekst, skrót lub kod opisu operacji, z tym że należy posiadać pisemne objaśnienia treści skrótów lub kodów,</li>
+<li>kwotę i datę zapisu,</li>
+<li>oznaczenie kont, których dotyczy.</li>
+</ul>
+<p>Zapisów dotyczących operacji wyrażonych w walutach obcych dokonuje się w sposób umożliwiający ustalenie kwoty operacji w walucie polskiej i obcej.</p>
+<p>Zapisy w dzienniku i na kontach księgi głównej powinny być powiązane ze sobą w sposób umożliwiający ich sprawdzenie (art. 23. ust. 2, 3, 4, Ustawy o Rachunkowości). Zapisy w księgach rachunkowych powinny być dokonywane w sposób zapewniający ich trwałość, przez czas nie krótszy od wymaganego do przechowywania ksiąg rachunkowych.</p>
+<p>Ustala się, że księgi rachunkowe będą prowadzone przy pomocy kompute[ra] z komputerowym systemem przetwarzania danych obejmującym:</p>
+<ul>
+<li>a) Księgi handlowe – program „Finansowo – Księgowy” Symfonia ® Finanse i ks[ięgowość] 500 e,</li>
+<li>b) Symfonia® Płace „2.70” autorstwa „MATRIX” 01-233 Warszawa, ul. B[…] stosowany do rozliczeń z tytułu wynagrodzeń o pracę oraz umów cywilnop[rawnych] z pracownikami oraz Urzędem Skarbowym.</li>
+<li>c) Program Płatnik stosowany do rozliczeń z Zakładem Ubezpieczeń Społeczny[ch].</li>
+</ul>
+<p><em>Podpisy: Anna Chipczyńska — Przewodnicząca Zarządu; Lesław Piszewski — Wiceprzewodniczący Zarządu; Anna Bakuła — Członkini Zarządu, Skarbniczka; Anna Dodziuk — Członkini Zarządu; Paweł Lewandowski — Członek Zarządu; Grażyna Majer — Członkini Zarządu.</em></p>
+</section><section class="r-doc"><h2 id="instrukcja-obiegu-i-kontroli-dowodow-ksiegowych-w-gminie-wyz">Instrukcja obiegu i kontroli dowodów księgowych w Gminie Wyznaniowej Żydowskiej w Warszawie</h2>
+<h3 id="1-cel-i-zadania-instrukcji">1. Cel i zadania instrukcji</h3>
+<p>Celem niniejszej instrukcji jest ustalenie jednolitych zasad sporządzania, kontroli i obiegu dokumentów w Gminie Wyznaniowej Żydowskiej w Warszawie, które powodują skutki finansowo – gospodarcze oraz określenie kompetencji i odpowiedzialności związanej z prawidłowym i rzetelnym opracowaniem tych dokumentów.</p>
+<h3 id="2-dowody-ksiegowe">2. Dowody księgowe</h3>
+<p>Wszystkie operacje gospodarcze powinny być udokumentowane odpowiednimi dowodami księgowymi. Dowód księgowy jest dokumentem potwierdzającym dokonanie operacji gospodarczej lub finansowej w określonym miejscu i czasie.</p>
+<p><em>Cechy prawidłowego dowodu księgowego:</em></p>
+<p><strong>Każdy dowód księgowy powinny charakteryzować następujące cechy:</strong></p>
+<ol>
+<li>być sporządzony wg ustalonego wzoru (np. faktura VAT),</li>
+<li>zawierać zapisy na dokumencie dokonane w sposób trwały, wypełniony czytelnie, ręcznie (piórem, długopisem), maszynowo lub komputerowo, zapobiegający ich usunięciu, poprawieniu lub uzupełnieniu,</li>
+<li>być kompletny, a treść i liczby w poszczególnych rubrykach (polach) winny być nanoszone pismem starannym, w sposób poprawny i bezbłędny, nie budzący żadnych wątpliwości,</li>
+<li>mieć rubryki (pola) dowodu księgowego wypełnione zgodnie z przeznaczeniem,</li>
+<li>być wypełniony rzetelnie, rzeczowo, wiarygodnie, w sposób wolny od błędów rachunkowych i kompletny, zawierający wszystkie dane wymagane przepisami i wynikające z operacji, którą dokumentuje,</li>
+<li>zawierać dane, o których mowa w aktualnie obowiązujących przepisach</li>
+<li>zawierać podpisy na dowodach księgowych, pieczątki i daty (muszą być autentyczne),</li>
+<li>posiadać numerację kolejno wystawionych dowodów księgowych – musi być ciągła, bezpośrednio przyporządkowana chronologii (według kolejnych dat) i według przyjętych zasad numerowania dowodów księgowych,</li>
+<li>w przypadku dowodów księgowych zbiorczych być sporządzony na podstawie pra[widłowo wy]stawionych dokumentów źródłowych, które muszą być w dowodzie zbiorczym p[oprawnie] wypełnione,</li>
+<li>pozbawiony jakichkolwiek przeróbek i wymazywania,</li>
+<li>w przypadku korygowania niewłaściwych danych lub błędnych zapisów źródłowych [w dowo]dzie zewnętrznym obcym może on być skorygowany albo poprzez wystawienie przez [kontrahenta] – dokumentu korygującego błędny dokument (np. faktura korygująca) albo przez w[ystawienie] i wysłanie kontrahentowi dowodu korygującego (np. nota korygująca),</li>
+<li>błędy w dowodzie księgowym wewnętrznym mogą być poprawione przez skreślenie [błędnej] treści lub liczby (kwoty) i wpisanie obok danych poprawnych z datą poprawki i pa[rafką osoby] upoważnionej do tej czynności, z utrzymaniem czytelności skreślonych wyraże[ń lub liczb;] nie można poprawić pojedynczych liter lub cyfr,</li>
+<li>sporządzanie faktury VAT musi być zgodne z przepisami ustawy VAT i wykonawczych [rozporzą]dzeń Ministra Finansów wydanych do tej ustawy,</li>
+<li>mogą być stosowane skróty i symbole w dowodzie księgowym, ale tylko powszechnie z[rozumiałe].</li>
+</ol>
+<p><em>Klasyfikacja dowodów księgowych</em></p>
+<ol>
+<li>Podstawą zapisów w księgach rachunkowych są dowody księgowe, stwierdzające do[konanie] operacji gospodarczej, zwane „dowodami źródłowymi”.</li>
+<li>Dowody księgowe dzielą się na trzy grupy:<ul>
+<li>a) zewnętrzne obce – otrzymane od kontrahentów,</li>
+<li>b) zewnętrzne własne – przekazywane w oryginale kontrahentom,</li>
+<li>c) wewnętrzne – dotyczące operacji wewnątrz Gminy.</li>
+</ul>
+</li>
+<li>Zgodnie z art. 21 ust. 1 ustawy o rachunkowości, podstawą zapisów rachunkowych [mogą] być również sporządzone przez jednostkę dowody księgowe:<ul>
+<li>a) zbiorcze – służące do dokonania łącznych zapisów zbioru dowodów źródłowych, któ[re mu]szą być w dowodzie zbiorczym pojedynczo wymienione,</li>
+<li>b) korygujące poprzednie zapisy,</li>
+<li>c) zastępcze – wystawione do czasu otrzymania zewnętrznego obcego dowodu źródło[wego],</li>
+<li>d) rozliczeniowe – ujmujące dokonane już zapisy według nowych kryteriów klasyfikacji.</li>
+</ul>
+</li>
+</ol>
+<p>W przypadku uzasadnionego braku możliwości uzyskania zewnętrznych obcych dowodów źródł[owych] kierownik jednostki może zezwolić na udokumentowanie operacji gospodarczej za pomocą księg[owych] dowodów zastępczych, sporządzonych przez osoby dokonujące tych operacji. Nie może jed[nak to] dotyczyć operacji gospodarczych, których przedmiotem są zakupy opodatkowane poda[tkiem] od towarów i usług. Szczegółową zawartość dowodu księgowego szczegółowo określa w art. 21 Us[tawy] o rachunkowości dnia 29 września 1994r.</p>
+<p><em>Za dowody księgowe uznaje się:</em></p>
+<ul>
+<li>a) Faktury VAT</li>
+<li>b) Faktury VAT korygujące</li>
+<li>c) Rachunki</li>
+<li>d) Rozliczenia zaliczek</li>
+<li>e) Polecenia wyjazdu służbowego</li>
+<li>f) Dowody bankowe (wszelkie wyciągi bankowe)</li>
+<li>g) Lista Płac,</li>
+<li>h) Dowody kasowe (kasa przyjmie, kasa wypłaci, raport kasowy),</li>
+<li>i) Noty księgowe,</li>
+<li>j) Noty korygujące,</li>
+<li>k) Polecenia księgowania</li>
+</ul>
+<h3 id="3-obieg-dokumentow">3. Obieg dokumentów</h3>
+<ol>
+<li>Obieg dokumentów księgowych, który obejmuje drogę dokumentu od chwili sporządzenia, względnie wpływu aż do momentu ich dekretacji i przekazania do zaksięgowania, powinien odbyć się najkrótszą drogą.</li>
+<li>Wszystkie dokumenty księgowe winny być składane w sekretariacie. Na dowód wpływu dokumentów pracownik administracyjno – biurowy na każdym z nich umieszcza pieczęć z datą wpływu i wpisuje do księgi korespondencyjnej.</li>
+<li>Oryginały dokumentów przekazywane są kierownikom działów /pracownikom (za pokwitowaniem w księdze korespondencyjnej), a przez nich odpowiednim osobom celem ich sprawdzenia (czyt. pkt. 4 Kontrola).</li>
+<li>Dokumenty księgowe są opisywane na odwrocie zgodnie z wytycznymi dotyczącymi danego działu, opatrywane pieczęcią kontrolną¹ oraz podpisane własnoręcznym podpisem osoby upoważnionej.</li>
+<li>Opisany dokument przekazywany jest do działu księgowego w terminie 7 dni od daty otrzymania.</li>
+<li>Sprawdzony dowód księgowy stanowi podstawę zapisów w księgach rachunkowych (a zapis zawiera co najmniej: datę dokonania operacji gospodarczej, określenie rodzaju i numer identyfikacyjny dowodu księgowego stanowiącego podstawę zapisu oraz jego datę, jeżeli różni się ona od daty dokonania operacji, zrozumiały tekst, skrót opisu operacji, kwotę i datę zapisu, oznaczenie kont których dotyczy).</li>
+</ol>
+<p>Dowód księgowy podlega zaksięgowaniu po dokonaniu dekretacji.</p>
+<p>Księgi rachunkowe Gminy, prowadzone są przy pomocy komputera wraz z komputerowym systemem przetwarzania danych: „Symfonia SAGE® Finanse i księgowość”, w związku z tym na zaksięgowanym dokumencie umieszcza się numer pod którym został zaewidencjonowany (nadany przez system).</p>
+<p>¹ Wzór pieczęci kontrolnej zawarty jest w załączniku nr 1 do niniejszej Instrukcji</p>
+<h3 id="4-kontrola">4. Kontrola</h3>
+<p>Wszelkie dokumenty stanowiące podstawę księgowania powinny być poddane kontroli przed zrealizowaniem i zaksięgowaniem.</p>
+<p><strong>Kontrola merytoryczna (rzeczowa)</strong> polega na sprawdzeniu, czy dowód księgowy dokumentuje faktyczny obraz konkretnej operacji gospodarczej (np. dostawę towarów, wykonanie usług itp.) oraz zasadność tej operacji, czyli jej konieczność na potrzeby prowadzonej działalności statutowej lub gospodarczej. Inaczej mówiąc, kontrola merytoryczna potwierdza prawidłowość i faktyczne dokonanie operacji gospodarczej.</p>
+<p>W trakcie kontroli merytorycznej weryfikacji podlegają przede wszystkim:</p>
+<ul>
+<li>prawidłowość identyfikacji podmiotowej (określenie stron) i przedmiotowej operacji stat[utowej] lub gospodarczej, poprawność nazewnictwa dokonanych operacji statutowych lub go[spodar]czych</li>
+<li>zasadność dokumentowanych zdarzeń oraz ich zgodność z treścią zawartych umów bądź [decy]zjami, podjętymi przez upełnomocnione osoby,</li>
+<li>aspekt ilościowy i wartościowy poszczególnych operacji gospodarczych (w tym w zakresie [za]stawek, opustów, marży itp.)</li>
+<li>informacje dodatkowe (w tym dotyczące: sposobów i terminów płatności, rachunków ba[nko]wych, środków transportu, wymaganych atestów, opakowań itp.)</li>
+</ul>
+<p>Kontrolę merytoryczną przeprowadza kierownik danego działu, bądź pracownik odpowiedzia[lny za] dokonanie danej operacji gospodarczej. Osoby te powinny ponadto zamieścić na dokumencie [wy]czerpujący opis zdarzenia gospodarczego, aby ta adnotacja umożliwiła późniejsze zadekretowa[nie] danego dowodu księgowego w sposób jednoznaczny i nie budzący żadnych wątpliwości.</p>
+<p>W odróżnieniu od kontroli merytorycznej – do przeprowadzenia której nierzadko wymagana [jest wie]dza, znacznie wykraczająca poza kompetencje zawodowe i zasób informacji, posiadane przez pe[rsonel działu] księgowy – sprawdzenia dokumentu od strony formalnej oraz rachunkowej dokonuje zazwyczaj gł[ówny] księgowy bądź upoważniony pracownik działu finansowo-księgowego (dlatego te dwa aspekty we[ryfi]kacji dowodów księgowych obejmuje się często wspólnym terminem: kontrola formalno-rachu[nkowa]). Kontrola formalna polega na ustaleniu, czy dany dowód księgowy – w świetle przepisów ogólnie [obo]wiązujących (księgowych, podatkowych, finansowych, gospodarczych itp.) oraz przepisów szcze[gól]nych – posiada wszystkie cechy formalne pełnoprawnego, legalnego dokumentu. Ten rodzaj ko[ntroli] można przeprowadzać równolegle z kontrolą merytoryczną, albo oddzielnie.</p>
+<p>W trakcie kontroli formalnej weryfikacji podlegają w szczególności:</p>
+<ul>
+<li>właściwy wybór druków (formularzy, zestawień, arkuszy itp.) na szablonie których sporządz[ane są] poszczególne dowody księgowe oraz prawidłowe (zgodne z przeznaczeniem) wypełnienie [w nich] odpowiednich rubryk i pól,</li>
+<li>poprawność nazewnictwa i numeracji dokumentów,</li>
+<li>kompletność danych ujętych w dowodach księgowych, zgodnie z przynajmniej minimal[nymi] wymogami, określonymi na mocy stosowanych przepisów,</li>
+<li>czytelność i staranność sporządzenia dowodów księgowych,</li>
+<li>brak w dokumentach fragmentów zniszczonych (poplamionych, podartych itp.), a także śla[dów] wymazywania i przeróbek,</li>
+<li>obecność w odpowiednich miejscach pieczęci, dat i podpisów upoważnionych osób, któr[ymi] winny być opatrzone dowody księgowe.</li>
+</ul>
+<p>Kontrola rachunkowa – jako dopełnienie merytorycznej i formalno-prawnej weryfikacji dokument[ów] polega na dokładnym sprawdzeniu, czy zamieszczone są na dowodach księgowych dane liczbo[we] zgodnie z zasadami działań matematycznych oraz obowiązującymi w danym czasie normami prze[li]czeniowymi (np. w zakresie zaokrągleń, reguł obliczeń podatkowych itp.) – są bezbłędne od strony rachunkowej (np. czy poprawne są sumy, iloczyny, ilorazy itp.). Ważne jest przy tym, by osoba doko[nu]jąca kontroli rachunkowej przeprowadziła obliczenia, nie sugerując się zamieszczonymi na dowo[dzie] księgowym wynikami poszczególnych działań arytmetycznych, czyli niejako „od początku” (zgodnie [z] tzw. Zasadą ograniczonego zaufania).</p>
+<p>Fakt dokonania kontroli dokumentu pod względem merytorycznym i formalno-rachunkowym winien być potwierdzony podpisem osoby dokonującej kontroli pod klauzulą: „Sprawdzono pod względem formalno-rachunkowym oraz merytorycznym”</p>
+<p>Dowody księgowe kontroluje pod względem merytorycznym kierownik danego działu lub Zarząd Gminy, a pod względem formalno-rachunkowym księgowy (obecnie pracownik biura rachunkowego Adiutor).</p>
+<p>Podstawę do zapłaty stanowią dowody księgowe zawierające klauzulę „zatwierdzono do zapłaty” i podpis.</p>
+<p>Zatwierdzenia dowodu do wypłaty dokonuje Zarząd Gminy.</p>
+<p>Na odwrocie dowodów księgowych dotyczących realizowanego wydatku powinny znaleźć się informacje:</p>
+<ul>
+<li>krótki opis wraz ze wskazaniem działu jakiego dany wydatek dotyczy</li>
+<li>pozycja w budżecie danego działu</li>
+<li>sposób płatności (przelew / gotówka)</li>
+</ul>
+<h3 id="5-przechowywanie-dokumentacji">5. Przechowywanie dokumentacji</h3>
+<p>Dokumentację księgową przechowuje się w siedzibie Gminy, w zamkniętych szafach pancernych. Dokumenty źródłowe stanowiące podstawę do zapisów w księgach jednostki są przechowywane w segregatorach, które są opisane co do roku, okresu (miesięcy) oraz typu dokumentacji jaką zawierają.</p>
+<p>Dokumenty księgowe (faktury sprzedaż i zakupu, rachunki, wyciągi bankowe i inne dowody księgowe) są przechowywane przez jednostkę przez okres nie krótszy niż 6 lat.</p>
+<p>Listy płac, kartoteki wynagrodzenie oraz inna dokumentacja związana ze stosunkiem pracy zawarta z pracownikiem Jednostki jest przechowywane przez okres nie krótszy niż 50 lat.</p>
+<h3 id="6-postanowienia-koncowe">6. Postanowienia końcowe</h3>
+<p>W przypadku spraw nieuregulowanych niniejszą instrukcją ma zastosowanie Polityka rachunkowości Gminy Wyznaniowej Żydowskiej w Warszawie oraz Ustawa o rachunkowości z dnia 29 września 1994r.</p>
+<p><em>Podpisy: Główna Księgowa; za Zarząd Gminy: Anna Chipczyńska — Przewodnicząca Zarządu, Anna Bakuła — Skarbnik.</em></p>
+<h3 id="zalacznik-nr-1-wzor-obowiazujacych-w-obiegu-dowodow-ksiegowy">Załącznik nr 1: Wzór obowiązujących w obiegu dowodów księgowych pieczęci</h3>
+<p>Pieczęć kontrolna:</p>
+<blockquote>
+<p>Sprawdzono pod względem:</p>
+<ul>
+<li>merytorycznym ........................................</li>
+<li>rachunkowym ........................................</li>
+<li>formalnym ........................................</li>
+</ul>
+<p>Zatwierdzono do zapłaty: ........................................</p>
+<p>Zrealizowano:</p>
+<ul>
+<li>zapłacono gotówką ........................................</li>
+<li>wprowadzono do systemu bankowego: ........................................</li>
+</ul>
+</blockquote>
+</section><section class="r-doc"><h2 id="procedura-zakupowa-w-gminie-wyznaniowej-zydowskiej-w-warszaw">Procedura zakupowa w Gminie Wyznaniowej Żydowskiej w Warszawie („Procedura”)</h2>
+<p><em>(zatwierdzona uchwałą Zarządu GWŻ w Warszawie dn. 10 kwietnia 2018 r.)</em></p>
+<h3 id="1-cel-i-zakres">1. Cel i zakres</h3>
+<p><strong>1.1. Cel procedury</strong></p>
+<ul>
+<li>1.1.1. Celem Procedury jest uregulowanie procesu planowania i dokonywania zakupów na potrzeby Gminy Wyznaniowej Żydowskiej w Warszawie w taki sposób, aby zapewnić dokonanie wyboru najkorzystniejszej oferty w postępowaniu zakupowym.</li>
+<li>1.1.2. Procedurę stosuje się do zakupów, których wartość przekracza kwotę 1 000 zł netto.</li>
+</ul>
+<p><strong>1.2. Wyłączenia</strong></p>
+<ul>
+<li>1.2.1. Procedury nie stosuje się do zakupów awaryjnych, umów z zakresu prawa pracy, umów zlecenia z osobami fizycznymi, umów o dzieło z osobami fizycznymi, kontraktów na świadczenie usług rabinackich, zakupów związanych z kosztami delegacji służbowych oraz opłatami za dozory techniczne i przeglądy.</li>
+<li>1.2.2. Zakupy awaryjne dotyczą prac remontowych, bądź zakupów materiałów do remontu w przypadku, gdy zagrożone jest bezpieczeństwo mienia i/lub osób przebywających w danej nieruchomości.</li>
+</ul>
+<p>W przypadku powstania awarii niniejsza Procedura zakupu nie obowiązuje, a osobami uprawnionymi do dokonania zakupów i/lub zlecenia prac są Kierownicy Biur, przy zachowaniu zasady uzyskania uprzedniej akceptacji Skarbnika Gminy bądź Przewodniczącego lub Wiceprzewodniczącego Zarządu Gminy.</p>
+<p>Pisemne potwierdzenie zlecenia zakupów i/lub prac awaryjnych zostaje podpisane „post factum”.</p>
+<p>Na odwrocie faktury za prace lub zakupy awaryjne umieszcza [się] dodatkowo adnotację „awaria”.</p>
+<p>W przypadku, gdy wartość zakupów awaryjnych przekracza kwotę 5 00[0 zł] netto sporządzany jest Protokół opisujący awarię, zatwierdzany pr[zez] dwóch członków Zarządu, w tym Przewodniczącego.
+- 1.2.3. Zarząd Gmin Wyznaniowej Żydowskiej w Warszawie może zdecydować [o] wyborze Wykonawcy i zawarciu Umowy zakupowej bez stosowan[ia] Procedury lub o odstąpieniu od stosowania poszczególnych postanowie[ń] Procedury w szczególnych sytuacjach. W takim wypadku, Zarzą[d] podejmuje indywidualną uchwałę oraz załącza do niej merytoryczn[e] uzasadnienie odstąpienia od Procedury zakupowej.</p>
+<h3 id="2-realizacja">2. Realizacja</h3>
+<p><strong>2.1. Ogólne zasady prowadzenia postępowania zakupowego</strong></p>
+<ul>
+<li>2.1.1. Każde Biuro współuczestniczy w opracowywaniu budżetu swojego dzia[łu] na dany rok kalendarzowy oraz przedstawia go do akceptacji Zarząd[u] Gminy.</li>
+<li>2.1.2. Zakupów dokonuje się w oparciu o bieżący Budżet Gminy, zatwierdza[ny] w drodze uchwały przez Zarząd Gminy.</li>
+<li>2.1.3. Postępowanie zakupowe przygotowuje się i prowadzi z zachowanie[m] zasady uczciwej konkurencji oraz zasady równego traktowa[nia] producentów, dostawców, zleceniobiorców lub wykonawców.</li>
+</ul>
+<p><strong>2.2. Zakupy o wartości od 1 000 zł do 20 000 zł netto</strong></p>
+<ul>
+<li>2.2.1. Przy planowaniu w budżecie zakupów o wartości od 1 000 zł do 20 00[0 zł] netto osoba szacująca koszty zobowiązana jest określić war[tość] zamówienia – telefonicznie lub w oparciu o cenniki kilku producent[ów,] dostawców, zleceniobiorców lub wykonawców.</li>
+<li>2.2.2. Przystępując do realizacji zakupu Kierownik Biura ponownie zbie[ra] minimum dwie oferty, analizuje warunki i opracowuje Rekomendacj[ę] jednego dostawcy/wykonawcy, którą przedstawia do akceptacji dw[óch] członkom Zarządu, w tym Przewodniczącemu, którzy podejmu[ją] ostateczną decyzję o wyborze najkorzystniejszej oferty.</li>
+<li>2.2.3. Kontrola i monitorowanie zakupów prowadzone są przy akceptowani[u] faktur przez co najmniej dwóch członków Zarządu oraz Kierowników Biur, jak również poprzez ciągłą kontrolę zgodności kosztów z zatwierdzonym Budżetem wykonywaną przez Dział Księgowości.</li>
+</ul>
+<p><strong>2.3. Zakupy o wartości powyżej 20 000 zł netto</strong></p>
+<ul>
+<li>2.3.1. Przy zakupach powyżej wartości 20 000 zł netto wymagane jest zebranie co najmniej trzech ofert. Analiza ofert odbywa się w obecności co najmniej dwóch członków Zarządu oraz osoby odpowiedzialnej za procedurę zakupową (Kierownika Biura), którzy łącznie tworzą Komisję Konkursową. W uzasadnionych przypadkach liczba ofert może być mniejsza, jednakże w takim przypadku należy każdorazowo udokumentować zaistniałą sytuację (np. brak odpowiedzi na zapytania ofertowe). Kierownik Biura odpowiedzialny jest za wysyłanie zapytań ofertowych, które określają podstawowe wymagania, jakie oferta winna spełniać (cena, termin i data dostawy/wykonania usługi, warunki płatności itp.).</li>
+<li>2.3.2. Za sporządzenie prawidłowego zakresu robót (materiałów, urządzeń, usług) niezbędnych do sporządzenia zapytania ofertowego odpowiedzialny jest Kierownik Biura.</li>
+<li>2.3.3. Oferty od dostawców wymagane są tylko w formie pisemnej (w wersji papierowej lub elektronicznej). W przypadku braku odpowiedzi na zapytanie ofertowe członkowie Komisji zobowiązani są do opisania zaistniałej sytuacji w protokole z wyboru ofert.</li>
+<li>2.3.4. Po dokonaniu analizy ofert, w tym po ewentualnym przeprowadzeniu dodatkowych spotkań bądź negocjacji z oferentami, Komisja Konkursowa przedstawia Zarządowi Gminy swoją rekomendację o wyborze najkorzystniejszej oferty, wraz z protokołem oraz zestawieniem ofert. Zarząd Gminy podejmuje, w formie uchwały, ostateczną decyzję o wyborze najkorzystniejszej oferty.</li>
+<li>2.3.5. Zlecenie zakupu musi być potwierdzone w formie pisemnej – poprzez zawartą umowę.</li>
+<li>2.3.6. Za przygotowanie umów odpowiedzialny jest Kierownik Biura.</li>
+<li>2.3.7. Kontrola i monitorowanie zakupów prowadzone są przy podpisywaniu przez Zarząd Gminy umów oraz akceptowaniu faktur przez co najmniej dwóch członków Zarządu, w tym Przewodniczącego Zarządu oraz Kierownika Działu, jak również poprzez ciągłą kontrolę zgodności kosztów z zatwierdzonym Budżetem wykonywaną przez Dział Księgowości.</li>
+</ul>
+<p><strong>2.4. Zakupy inwestycyjne w ramach prowadzonej działaności gospodarczej</strong></p>
+<ul>
+<li>2.4.1. Przy zakupie nieruchomości/lokalu użytkowego wymagana jest rekomendacja Biura ds. Nieruchomości oraz aktualny operat szacunkowy określający realną wartość nieruchomości/lokalu wraz z opinią o stanie prawnym i faktycznym nieruchomości/lokalu.</li>
+<li>2.4.2. Operat szacunkowy sporządza uprawniony rzeczoznawca majątkowy.</li>
+<li>2.4.3. Rekomendacja dla Zarządu Gminy powinna zawierać o[pis] nieruchomości/lokalu, wysokość stawki czynszu oraz analizę czynsz[ów w] bezpośrednim sąsiedztwie lokalu, opis warunków umowy, analizę koszt[ów] i przychodów oraz innych istotnych czynników.</li>
+<li>2.4.4. Procedura zakupu nieruchomości/lokalu użytkowego prowadzona je[st] zgodnie z zasadami określonymi w Uchwale nr 3 Nadzwyczajnego Walne[go] Zebrania członków Gminy Wyznaniowej Żydowskiej w Warszawie z d[nia] 7 września 2014 r. w sprawie ustalenia zasad gospodarowania majątki[em] Gminy.</li>
+</ul>
+<p><strong>2.5. Zakupy usług serwisowych</strong></p>
+<p>Ze względu na specyfikę usług serwisowych oraz niejednokrotn[ie] długotrwały charakter ich trwania, Kierownicy Biur raz do roku dokona[ją] przeglądu rynku tych usług, analizy cen oraz poddadzą ocenie solidno[ść] kontrahenta i jakość świadczonych przez niego usług. W przypadk[u] znalezienia korzystniejszej oferty, Kierownik Biura przedstawi Zarządowi Gminy rekomendację dotyczącą zmiany usługodawcy.</p>
+<h3 id="3-odpowiedzialnosc">3. Odpowiedzialność</h3>
+<p>Za stosowanie wymagań niniejszej Procedury odpowiedzialni są Kierownicy Biur w zakresie, w jakim współuczestniczą w procesie planowania i dokonywani[a] zakupów.</p>
+<p><em>Podpisy: Anna Chipczyńska — Przewodnicząca Zarządu; Anna Bakuła — Skarbnik.</em></p></section>
+  </div>
+    </div></div>
+    <p><a href="/">&larr; Powrót na stronę główną</a></p>
+  </div>
+  <script src="/nav.js"></script>
+  <script>
+
+(function(){
+  // wrap wide tables
+  document.querySelectorAll('#content table').forEach(function(t){
+    var w=document.createElement('div');w.className='r-tablewrap';t.parentNode.insertBefore(w,t);w.appendChild(t);
+  });
+  // highlight current section in nav
+  var links=[].slice.call(document.querySelectorAll('#nav a'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){
+        links.forEach(function(a){a.classList.remove('on');});
+        var h=e.target.querySelector('h2'); if(h&&map[h.id]) map[h.id].classList.add('on');
+      }});
+    },{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('section.r-doc').forEach(function(s){io.observe(s);});
+  }
+  // search: highlight matches, jump to first
+  var main=document.getElementById('content'), q=document.getElementById('q'), hits=document.getElementById('hits'), t;
+  function clear(){
+    main.querySelectorAll('mark').forEach(function(m){var p=m.parentNode;p.replaceChild(document.createTextNode(m.textContent),m);p.normalize();});
+  }
+  function run(){
+    clear(); var v=q.value.trim(); if(v.length<3){hits.textContent='';return;}
+    var re=new RegExp(v.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi'), n=0, first=null;
+    var w=document.createTreeWalker(main,NodeFilter.SHOW_TEXT,null), nodes=[];
+    while(w.nextNode()) nodes.push(w.currentNode);
+    nodes.forEach(function(node){
+      if(!re.test(node.nodeValue)) return; re.lastIndex=0;
+      var f=document.createDocumentFragment(), s=node.nodeValue, last=0, m;
+      while((m=re.exec(s))){ f.appendChild(document.createTextNode(s.slice(last,m.index)));
+        var mk=document.createElement('mark'); mk.textContent=m[0]; f.appendChild(mk); if(!first) first=mk; n++; last=m.index+m[0].length; }
+      f.appendChild(document.createTextNode(s.slice(last))); node.parentNode.replaceChild(f,node);
+    });
+    hits.textContent = n ? ('Znaleziono: '+n) : 'Brak wyników';
+    if(first) first.scrollIntoView({block:'center'});
+  }
+  q.addEventListener('input',function(){clearTimeout(t);t=setTimeout(run,300);});
+})();
+
+  </script>
+</body>
+</html>
