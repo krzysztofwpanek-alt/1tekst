@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nieruchomości gminne — Walne Zgromadzenie GWŻ</title>
+  <link rel="stylesheet" href="/style.css" />
+<style>
+
+  .nier{
+    --nbg:#f6f5f2; --surface:#ffffff; --text:#1c1f24; --muted:#5d636d; --line:#e2e0da;
+    --accent:#1f3a5f; --accent-soft:#e7edf5; --sold:#9a3b2e; --sold-soft:#f8e9e6;
+    --avir:#6b4f1d; --avir-soft:#f5eedd; --radius:10px;
+  }
+    .nier, .nier *{box-sizing:border-box}
+    
+    .nier .n-lead{color:var(--muted);margin:0 0 24px;max-width:70ch}
+
+  .nier .n-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,45%),1fr));gap:12px;margin-bottom:24px}
+  .nier .n-stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+  .nier .n-stat b{display:block;font-size:clamp(1.05rem,4.2vw,1.35rem);font-variant-numeric:tabular-nums;margin-top:2px}
+  .nier .n-stat span{color:var(--muted);font-size:.85rem}
+
+  .nier .n-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+  .nier .n-seg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px}
+  .nier .n-seg button{border:0;background:none;color:var(--text);font:inherit;font-size:.9rem;padding:6px 14px;border-radius:999px;cursor:pointer}
+  .nier .n-seg button[aria-pressed="true"]{background:var(--accent);color:var(--surface)}
+  .nier .n-search{flex:1;min-width:180px;max-width:320px;font:inherit;font-size:.95rem;padding:8px 12px;
+          border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--text)}
+  .nier .n-count{color:var(--muted);font-size:.85rem;margin-left:auto}
+
+  .nier .n-badge{display:inline-block;font-size:.75rem;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap}
+  .nier .n-b-own{background:var(--accent-soft);color:var(--accent)}
+  .nier .n-b-sold{background:var(--sold-soft);color:var(--sold)}
+  .nier .n-b-avir{background:var(--avir-soft);color:var(--avir)}
+
+  /* Tabela (desktop) */
+  .nier .n-table-wrap{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow-x:auto}
+  .nier table{width:100%;border-collapse:collapse;font-size:.9rem}
+  .nier th, .nier td{padding:10px 10px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  .nier th{font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:var(--nbg);position:sticky;top:0}
+  .nier td.n-num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .nier td.n-area{white-space:normal;max-width:13ch}
+  .nier th.n-num{text-align:right}
+  .nier th{white-space:normal}
+  .nier td.n-addr b{display:block}
+  .nier td.n-addr small{color:var(--muted)}
+  .nier td.n-desc{min-width:30ch;width:40%;color:var(--text)}
+  .nier tr.n-sold td{background:color-mix(in srgb,var(--sold-soft) 45%,transparent)}
+  .nier tbody tr:last-child td{border-bottom:0}
+
+  /* Karty (mobile) */
+  .nier .n-cards{display:none;gap:12px}
+  .nier .n-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+  .nier .n-card.n-sold{border-left:4px solid var(--sold)}
+  .nier .n-card-head{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+  .nier .n-card h3{margin:0;font-size:1rem}
+  .nier .n-card .n-city{color:var(--muted);font-size:.85rem}
+  .nier .n-card .n-value{font-size:1.15rem;font-weight:700;font-variant-numeric:tabular-nums;margin:10px 0 6px}
+  .nier .n-card dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:8px 0;font-size:.85rem}
+  .nier .n-card dt{color:var(--muted)} .n-card dd{margin:0}
+  .nier .n-card details{font-size:.9rem;margin-top:6px}
+  .nier .n-card summary{cursor:pointer;color:var(--accent);font-weight:600}
+  .nier .n-card details p{margin:6px 0 0}
+
+  .nier .n-totals{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+  .nier .n-totals div{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line)}
+  .nier .n-totals div:last-child{border-bottom:0}
+  .nier .n-totals b{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .nier .n-note{color:var(--muted);font-size:.8rem;margin-top:16px}
+  .nier .n-empty{padding:24px;text-align:center;color:var(--muted)}
+
+  @media (max-width:1000px){
+    .nier .n-table-wrap{display:none}
+    .nier .n-cards{display:grid}
+    .nier .n-count{margin-left:0;width:100%}
+  }
+
+.page.nier-page{max-width:1200px}
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="brand" href="/">
+        <img src="/assets/logogwz.jpg" alt="Logo Gminy Wyznaniowej Żydowskiej w Warszawie" />
+        <span>Gmina Wyznaniowa Żydowska<br/>w Warszawie<br/><em style="font-weight:400; font-size:11px; color:var(--text-secondary);">(moja prywatna inicjatywa)</em></span>
+      </a>
+      <button class="nav-toggle" aria-label="Otwórz menu">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="/">Strona główna</a></li>
+        <li>
+          <button type="button">Gorące tematy</button>
+          <div class="dropdown">
+            <a href="/gorace-tematy/proces-synagoga.html">Proces o synagogę i Biały Budynek – dlaczego przegramy</a>
+            <a href="/gorace-tematy/laszon-hara.html">Laszon Hara</a>
+            <a href="/gorace-tematy/wynagrodzenia-w-gminie-i.html">Wynagrodzenia w Gminie I</a>
+            <a href="/gorace-tematy/wynagrodzenia-zarzadu.html">Wynagrodzenia Zarządu GWŻ</a>
+            <a href="/gorace-tematy/ofiary-mobbingu.html">Ofiary mobbingu w Gminie</a>
+            <a href="/gorace-tematy/budzet.html">Budżet GWŻ – dlaczego za 3 lata zbankrutujemy</a>
+            <a href="/gorace-tematy/symulator-budzetu.html">Symulator budżetu Gminy</a>
+            <a href="/gorace-tematy/ulica-smetna.html">Coraz bardziej smętna historia ulicy Smętnej</a>
+            <a href="/gorace-tematy/przeplaca.html">Dlaczego Gmina za wszystko przepłaca?</a>
+            <a href="/gorace-tematy/misiewicze.html">„Misiewicze” w akcji</a>
+            <a href="/gorace-tematy/zarzad-fatalnie.html">Dlaczego Zarząd tak fatalnie pracuje?</a>
+            <a href="/gorace-tematy/konflikt-interesow.html">O konflikcie interesów</a>
+            <a href="/gorace-tematy/sprawozdanie-nasza-gmina.html">Sprawozdanie – Nasza Gmina, nasza społeczność</a>
+          </div>
+        </li>
+        <li>
+          <button type="button">Projekty uchwał</button>
+          <div class="dropdown">
+            <a href="/uchwaly/zrownowazenie-budzetu.html">Uchwała w sprawie zrównoważenia budżetu</a>
+            <a href="/uchwaly/regulamin-zarzadu.html">Uchwała w sprawie zmiany Regulaminu Prac Zarządu</a>
+            <a href="/uchwaly/polityka-zakupow.html">Uchwała w sprawie zmiany Polityki Zakupów</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page content-page nier-page">
+    <p class="breadcrumb"><a href="/">Strona główna</a> / Gorące tematy</p>
+    <h1>Nieruchomości gminne</h1>
+    <div class="nier">
+  <p style="color:var(--text-secondary)">Nieruchomości Gminy Wyznaniowej Żydowskiej w Warszawie i Spółki AVIR według stanu na 9 października 2026 r. oraz nieruchomości zbyte w kadencji obecnego Zarządu Gminy.</p>
+
+  <section class="n-stats" aria-label="Podsumowanie">
+    <div class="n-stat"><span>Posiadane nieruchomości</span><b id="s-count"></b></div>
+    <div class="n-stat"><span>Wartość bez AVIR</span><b id="s-noavir"></b></div>
+    <div class="n-stat"><span>Wartość z AVIR</span><b id="s-avir"></b></div>
+    <div class="n-stat"><span>Sprzedaż w kadencji (brutto)</span><b id="s-sold"></b></div>
+  </section>
+
+  <div class="n-controls">
+    <div class="n-seg" role="group" aria-label="Filtr statusu">
+      <button type="button" data-f="all" aria-pressed="true">Wszystkie</button>
+      <button type="button" data-f="own" aria-pressed="false">Posiadane</button>
+      <button type="button" data-f="sold" aria-pressed="false">Zbyte</button>
+    </div>
+    <input class="n-search" type="search" placeholder="Szukaj: miejscowość, ulica, opis…" aria-label="Szukaj">
+    <span class="n-count" id="count"></span>
+  </div>
+
+  <div class="n-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Lp.</th><th>Status</th><th>Nieruchomość</th><th>Działka</th>
+          <th class="n-num">Pow. działki<br>[m²]</th><th class="n-num">Pow. bud./<br>lok. [m²]</th>
+          <th>Opis</th><th>Data</th><th class="n-num">Wartość /<br>cena</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <div class="n-cards" id="cards"></div>
+
+  <section class="n-totals" aria-label="Sumy">
+    <div><span>Łączna wartość nieruchomości posiadanych bez nieruchomości AVIR</span><b id="t-noavir"></b></div>
+    <div><span>Łączna wartość nieruchomości posiadanych z nieruchomością AVIR</span><b id="t-avir"></b></div>
+    <div><span>Łączna cena sprzedaży brutto nieruchomości zbytych</span><b id="t-sold"></b></div>
+  </section>
+
+  <p class="n-note">Wartości nieruchomości posiadanych są szacunkowe. Źródło: spis nieruchomości GWŻ w Warszawie i Spółki AVIR (stan na 9.10.2026 r.) oraz zestawienie nieruchomości zbytych w kadencji obecnego Zarządu Gminy.</p>
+
+    </div>
+    <p><a href="/">&larr; Powrót na stronę główną</a></p>
+  </div>
+  <script src="/nav.js"></script>
+  <script>
+
+// s: own | avir | sold ; d = data odzyskania/zakupu lub sprzedaży ; v = szacunkowa wartość lub cena sprzedaży brutto
+const DATA = [
+ {s:"own",c:"Łomazy",a:"ul. Małobrzeska",p:"1109/6",pd:"9 781",pb:"brak",d:"2012-07-18",v:300000,o:"Działka niezabudowana. W centralnej jej części znajduje się teren podmokły po dawnym bagnie. Działka w studium przeznaczona pod mieszkalnictwo jednorodzinne."},
+ {s:"own",c:"Otwock",a:"ul. Kochanowskiego 10",p:"1/2",pd:"65 921",pb:"676",d:"2012-11-06",v:6600000,o:"Teren dawnego szpitala żydowskiego (w dawnych pawilonach szpitalnych znajduje się 19 lokali mieszkalnych). Główny pawilon szpitalny do rozbiórki. Gmina posiada jedynie udział w nieruchomości w wysokości około 38%, reszta jest własnością Skarbu Państwa, tj. Starosty Otwockiego. W sprawie tej nieruchomości toczy się postępowanie sądowe z wniosku Lasów Państwowych."},
+ {s:"own",c:"Wawer – Falenica",a:"ul. Polaniecka 15",p:"11/2; 11/3; 11/4",pd:"20 615",pb:"brak",d:"2000-06-26",v:3200000,o:"Działka niezabudowana. Przed wojną znajdowała się w tym miejscu kolonia dla biednych dzieci żydowskich im. Horacego Hellera. Nieruchomość stanowi teren leśny i tak jest oznaczona w studium. Miasto Stołeczne Warszawa przystąpiło do sporządzenia planu, ale napotkało na problemy z odlesieniem terenów leśnych na obszarze tego planu, za które odpowiedzialny jest Marszałek Województwa."},
+ {s:"own",c:"Warszawa",a:"ul. Marii Rodziewiczówny 1",p:"6/27",pd:"10 354",pb:"2 050,06",d:"2017-12-12",v:22000000,o:"4 lokale użytkowe połączone w jeden o pow. 2 050,06 m². Gmina posiada także 10 miejsc postojowych i 43 w garażu podziemnym."},
+ {s:"own",c:"Warszawa",a:"ul. Kłopotowskiego 31",p:"34",pd:"1 052",pb:"1 340",d:"2001-01-08",v:10000000,o:"Budynek dawnej mykwy i biur rabinatu praskiego, obecnie wynajęty na szkołę. Budynek jest wpisany do rejestru zabytków. Nieruchomość posiada aktualny plan zagospodarowania przestrzennego."},
+ {s:"own",c:"Warszawa",a:"Pl. Bankowy 2, piętra XVIII, XIX, XX",p:"2/1",pd:"147,23",pb:"659,24 (łącznie 1 978,11)",d:"2004-12-20",v:12500000,o:"Gmina posiada trzy lokale użytkowe, stanowiące piętra w budynku biurowym przy Pl. Bankowym 2: XVIII, XIX, XX, które są wynajęte, oraz udział w powierzchniach wspólnych tego budynku, w tym handlowych, w udziale 8,8%, z których Gmina czerpie przychody z najmu."},
+ {s:"own",c:"Warszawa",a:"ul. Grzybowska 12/14 lok. B1",p:"—",pd:"—",pb:"190,4",d:"2006-11-09",v:3000000,o:"Lokal użytkowy wynajęty na kancelarię prawną."},
+ {s:"own",c:"Warszawa",a:"ul. Twarda 6",p:"11/1; 11/2",pd:"2 729 + 2 585 = 5 314",pb:"1 604,18 + 1 574,42 = 3 178,6",d:"2004-11-26",v:40000000,o:"Budynek biurowy wykorzystywany na cele statutowe Gminy. Gmina posiada aktualne warunki zabudowy dla inwestycji hotelowej dla tej nieruchomości, które zostały oprotestowane. We wniosku budynek ma mieć wysokość 80 m oraz około 12 300 m² powierzchni użytkowej. Drugi budynek: biurowy i synagoga."},
+ {s:"own",c:"Warszawa",a:"ul. Mokotowska 56",p:"—",pd:"—",pb:"109,79",d:"2014-05-12",v:3200000,o:"Lokal użytkowy wynajęty na biuro kancelarii adwokackiej."},
+ {s:"own",c:"Warszawa",a:"ul. Kamionkowska 51",p:"44",pd:"560",pb:"2 547,13",d:"2020-02-25",v:23000000,o:"Budynek biurowy, 6-kondygnacyjny, wynajęty."},
+ {s:"own",c:"Warszawa",a:"ul. Żeromskiego 77",p:"—",pd:"—",pb:"733,12",d:"2019-10-16",v:11000000,o:"Nieruchomość składająca się z dwóch lokali użytkowych, wynajęta, zakupiona przez Zarząd w tej kadencji wraz z 6 miejscami postojowymi."},
+ {s:"own",c:"Warszawa",a:"ul. Skierniewicka 21 lok. 1",p:"—",pd:"—",pb:"681,8",d:"2022-05-13",v:10260000,o:"Lokal usługowy Liceum żydowskie wraz z 6 miejscami postojowymi w garażu podziemnym."},
+ {s:"own",c:"Warszawa",a:"ul. Zimna 2 m. 9",p:"—",pd:"—",pb:"94,08",d:"2010-05-25",v:1950000,o:"Lokal mieszkalny."},
+ {s:"own",c:"Kazimierz Dolny",a:"ul. Lubelska 4",p:"—",pd:"735",pb:"362,92",d:"2014-12-19",v:6000000,o:"Budynek historycznej synagogi, gdzie prowadzimy działalność gospodarczą: wynajem pokoi oraz sprzedaż judaików i kawiarnia."},
+ {s:"own",c:"Kazimierz Dolny",a:"ul. Czerniawy 21",p:"2138",pd:"4 342",pb:"420 oraz garaż 173",d:"2020-11-26",v:5000000,o:"Nieruchomość zabudowana przedwojennym budynkiem pensjonatu oraz budynkiem garażowym z nadbudową pełniącą funkcję usługową."},
+ {s:"avir",c:"Lublin",a:"ul. Lubartowska 85",p:"1/1",pd:"4 859,34",pb:"3 539,84",d:"2010-10-30",v:18000000,o:"Budynek dawnej szkoły rabinicznej został zaadaptowany pod hotel, w którym oprócz części hotelowej znajduje się synagoga oraz mykwa i biura filii GWŻ. Hotel ILAN jest zarządzany przez Spółkę AVIR, która posiada udział we własności gruntu i budynku w wysokości 957/1000. Reszta udziału należy do Gminy Żydowskiej w Warszawie. Hotel posiada 40 pokoi, restaurację oraz duży i przestronny parking."},
+ {s:"sold",c:"Warszawa – Rembertów",a:"ul. Zawodowa",p:"11/2",pd:"1 624",pb:"",d:"2022-09-16",v:1290000,o:"Nieruchomość niezabudowana; działka ewidencyjna nr 11/2."},
+ {s:"sold",c:"Wilga",a:"ul. Jemiołuszki",p:"",pd:"6 658",pb:"",d:"2023-03-17",v:375150,o:"Nieruchomość o powierzchni 6 658 m²."},
+ {s:"sold",c:"Warszawa",a:"ul. Augustówka",p:"",pd:"6 735",pb:"",d:"2025-01-28",v:16359000,o:"Nieruchomość o powierzchni 6 735 m²."},
+ {s:"sold",c:"Podkowa Leśna",a:"ul. Warszawska 21",p:"",pd:"2 536",pb:"",d:"2025-11-07",v:1680000,o:"Nieruchomość o powierzchni 2 536 m²."},
+ {s:"sold",c:"Piaseczno",a:"ul. Zgoda 1",p:"",pd:"673",pb:"",d:"2025-12-04",v:1050000,o:"Nieruchomość zabudowana historycznym budynkiem dawnej mykwy. Sprzedaż na rzecz Miasta Piaseczno."}
+];
+
+const zl = n => n.toLocaleString("pl-PL",{minimumFractionDigits:2,maximumFractionDigits:2}) + " zł";
+const zlShort = n => (n/1e6).toLocaleString("pl-PL",{maximumFractionDigits:2}) + " mln zł";
+const dt = s => { const [y,m,d] = s.split("-"); return `${d}.${m}.${y}`; };
+const nb = s => String(s).replace(/(\d) (?=\d)/g, "$1\u00a0");
+const esc = s => String(s).replace(/[&<>"]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
+const BADGE = {own:['n-b-own','Posiadana'], avir:['n-b-avir','Posiadana – AVIR'], sold:['n-b-sold','Zbyta']};
+const dateLabel = r => r.s==="sold" ? "Sprzedaż" : "Odzyskanie / zakup";
+const valLabel = r => r.s==="sold" ? "Cena sprzedaży brutto" : "Szacunkowa wartość";
+
+const sum = f => DATA.filter(f).reduce((a,r)=>a+r.v,0);
+const noAvir = sum(r=>r.s==="own"), withAvir = sum(r=>r.s!=="sold"), sold = sum(r=>r.s==="sold");
+document.getElementById("s-count").textContent = DATA.filter(r=>r.s!=="sold").length;
+document.getElementById("s-noavir").textContent = zlShort(noAvir);
+document.getElementById("s-avir").textContent = zlShort(withAvir);
+document.getElementById("s-sold").textContent = zlShort(sold);
+document.getElementById("t-noavir").textContent = zl(noAvir);
+document.getElementById("t-avir").textContent = zl(withAvir);
+document.getElementById("t-sold").textContent = zl(sold);
+
+DATA.forEach((r,i)=>r.lp=i+1);
+let filter = "all", query = "";
+
+function render(){
+  const q = query.trim().toLowerCase();
+  const rows = DATA.filter(r =>
+    (filter==="all" || (filter==="sold" ? r.s==="sold" : r.s!=="sold")) &&
+    (!q || (r.c+" "+r.a+" "+r.o+" "+r.p).toLowerCase().includes(q)));
+  document.getElementById("count").textContent = `Pozycji: ${rows.length}`;
+
+  document.getElementById("tbody").innerHTML = rows.length ? rows.map(r=>{
+    const [cls,lab] = BADGE[r.s];
+    return `<tr class="${r.s==='sold'?'n-sold':''}">
+      <td>${r.lp}</td>
+      <td><span class="n-badge ${cls}">${lab}</span></td>
+      <td class="n-addr"><b>${esc(r.a)}</b><small>${esc(r.c)}</small></td>
+      <td>${esc(r.p||"—")}</td>
+      <td class="n-num n-area">${esc(nb(r.pd||"—"))}</td>
+      <td class="n-num n-area">${esc(nb(r.pb||"—"))}</td>
+      <td class="n-desc">${esc(r.o)}</td>
+      <td style="white-space:nowrap">${dt(r.d)}<br><small style="color:var(--muted)">${dateLabel(r)}</small></td>
+      <td class="n-num"><b>${zl(r.v)}</b></td>
+    </tr>`;}).join("") : `<tr><td colspan="9" class="n-empty">Brak wyników.</td></tr>`;
+
+  document.getElementById("cards").innerHTML = rows.length ? rows.map(r=>{
+    const [cls,lab] = BADGE[r.s];
+    return `<article class="n-card ${r.s==='sold'?'n-sold':''}">
+      <div class="n-card-head">
+        <div><h3>${r.lp}. ${esc(r.a)}</h3><div class="n-city">${esc(r.c)}</div></div>
+        <span class="n-badge ${cls}">${lab}</span>
+      </div>
+      <div class="n-value">${zl(r.v)} <small style="font-weight:400;color:var(--muted);font-size:.75rem">${valLabel(r)}</small></div>
+      <dl>
+        ${r.p ? `<dt>Działka</dt><dd>${esc(r.p)}</dd>` : ""}
+        ${r.pd ? `<dt>Pow. działki</dt><dd>${esc(r.pd)} m²</dd>` : ""}
+        ${r.pb ? `<dt>Pow. bud./lok.</dt><dd>${esc(r.pb)}${/\d$/.test(r.pb)?" m²":""}</dd>` : ""}
+        <dt>${dateLabel(r)}</dt><dd>${dt(r.d)}</dd>
+      </dl>
+      <details><summary>Opis</summary><p>${esc(r.o)}</p></details>
+    </article>`;}).join("") : `<div class="n-empty">Brak wyników.</div>`;
+}
+
+document.querySelectorAll(".n-seg button").forEach(b=>b.addEventListener("click",()=>{
+  filter = b.dataset.f;
+  document.querySelectorAll(".n-seg button").forEach(x=>x.setAttribute("aria-pressed", x===b));
+  render();
+}));
+document.querySelector(".n-search").addEventListener("input", e=>{ query = e.target.value; render(); });
+render();
+
+  </script>
+</body>
+</html>
