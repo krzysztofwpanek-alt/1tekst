@@ -99,7 +99,15 @@ export default {
     const expected = await hashPassword(SITE_PASSWORD);
 
     if (token === expected) {
-      return env.ASSETS.fetch(resolveAssetRequest(request, url.pathname));
+      let res = await env.ASSETS.fetch(resolveAssetRequest(request, url.pathname));
+      // Adres bez rozszerzenia (np. /demo, /Rut) -> spróbuj małymi literami + .html
+      if (res.status === 404 && !url.pathname.includes(".") && url.pathname !== "/") {
+        const alt = new URL(request.url);
+        alt.pathname = url.pathname.replace(/\/$/, "").toLowerCase() + ".html";
+        const res2 = await env.ASSETS.fetch(new Request(alt.toString(), request));
+        if (res2.status === 200) res = res2;
+      }
+      return res;
     }
 
     const redirectUrl = new URL("/login.html", url.origin);
