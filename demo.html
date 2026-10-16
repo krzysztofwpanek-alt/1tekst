@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Zdjęcia — Walne Zgromadzenie GWŻ</title>
+  <link rel="stylesheet" href="/style.css" />
+<style>
+.demo{max-width:1200px}
+.demo .g{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:1.5rem 0}
+.demo .g a{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);line-height:0}
+.demo .g img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .25s}
+.demo .g a:hover img{transform:scale(1.03)}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:100}
+#lb.on{display:flex}
+#lb img{max-width:94vw;max-height:90vh;object-fit:contain}
+#lb button{position:absolute;background:none;border:0;color:#fff;font-size:34px;cursor:pointer;padding:14px;line-height:1}
+#lb .x{top:6px;right:10px}#lb .p{left:6px;top:50%}#lb .n{right:6px;top:50%}
+</style>
+</head>
+<body>
+  <div class="page content-page demo">
+    <h1>Zdjęcia</h1>
+    <div class="g" id="g">
+      <a href="/materialy/demo/01.jpg"><img src="/materialy/demo/01.jpg" alt="Zdjęcie 1" loading="lazy" /></a>
+      <a href="/materialy/demo/02.jpg"><img src="/materialy/demo/02.jpg" alt="Zdjęcie 2" loading="lazy" /></a>
+      <a href="/materialy/demo/03.jpg"><img src="/materialy/demo/03.jpg" alt="Zdjęcie 3" loading="lazy" /></a>
+      <a href="/materialy/demo/04.jpg"><img src="/materialy/demo/04.jpg" alt="Zdjęcie 4" loading="lazy" /></a>
+      <a href="/materialy/demo/05.jpg"><img src="/materialy/demo/05.jpg" alt="Zdjęcie 5" loading="lazy" /></a>
+      <a href="/materialy/demo/06.jpg"><img src="/materialy/demo/06.jpg" alt="Zdjęcie 6" loading="lazy" /></a>
+      <a href="/materialy/demo/07.jpg"><img src="/materialy/demo/07.jpg" alt="Zdjęcie 7" loading="lazy" /></a>
+      <a href="/materialy/demo/08.jpg"><img src="/materialy/demo/08.jpg" alt="Zdjęcie 8" loading="lazy" /></a>
+    </div>
+  </div>
+  <div id="lb"><button class="x" aria-label="Zamknij">×</button><button class="p" aria-label="Poprzednie">‹</button><img alt="" /><button class="n" aria-label="Następne">›</button></div>
+<script>
+(function(){
+  var L=[].slice.call(document.querySelectorAll('#g a')),lb=document.getElementById('lb'),im=lb.querySelector('img'),i=0;
+  function show(k){i=(k+L.length)%L.length;im.src=L[i].href;lb.classList.add('on')}
+  L.forEach(function(a,k){a.addEventListener('click',function(e){e.preventDefault();show(k)})});
+  lb.querySelector('.x').onclick=function(){lb.classList.remove('on')};
+  lb.querySelector('.p').onclick=function(e){e.stopPropagation();show(i-1)};
+  lb.querySelector('.n').onclick=function(e){e.stopPropagation();show(i+1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('on')});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;
+    if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)});
+})();
+</script>
+</body>
+</html>
