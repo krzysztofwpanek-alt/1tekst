@@ -5,99 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Budżet GWŻ – dlaczego za 3 lata zbankrutujemy — Walne Zgromadzenie GWŻ</title>
   <link rel="stylesheet" href="/style.css" />
-  <style>
-    .sim-row {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 4px 14px;
-      padding: 12px 10px;
-      border-bottom: 1px solid var(--border);
-    }
-    .sim-row .sim-label { font-size: 14px; font-weight: 600; }
-    .sim-row .sim-value {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--accent-dark);
-      text-align: right;
-      white-space: nowrap;
-    }
-    .sim-row .sim-value small {
-      font-weight: 400;
-      color: var(--text-secondary);
-      margin-left: 6px;
-    }
-    .sim-row input[type="range"] {
-      grid-column: 1 / 3;
-      width: 100%;
-      accent-color: #185fa5;
-      height: 6px;
-    }
-    /* Pozycje zaznaczone na czerwono */
-    .sim-row.flag {
-      background: #fdf1f0;
-      border-left: 4px solid #c0392b;
-    }
-    .sim-row.flag .sim-label,
-    .sim-row.flag .sim-value { color: #a32d2d; }
-    .sim-row.flag input[type="range"] { accent-color: #c0392b; }
-
-    .sim-total {
-      position: sticky;
-      bottom: 0;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 18px;
-      margin-top: 18px;
-      box-shadow: 0 -6px 16px rgba(0,0,0,0.06);
-    }
-    .sim-line {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 12px;
-    }
-    .sim-line.main { font-size: 16px; font-weight: 600; }
-    .sim-line.savings { font-size: 20px; font-weight: 800; margin-top: 4px; }
-    .sim-savings-value.bad { color: #a32d2d; }
-    .sim-savings-value.good { color: #1e7a2e; }
-
-    .sim-progress {
-      height: 8px;
-      background: #ece9e0;
-      border-radius: 999px;
-      overflow: hidden;
-      margin-top: 10px;
-    }
-    .sim-progress > div {
-      height: 100%;
-      width: 0%;
-      background: #c0392b;
-      transition: width 0.1s linear, background 0.15s;
-    }
-    .sim-progress > div.good { background: #1e7a2e; }
-    .sim-goal-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      margin-top: 6px;
-    }
-    .sim-goal-text { font-size: 12px; color: var(--text-secondary); }
-    .sim-reset {
-      font-size: 12px;
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 5px 10px;
-      cursor: pointer;
-      color: var(--text-secondary);
-      white-space: nowrap;
-    }
-    .sim-reset:hover { border-color: var(--accent); color: var(--accent-dark); }
-    .sim-unit-note { font-size: 12px; color: var(--text-secondary); margin: -8px 0 14px; }
-  </style>
+  
 </head>
 <body>
   <nav class="site-nav">
@@ -125,7 +33,6 @@
             <a href="/gorace-tematy/zarzad-fatalnie.html">Dlaczego Zarząd tak fatalnie pracuje?</a>
             <a href="/gorace-tematy/konflikt-interesow.html">O konflikcie interesów</a>
             <a href="/gorace-tematy/nieruchomosci-gminne.html">Nieruchomości gminne</a>
-            <a href="/gorace-tematy/sprawozdanie-nasza-gmina.html">Sprawozdanie – Nasza Gmina, nasza społeczność</a>
           </div>
         </li>
         <li>
@@ -133,6 +40,7 @@
           <div class="dropdown">
             <a href="/gorace-tematy/prawo-wewnetrzne.html">Prawo wewnętrzne</a>
             <a href="/gorace-tematy/regulaminy-i-polityki.html">Aktualne regulaminy i polityki GWŻ</a>
+            <a href="/gorace-tematy/sprawozdanie-nasza-gmina.html">Sprawozdanie – Nasza Gmina, nasza społeczność</a>
           </div>
         </li>
         <li>
@@ -141,6 +49,7 @@
             <a href="/uchwaly/zrownowazenie-budzetu.html">Uchwała w sprawie zrównoważenia budżetu</a>
             <a href="/uchwaly/regulamin-zarzadu.html">Uchwała w sprawie zmiany Regulaminu Prac Zarządu</a>
             <a href="/uchwaly/polityka-zakupow.html">Uchwała w sprawie zmiany Polityki Zakupów</a>
+            <a href="/uchwaly/wynagrodzenia-zarzadu.html">Uchwała w sprawie wynagrodzeń członków Zarządu</a>
           </div>
         </li>
       </ul>
@@ -266,32 +175,13 @@
       </table>
     </div>
 
-    <p>A kiedy już skończy się nam wolna gotówka będziemy musieli dokonać cięć nie skalpelem, a siekierą. Jak wielka będzie ich skala pokazuje poniższy symulator budżetu. Oczywistym jest wycięcie takich pozycji, jak niewystępujący w żadnej z innych gmin dyrektorzy cmentarzy, czy Biuro Komunikacji Społecznej, ale da to tylko 1,49 mln zł rocznie oszczędności. A my musimy dobić do 5,3 mln zł. Dlatego tak ważne jest jak najszybsze rozpoczęcie programu oszczędności, by przejadane dziś miliony można było zainwestować w coś przynoszącego zysk, bo za kilka lat będzie już na to za późno.</p>
+    <p>A kiedy już skończy się nam wolna gotówka będziemy musieli dokonać cięć nie skalpelem, a siekierą. Jak wielka będzie ich skala pokazuje <a href="/gorace-tematy/symulator-budzetu.html">symulator budżetu</a>. Oczywistym jest wycięcie takich pozycji, jak niewystępujący w żadnej z innych gmin dyrektorzy cmentarzy, czy Biuro Komunikacji Społecznej, ale da to tylko 1,49 mln zł rocznie oszczędności. A my musimy dobić do 5,3 mln zł. Dlatego tak ważne jest jak najszybsze rozpoczęcie programu oszczędności, by przejadane dziś miliony można było zainwestować w coś przynoszącego zysk, bo za kilka lat będzie już na to za późno.</p>
 
     <p>P.S. Powyższe obliczenia nie uwzględniają blisko 8 mln zł, które przyjdzie nam dodatkowo zapłacić ZGWŻ, jeśli już w 2029 roku przegramy sprawę o synagogę Nożyków i Biały Budynek. Przyznam, że nie mam żadnego pomysłu, co moglibyśmy zrobić w tej sytuacji…</p>
 
-    <section id="sim-section">
+    <section id="sim-link">
     <h2>Symulator budżetu</h2>
-    <p class="lead">Przesuń suwaki, żeby zobaczyć, jak zmiana wydatków na poszczególne pozycje wpływa na łączny budżet. Wartości startowe to wykonanie budżetu za 2025 rok. Cel: obciąć wydatki o 5,3 mln zł.</p>
-    <p class="sim-unit-note">Kwoty w złotych. Każdy suwak: od 0% do 150% wartości z 2025 roku.</p>
-
-    <div id="sim-rows"></div>
-
-    <div class="sim-total">
-      <div class="sim-line main">
-        <span>Razem wydatki</span>
-        <span id="sim-total-value">18 496 271 zł</span>
-      </div>
-      <div class="sim-line savings">
-        <span>Oszczędności</span>
-        <span id="sim-savings-value" class="sim-savings-value bad">0 zł</span>
-      </div>
-      <div class="sim-progress"><div id="sim-bar"></div></div>
-      <div class="sim-goal-row">
-        <span id="sim-goal-text" class="sim-goal-text">Cel: 5 300 000 zł</span>
-        <button class="sim-reset" id="sim-reset">Przywróć wartości z 2025</button>
-      </div>
-    </div>
+    <p>Sprawdź sam, jak duże cięcia byłyby potrzebne: <a href="/gorace-tematy/symulator-budzetu.html"><b>Symulator budżetu Gminy</b></a> pozwala przesuwać suwaki wydatków na poszczególne pozycje (wykonanie 2025 r.) i pokazuje, czy udało się uzyskać 5,3 mln zł oszczędności.</p>
     </section>
 
     <h2>Załączniki</h2>
@@ -318,86 +208,6 @@
     <p style="margin-top:1.5rem;"><a href="/">&larr; Powrót na stronę główną</a></p>
   </div>
   <script src="/nav.js"></script>
-  <script>
-    // [numer, nazwa, wykonanie 2025 w zł, zaznaczona na czerwono?]
-    const items = [
-      [1,  "Zarząd", 798449, false],
-      [2,  "Administracja (Biuro Zarządu)", 1059672, false],
-      [3,  "IT", 263662, false],
-      [4,  "Synagoga - Rabin Michael Schudrich", 985745, false],
-      [5,  "Synagoga - Ec Chaim - Synagoga", 819052, false],
-      [6,  "Komisja Pomocy Społecznej", 1778155, false],
-      [7,  "Klub Seniora", 226181, false],
-      [8,  "Pomoc finansowa / dotacje i składki", 816442, false],
-      [9,  "Biuro Komunikacji Społecznej", 206161, true],
-      [10, "Cmentarz na Bródnie", 134653, true],
-      [11, "Cmentarz Okopowa", 844260, true],
-      [12, "Restytucja", 5120, false],
-      [13, "Zarządzanie nieruchomościami", 6320521, false],
-      [14, "Filia w Lublinie", 276676, false],
-      [15, "Cmentarze poza Warszawą", 303795, true],
-      [16, "Ochrona", 1099815, false],
-      [17, "Inne koszty i daniny (dotacje, koszty zarządu, podatek VAT)", 2557912, false],
-    ];
-    const ORIGINAL_TOTAL = items.reduce((s, it) => s + it[2], 0); // 18 496 271
-    const GOAL = 5300000;
-    const nf = new Intl.NumberFormat("pl-PL");
-    const zl = (n) => nf.format(n) + " zł";
-
-    const rowsEl = document.getElementById("sim-rows");
-    const totalEl = document.getElementById("sim-total-value");
-    const savingsEl = document.getElementById("sim-savings-value");
-    const barEl = document.getElementById("sim-bar");
-    const goalTextEl = document.getElementById("sim-goal-text");
-
-    // Suwak działa w procentach wartości z 2025 (0–150%), więc 100% to dokładnie
-    // kwota z tabeli — bez błędów zaokrągleń przy wartościach startowych.
-    items.forEach(([nr, name, val, flag], idx) => {
-      const row = document.createElement("div");
-      row.className = "sim-row" + (flag ? " flag" : "");
-      row.innerHTML =
-        '<span class="sim-label">' + nr + '. ' + name + '</span>' +
-        '<span class="sim-value" id="sim-value-' + idx + '"></span>' +
-        '<input type="range" id="sim-slider-' + idx + '" min="0" max="150" step="0.5" value="100" />';
-      rowsEl.appendChild(row);
-    });
-
-    function currentValue(idx) {
-      const pct = parseFloat(document.getElementById("sim-slider-" + idx).value);
-      return Math.round(items[idx][2] * pct / 100);
-    }
-
-    function recalc() {
-      let total = 0;
-      items.forEach((it, idx) => {
-        const pct = parseFloat(document.getElementById("sim-slider-" + idx).value);
-        const v = Math.round(it[2] * pct / 100);
-        total += v;
-        const pctText = String(pct).replace(".", ",") + "%";
-        document.getElementById("sim-value-" + idx).innerHTML =
-          zl(v) + "<small>" + pctText + "</small>";
-      });
-      const savings = ORIGINAL_TOTAL - total;
-      totalEl.textContent = zl(total);
-      savingsEl.textContent = (savings < 0 ? "−" : "") + zl(Math.abs(savings));
-
-      const reached = savings >= GOAL;
-      savingsEl.className = "sim-savings-value " + (reached ? "good" : "bad");
-      barEl.className = reached ? "good" : "";
-      barEl.style.width = Math.max(0, Math.min(100, savings / GOAL * 100)) + "%";
-      goalTextEl.textContent = reached
-        ? "Cel osiągnięty: obcięto co najmniej 5 300 000 zł"
-        : "Cel: 5 300 000 zł — brakuje jeszcze " + zl(GOAL - savings);
-    }
-
-    items.forEach((_, idx) => {
-      document.getElementById("sim-slider-" + idx).addEventListener("input", recalc);
-    });
-    document.getElementById("sim-reset").addEventListener("click", () => {
-      items.forEach((_, idx) => { document.getElementById("sim-slider-" + idx).value = 100; });
-      recalc();
-    });
-    recalc();
-  </script>
+  
 </body>
 </html>
