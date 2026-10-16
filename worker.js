@@ -61,6 +61,11 @@ function handleLogout(request) {
 // przekierowań opisanej wyżej), Cloudflare przestaje też automatycznie
 // serwować index.html pod samym "/" — musimy to zrobić sami.
 function resolveAssetRequest(request, pathname) {
+  if (pathname === "/demo" || pathname === "/demo/") {
+    const url = new URL(request.url);
+    url.pathname = "/demo.html";
+    return new Request(url.toString(), request);
+  }
   if (pathname === "/") {
     const url = new URL(request.url);
     url.pathname = "/index.html";
