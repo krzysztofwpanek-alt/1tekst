@@ -1,0 +1,9 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>[TEST] Logowanie</title><link rel="stylesheet" href="/test/test.css"></head>
+<body><div class="testbar">STRONA TESTOWA – makieta propozycji dla Zarządu. To nie jest oficjalna strona GWŻ w Warszawie.</div><div class="wm" aria-hidden="true"></div>
+<header class="site"><div class="hin"><span class="brand">Gmina Wyznaniowa Żydowska w Warszawie<small>Makieta strony dla członków – wersja testowa</small></span></div></header>
+<main><form class="login" method="post" action="/api/test-login"><h1 style="font-size:24px;margin-top:0">Strefa członka</h1>
+<div id="e"></div><label for="p">Hasło</label><input id="p" name="password" type="password" autocomplete="current-password" required autofocus>
+<input type="hidden" name="next" id="n" value="/test/"><button type="submit">Zaloguj</button></form></main>
+<footer class="site">Strona testowa. To nie jest oficjalna strona GWŻ w Warszawie.</footer>
+<script>var q=new URLSearchParams(location.search);if(q.get('error'))document.getElementById('e').innerHTML='<p class="err">Nieprawidłowe hasło.</p>';var x=q.get('next');if(x&&x.indexOf('/test')===0)document.getElementById('n').value=x;</script></body></html>
