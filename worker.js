@@ -74,9 +74,77 @@ function resolveAssetRequest(request, pathname) {
   return request;
 }
 
+
+// ---------------------------------------------------------------------------
+// MAKIETA /test — osobne hasło i osobne ciasteczko (nie wpływa na resztę serwisu)
+// ---------------------------------------------------------------------------
+const TEST_PASSWORD = "testyTwarda6#";
+const TEST_COOKIE = "test_auth";
+const TEST_PUBLIC = new Set(["/test/login.html", "/test/test.css", "/test/test.js"]);
+
+async function handleTestLogin(request) {
+  const formData = await request.formData();
+  const password = (formData.get("password") || "").toString();
+  const next = (formData.get("next") || "/test/").toString();
+  if (password !== TEST_PASSWORD) {
+    const failUrl = new URL("/test/login.html", request.url);
+    failUrl.searchParams.set("error", "1");
+    return Response.redirect(failUrl.toString(), 302);
+  }
+  const token = await hashPassword(password);
+  const headers = new Headers();
+  headers.append("Set-Cookie", `${TEST_COOKIE}=${token}; Path=/test; HttpOnly; Secure; SameSite=Lax; Max-Age=604800`);
+  headers.append("Location", next.startsWith("/test") ? next : "/test/");
+  return new Response(null, { status: 302, headers });
+}
+
+async function handleTest(request, env, url) {
+  const p = url.pathname;
+  if (p === "/api/test-login" && request.method === "POST") return handleTestLogin(request);
+  if (p === "/api/test-logout") {
+    const headers = new Headers();
+    headers.append("Set-Cookie", `${TEST_COOKIE}=; Path=/test; HttpOnly; Secure; SameSite=Lax; Max-Age=0`);
+    headers.append("Location", new URL("/test/login.html", request.url).toString());
+    return new Response(null, { status: 302, headers });
+  }
+  if (p === "/test") return Response.redirect(new URL("/test/", request.url).toString(), 302);
+
+  let assetPath = p;
+  if (p === "/test/") assetPath = "/test/index.html";
+  // dokumenty PDF są serwowane z istniejącego katalogu /materialy/ (bez duplikowania plików)
+  if (p.startsWith("/test/dokumenty/")) assetPath = "/materialy/" + p.slice("/test/dokumenty/".length);
+
+  if (!TEST_PUBLIC.has(p)) {
+    const m = (request.headers.get("Cookie") || "").match(new RegExp(`${TEST_COOKIE}=([^;]+)`));
+    const ok = m && m[1] === (await hashPassword(TEST_PASSWORD));
+    if (!ok) {
+      const r = new URL("/test/login.html", url.origin);
+      r.searchParams.set("next", p);
+      return Response.redirect(r.toString(), 302);
+    }
+  }
+  const a = new URL(request.url);
+  a.pathname = assetPath;
+  let res = await env.ASSETS.fetch(new Request(a.toString(), request));
+  if (res.status === 404 && !assetPath.includes(".")) {
+    a.pathname = assetPath.replace(/\/$/, "") + ".html";
+    const res2 = await env.ASSETS.fetch(new Request(a.toString(), request));
+    if (res2.status === 200) res = res2;
+  }
+  const out = new Response(res.body, res);
+  out.headers.set("X-Robots-Tag", "noindex, nofollow");
+  out.headers.set("Cache-Control", "private, no-store");
+  return out;
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    if (url.pathname === "/test" || url.pathname.startsWith("/test/") ||
+        url.pathname === "/api/test-login" || url.pathname === "/api/test-logout") {
+      return handleTest(request, env, url);
+    }
 
     if (url.pathname === "/api/login" && request.method === "POST") {
       return handleLogin(request);
