@@ -137,8 +137,50 @@ async function handleTest(request, env, url) {
   return out;
 }
 
+// ---------------------------------------------------------------------------
+// TRYB ZAŚLEPKI: gdy MAINTENANCE = true, każdy adres serwisu pokazuje stronę
+// „Już wkrótce nowy serwis” (bez logowania i bez dostępu do jakichkolwiek treści).
+// Aby ponownie otworzyć serwis, ustaw MAINTENANCE = false i wypchnij zmianę.
+// ---------------------------------------------------------------------------
+const MAINTENANCE = true;
+
+const PLACEHOLDER_HTML = `<!doctype html>
+<html lang="pl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Już wkrótce nowy serwis</title>
+<style>
+:root{--bg:#f6f4ef;--ink:#1d2433;--muted:#5b6678;--accent:#1f3a5f}
+@media (prefers-color-scheme:dark){:root{--bg:#10151f;--ink:#e8ebf1;--muted:#a3adbf;--accent:#9ec1ee}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;background:var(--bg);color:var(--ink);font:18px/1.6 Georgia,'Times New Roman',serif;text-align:center}
+main{max-width:560px}
+.star{font-size:40px;color:var(--accent);margin-bottom:10px}
+h1{margin:0 0 12px;font-size:clamp(30px,7vw,46px);line-height:1.15;color:var(--accent)}
+p{margin:0;color:var(--muted);font:17px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif}
+</style></head>
+<body><main>
+<div class="star" aria-hidden="true">✡</div>
+<h1>Już wkrótce nowy serwis</h1>
+<p>Dziękujemy za cierpliwość.</p>
+</main></body></html>`;
+
+function placeholderResponse() {
+  return new Response(PLACEHOLDER_HTML, {
+    status: 503,
+    headers: {
+      "Content-Type": "text/html; charset=utf-8",
+      "Retry-After": "86400",
+      "X-Robots-Tag": "noindex, nofollow",
+      "Cache-Control": "no-store",
+    },
+  });
+}
+
 export default {
   async fetch(request, env) {
+    if (MAINTENANCE) return placeholderResponse();
+
     const url = new URL(request.url);
 
     if (url.pathname === "/test" || url.pathname.startsWith("/test/") ||
